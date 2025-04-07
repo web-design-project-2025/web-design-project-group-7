@@ -19,4 +19,20 @@ async function loadData() {
   console.log(users);
 }
 
+function getMovieById(id) {
+  return movies.find((movie) => movie.id === id);
+}
+
+function getReviewById(id) {
+  return reviews.find((review) => review.id === id);
+}
+
+function getUserById(id) {
+  return users.find((user) => user.id === id);
+}
+
+function getReviewByMovie(movie) {
+  return reviews.find((review) => review.movieId === movie.id);
+}
+
 loadData();
