@@ -15,3 +15,4 @@ async function loadData() {
   const userJSON = await userResponse.json();
   users = userJSON.users;
 }
+loadData();
