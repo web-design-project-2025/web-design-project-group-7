@@ -1,0 +1,59 @@
+.container {
+  padding: 1em;
+  width: 100%;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1em;
+  width: 100%;
+}
+
+.link {
+  text-decoration: none;
+  color: black;
+}
+
+.movie {
+  display: flex;
+  flex-direction: row;
+  background-color: #83c5f7;
+  border-bottom: 1px solid #000000;
+}
+
+.info {
+  width: 100%;
+}
+
+.movie img {
+  width: 100%;
+  max-width: 90px;
+}
+
+.padding {
+  padding: 0.5em;
+  margin: 0px;
+}
+
+.text {
+  margin-top: 2px;
+  margin-bottom: 0;
+}
+
+h4 {
+  font-size: 2svw;
+}
+
+h6 {
+  font-size: 1.2svw;
+}
+
+.stars {
+  font-size: 2%;
+}
+
+.reviewed-by {
+  padding-top: 5%;
+  font-size: 1.4svw;
+}
