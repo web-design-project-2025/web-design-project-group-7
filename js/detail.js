@@ -1,6 +1,9 @@
 const contentElement = document.getElementById("d-content");
 
 function renderContent() {
+  //https://stackoverflow.com/questions/55372998/open-same-page-with-different-content
+  //https://www.sitepoint.com/get-url-parameters-with-javascript/
+
   const urlParams = new URLSearchParams(window.location.search);
   const movieId = urlParams.get("movie");
   /* console.log(movieId + 2); */
