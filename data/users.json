@@ -1,0 +1,24 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Alice Johnson",
+      "img": "img/user_1.png"
+    },
+    {
+      "id": 2,
+      "name": "Michael Smith",
+      "img": "img/user_2.png"
+    },
+    {
+      "id": 3,
+      "name": "Sophia Martinez",
+      "img": "img/user_3.png"
+    },
+    {
+      "id": 4,
+      "name": "David Lee",
+      "img": "img/user_4.png"
+    }
+  ]
+}
