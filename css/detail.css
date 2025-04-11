@@ -7,7 +7,6 @@
 }
 
 .d-content {
-  flex: 1; /*https://medium.com/free-code-camp/how-to-keep-your-footer-where-it-belongs-59c6aa05c59c*/
   width: 100%;
 }
 
@@ -15,7 +14,6 @@
   display: flex;
   flex-direction: row;
   background-color: #c0f16c;
-  border-bottom: 1px solid #000000;
   width: 98%;
 }
 
