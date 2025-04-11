@@ -6,9 +6,10 @@
   justify-content: center;
 }
 
-/* .d-content {
-    width: 98%;
-  } */
+.d-content {
+  flex: 1; /*https://medium.com/free-code-camp/how-to-keep-your-footer-where-it-belongs-59c6aa05c59c*/
+  width: 100%;
+}
 
 .d-movie {
   display: flex;
