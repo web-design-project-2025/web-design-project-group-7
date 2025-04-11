@@ -28,6 +28,10 @@ main {
   min-height: 100vh;
 }
 
+body {
+  margin: 0;
+}
+
 footer {
   background-color: #9f4125;
   width: 100%;
