@@ -1,0 +1,22 @@
+.d-container {
+  padding: 1%;
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  justify-content: center;
+}
+
+.d-content {
+  width: 100%;
+}
+
+.d-movie {
+  display: flex;
+  flex-direction: row;
+  background-color: #c0f16c;
+  width: 98%;
+}
+
+.poster {
+  width: 40%;
+}
