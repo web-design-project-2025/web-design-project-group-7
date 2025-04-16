@@ -80,7 +80,6 @@
 /* movies grid */
 
 .content {
-  background-color: aqua;
   align-self: center;
   display: grid;
   grid-template-columns: repeat(4, 1fr);

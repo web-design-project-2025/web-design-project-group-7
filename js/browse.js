@@ -44,10 +44,18 @@ function renderContent() {
 function downArrowOverlay(arrowId, overlayId) {
   const arrowElement = document.getElementById(arrowId);
   const overlayElement = document.getElementById(overlayId);
+  let isOpen = false;
 
   arrowElement.addEventListener("click", function (e) {
-    arrowElement.style.transform = "scaleY(-1)";
-    overlayElement.style.display = "block";
+    if (!isOpen) {
+      arrowElement.style.transform = "scaleY(-1)";
+      overlayElement.style.display = "block";
+      isOpen = true;
+    } else {
+      arrowElement.style.transform = "scaleY(1)";
+      overlayElement.style.display = "none";
+      isOpen = false;
+    }
 
     /*  https://www.30secondsofcode.org/js/s/listen-click-outside-event/ 
     const onClickOutside = (element, callback) => {
