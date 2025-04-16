@@ -39,3 +39,15 @@ function renderContent() {
     contentElement.appendChild(movieElement);
   }
 }
+
+const downArrowElements = document.getElementsByClassName("down-arrow");
+
+for (let downArrowElement of downArrowElements) {
+  downArrowElement.addEventListener("click", function (e) {
+    downArrowElement.style.transform = "scaleY(-1)";
+    /* downArrowElement.style.transform = "scaleY(-1)"
+      ? (downArrowElement.style.transform = "scaleY(1)")
+      : (downArrowElement.style.transform = "scaleY(-1)");
+    console.log(downArrowElement.style.transform); */
+  });
+}

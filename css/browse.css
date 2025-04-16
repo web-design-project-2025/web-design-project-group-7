@@ -92,6 +92,10 @@
   align-content: center;
 }
 
+/* .down-arrow:hover {
+  transform: scaleY(-1);
+} */
+
 .page-number {
   color: var(--white);
 }
