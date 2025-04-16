@@ -40,14 +40,24 @@ function renderContent() {
   }
 }
 
-const downArrowElements = document.getElementsByClassName("down-arrow");
+/* function to open rating overlays */
+function downArrowOverlay(arrowId, overlayId) {
+  const arrowElement = document.getElementById(arrowId);
+  const overlayElement = document.getElementById(overlayId);
 
-for (let downArrowElement of downArrowElements) {
-  downArrowElement.addEventListener("click", function (e) {
-    downArrowElement.style.transform = "scaleY(-1)";
-    /* downArrowElement.style.transform = "scaleY(-1)"
-      ? (downArrowElement.style.transform = "scaleY(1)")
-      : (downArrowElement.style.transform = "scaleY(-1)");
-    console.log(downArrowElement.style.transform); */
+  arrowElement.addEventListener("click", function (e) {
+    arrowElement.style.transform = "scaleY(-1)";
+    overlayElement.style.display = "block";
+
+    /*  https://www.30secondsofcode.org/js/s/listen-click-outside-event/ 
+    const onClickOutside = (element, callback) => {
+      document.addEventListener("click", (e) => {
+        if (!element.contains(e.target)) callback();
+      });
+    };
+    onClickOutside(overlayElement, () => console.log("Hello")); */
   });
 }
+
+downArrowOverlay("title-arrow", "title-overlay");
+downArrowOverlay("rating-arrow", "rating-overlay");

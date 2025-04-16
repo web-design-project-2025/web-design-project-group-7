@@ -14,7 +14,73 @@
   flex-direction: column;
 }
 
+/* filter bar */
+
+.filter-sortby {
+  align-self: center;
+  margin-left: 2rem;
+}
+
+.filter-container {
+  background-color: var(--sand);
+  display: flex;
+  align-items: bottom;
+  border-radius: 1rem;
+  margin-top: 5rem;
+  margin-left: 7rem;
+  height: 5rem;
+  width: 60%;
+
+  position: relative;
+}
+
+.filter-list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 2rem;
+}
+
+.filter-item {
+  display: flex;
+}
+
+.filter-item:hover {
+  cursor: pointer;
+}
+
+.down-arrow {
+  width: 1rem;
+  fill: currentColor;
+  margin-left: 0.5rem;
+  align-content: center;
+}
+
+/* overlays */
+
+.filter-overlay {
+  display: none;
+  position: absolute;
+  top: 100%;
+  margin-top: 0.5rem;
+  padding: 1rem;
+
+  z-index: 20;
+
+  background-color: white;
+  border: solid 1px var(--sand);
+  border-radius: 10px;
+}
+
+.overlay-options {
+  list-style: none;
+  padding: 0;
+}
+
+/* movies grid */
+
 .content {
+  background-color: aqua;
   align-self: center;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -53,48 +119,6 @@
 .stars {
   font-size: 2%;
 }
-
-.filter-sortby {
-  align-self: center;
-  margin-left: 2rem;
-}
-
-.filter-container {
-  background-color: var(--sand);
-  display: flex;
-  align-items: bottom;
-  border-radius: 1rem;
-  margin-top: 5rem;
-  margin-left: 7rem;
-  height: 5rem;
-  width: 60%;
-}
-
-.filter-list {
-  display: flex;
-  align-items: center;
-  list-style: none;
-  gap: 2rem;
-}
-
-.filter-item {
-  display: flex;
-}
-
-.filter-item:hover {
-  cursor: pointer;
-}
-
-.down-arrow {
-  width: 1rem;
-  fill: currentColor;
-  margin-left: 0.5rem;
-  align-content: center;
-}
-
-/* .down-arrow:hover {
-  transform: scaleY(-1);
-} */
 
 .page-number {
   color: var(--white);
