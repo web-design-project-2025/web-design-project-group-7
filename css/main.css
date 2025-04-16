@@ -1,11 +1,17 @@
 * {
   font-family: sans-serif;
+
+  --red: #9f4125;
+  --brown: #1c140e;
+  --grey: #7d6f68;
+  --sand: #cda47b;
+  --white: #f6e3cf;
 }
 
 header {
   position: sticky;
   top: 0;
-  background-color: #9f4125;
+  background-color: var(--red);
   width: 100%;
   border-radius: 1rem;
   justify-self: center;
@@ -20,16 +26,22 @@ header {
 
 a {
   text-decoration: none;
-  color: black;
+  color: var(--brown);
+}
+
+body {
+  margin: 0;
+  /* background-color: var(--brown); */
 }
 
 main {
   width: 100%;
   min-height: 100vh;
+  /* color: var(--white); */
 }
 
 footer {
-  background-color: #9f4125;
+  background-color: var(--sand);
   width: 100%;
   height: 10rem;
 }

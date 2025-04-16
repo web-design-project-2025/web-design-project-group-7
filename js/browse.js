@@ -10,12 +10,12 @@ function createMovieElement(movie) {
   movieLinkElement.appendChild(movieElement);
 
   const imageElement = document.createElement("img");
-  imageElement.classList.add("padding");
+  imageElement.classList.add("poster", "padding");
   imageElement.src = movie.posterImg;
   movieElement.appendChild(imageElement);
 
   const infoElement = document.createElement("div");
-  infoElement.classList.add("padding", "info");
+  infoElement.classList.add("info");
   movieElement.appendChild(infoElement);
 
   const titleElement = document.createElement("h4");
@@ -39,3 +39,33 @@ function renderContent() {
     contentElement.appendChild(movieElement);
   }
 }
+
+/* function to open rating overlays */
+function downArrowOverlay(arrowId, overlayId) {
+  const arrowElement = document.getElementById(arrowId);
+  const overlayElement = document.getElementById(overlayId);
+  let isOpen = false;
+
+  arrowElement.addEventListener("click", function (e) {
+    if (!isOpen) {
+      arrowElement.style.transform = "scaleY(-1)";
+      overlayElement.style.display = "block";
+      isOpen = true;
+    } else {
+      arrowElement.style.transform = "scaleY(1)";
+      overlayElement.style.display = "none";
+      isOpen = false;
+    }
+
+    /*  https://www.30secondsofcode.org/js/s/listen-click-outside-event/ 
+    const onClickOutside = (element, callback) => {
+      document.addEventListener("click", (e) => {
+        if (!element.contains(e.target)) callback();
+      });
+    };
+    onClickOutside(overlayElement, () => console.log("Hello")); */
+  });
+}
+
+downArrowOverlay("title-arrow", "title-overlay");
+downArrowOverlay("rating-arrow", "rating-overlay");

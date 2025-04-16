@@ -26,12 +26,12 @@ function createDetailElement(movie) {
   detailElement.classList.add("d-movie");
 
   const imageElement = document.createElement("img");
-  imageElement.classList.add("padding", "poster");
+  imageElement.classList.add("poster");
   imageElement.src = movie.posterImg;
   detailElement.appendChild(imageElement);
 
   const infoElement = document.createElement("div");
-  infoElement.classList.add("padding", "info");
+  infoElement.classList.add("info");
   detailElement.appendChild(infoElement);
 
   const titleElement = document.createElement("h4");
