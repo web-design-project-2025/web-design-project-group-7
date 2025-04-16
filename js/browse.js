@@ -10,12 +10,12 @@ function createMovieElement(movie) {
   movieLinkElement.appendChild(movieElement);
 
   const imageElement = document.createElement("img");
-  imageElement.classList.add("padding");
+  imageElement.classList.add("poster", "padding");
   imageElement.src = movie.posterImg;
   movieElement.appendChild(imageElement);
 
   const infoElement = document.createElement("div");
-  infoElement.classList.add("padding", "info");
+  infoElement.classList.add("info");
   movieElement.appendChild(infoElement);
 
   const titleElement = document.createElement("h4");
