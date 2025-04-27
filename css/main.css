@@ -11,6 +11,13 @@ h1 {
   font-family: "monofett";
 }
 
+p {
+  margin-top: 10px;
+  margin-bottom: 0px;
+  font-size: 10pt;
+  color: #1C140E;
+}
+
 body {
   margin: 0;
 }
@@ -74,8 +81,37 @@ main {
   height: 40rem;
 }
 
+/* FOOTER */
+
 footer {
-  background-color: #9f4125;
-  width: 100%;
-  height: 10rem;
+  background-color: #CDA47B;
+  display: flex;
+  
+}
+/* sections of the footer */
+.footer-section{
+  width: 25%;
+  padding-left: 4%;
+  padding-bottom: 5%;
+}
+/* contents of previous sections */
+.footer-container{
+  display:flex;
+  align-items: baseline;
+  margin: 0%;
+}
+/* titles of sections in footer */
+h4 {
+  font-weight: 400;
+  color: #1C140E;
+  border-bottom: solid #1C140E;
+}
+/* small logos inside of footer */
+#footer-logo{
+  width: 1rem;
+  padding-right: 3%;
+}
+/*for bild text in footer*/
+#footer-bold{
+  font-weight: bold;
 }
