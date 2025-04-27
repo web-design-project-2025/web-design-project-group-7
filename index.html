@@ -3,47 +3,77 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Local Loser's Movie Club</title>
     <link rel="stylesheet" href="css/main.css" />
     <script src="js/main.js"></script>
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Changa:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Monofett&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header>
-        <a class="navitem" href="index.html">
-          <p>⭐</p>
-        </a>
-        <a class="navitem" href="browse.html">
-          <p>Browse Movies</p>
-        </a>
-        <a class="navitem" href="about-us.html">
-          <p>About Us</p>
-        </a>
-        <input class="navitem" type="text" placeholder="Search" id="searchbar" />
-        <button id="searchbutton" type="submit">🔍</button>
-        <a class="navitem" href="new-review.html">
-          <p>➕</p>
-        </a>
+      <a class="navitem" href="index.html">
+        <p>⭐</p>
+      </a>
+      <a class="navitem" href="browse.html">
+        <p>Browse Movies</p>
+      </a>
+      <a class="navitem" href="about-us.html">
+        <p>About Us</p>
+      </a>
+      <input class="navitem" type="text" placeholder="Search" id="searchbar" />
+      <button id="searchbutton" type="submit">🔍</button>
+      <a class="navitem" href="new-review.html">
+        <p>➕</p>
+      </a>
     </header>
 
     <main>
+      <img
+        id="header-image"
+        src="img/haunted cinema croped.jpg"
+        alt="a dark, empty cinema auditorium with plush red chairs"
+      />
       <section id="homepage1">
         <div>
-          <h1>welcome</h1>
-          <p>This is our website</p>
-          <button id="tomovies" >To movies!</button>
+          <h1>Welcome!</h1>
+          <p class="text-white">
+            The table below outlines milestones for each weekly session and what
+            you are expected to present and discuss. These milestones will help
+            you with your progress and make sure you receive constructive
+            feedback at each stage
+          </p>
+          <a href="browse.html">
+            <button id="to-movies-button">To Movies!</button>
+          </a>
         </div>
-        <img id="movies" src="img/movies.jpg" alt="">
+        <img id="home-image-1" src="img/movies.jpg" alt="a stack of old VHS cases" />
       </section>
 
       <section id="homepage2">
-        <img id="shrekposter" src="img/shrek2poster.jpg" alt="">
         <div>
-        <h1>Movie of the week</h1>
-        <p>this is the movie of the week and we really like it so you should like it to</p>
-      </div>
-      </section>
+          <h2>Movie of the week:</h2>
+          <h2>Barbie!</h2>
+          <img id="home-image-2" src="img/Wink-Sunglasses.gif" alt="" />
+        </div>
 
+        <div>
+          
+          <p>
+            this is the movie of the week and we really like it so you should
+            like it to
+          </p>
+        </div>
+      </section>
     </main>
 
     <footer>
