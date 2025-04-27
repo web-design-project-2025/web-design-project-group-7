@@ -33,8 +33,11 @@ header {
   column-gap: 5rem;
 }
 
-.navitem {
+.navlink{
   color: #f6e3cf;
+  text-decoration: underline;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
 .header-search {
@@ -55,6 +58,10 @@ header {
   border-style: none;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
+}
+
+#searchlogo{
+width: 0.8rem;
 }
 
 a {
