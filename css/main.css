@@ -1,5 +1,14 @@
+/* fonts:
+headers - "monofett";
+everyhing else - "changa", san-serif;
+*/
+
 * {
-  font-family: sans-serif;
+  font-family: "changa", sans-serif;
+}
+
+h1 {
+  font-family: "monofett";
 }
 
 body {
@@ -15,23 +24,37 @@ header {
   justify-content: space-evenly;
 }
 
+#logo {
+  scale: 0.6;
+}
+
 .header-nav {
   display: flex;
   column-gap: 5rem;
 }
 
+.navitem {
+  color: #f6e3cf;
+}
+
 .header-search {
   display: flex;
-  flex-basis: 50%;
+  padding: 0.5%;
 }
 
 #searchbar {
-  justify-self: flex-end;
-  width: 90%;
+  background-color: #f6e3cf;
+  border-style: none;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+
 }
 
 #searchbutton {
-  justify-self: flex-end;
+  background-color: #f6e3cf;
+  border-style: none;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 a {
