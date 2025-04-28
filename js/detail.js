@@ -1,5 +1,12 @@
 const contentElement = document.getElementById("d-content");
 
+async function loadMovieInfo(title) {
+  //https://stackoverflow.com/questions/50983150/how-to-pass-a-variable-with-url-on-javascript-fetch-method
+  fetch(`http://www.omdbapi.com/?t=${title}&apikey=1d35b601`)
+    .then((response) => response.json())
+    .then((data) => console.log(data));
+}
+
 function renderContent() {
   //https://stackoverflow.com/questions/55372998/open-same-page-with-different-content
   //https://www.sitepoint.com/get-url-parameters-with-javascript/
@@ -8,6 +15,8 @@ function renderContent() {
   const movieId = urlParams.get("movie");
   /* console.log(movieId + 2); */
   const movie = getMovieById(Number(movieId));
+
+  loadMovieInfo(movie.title);
 
   contentElement.innerHTML = "";
 
