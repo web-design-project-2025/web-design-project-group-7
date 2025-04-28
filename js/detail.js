@@ -1,13 +1,19 @@
 const contentElement = document.getElementById("d-content");
+let movieInfo = "";
 
 async function loadMovieInfo(title) {
   //https://stackoverflow.com/questions/50983150/how-to-pass-a-variable-with-url-on-javascript-fetch-method
-  fetch(`http://www.omdbapi.com/?t=${title}&apikey=1d35b601`)
+  /* fetch(`http://www.omdbapi.com/?t=${title}&apikey=1d35b601`)
     .then((response) => response.json())
-    .then((data) => console.log(data));
+    .then((data) => console.log(data)); */
+
+  const infoResponse = await fetch(
+    `http://www.omdbapi.com/?t=${title}&apikey=1d35b601`
+  );
+  movieInfo = await infoResponse.json();
 }
 
-function renderContent() {
+async function renderContent() {
   //https://stackoverflow.com/questions/55372998/open-same-page-with-different-content
   //https://www.sitepoint.com/get-url-parameters-with-javascript/
 
@@ -16,11 +22,12 @@ function renderContent() {
   /* console.log(movieId + 2); */
   const movie = getMovieById(Number(movieId));
 
-  loadMovieInfo(movie.title);
+  await loadMovieInfo(movie.title);
+  console.log(movieInfo);
 
   contentElement.innerHTML = "";
 
-  const detailElement = createDetailElement(movie);
+  const detailElement = createDetailElement(movie, movieInfo);
   contentElement.appendChild(detailElement);
 
   const movieReviews = getAllReviewsOf(movie);
@@ -30,7 +37,7 @@ function renderContent() {
   }
 }
 
-function createDetailElement(movie) {
+function createDetailElement(movie, info) {
   const detailElement = document.createElement("section");
   detailElement.classList.add("d-movie");
 
@@ -48,10 +55,20 @@ function createDetailElement(movie) {
   titleElement.innerText = movie.title;
   infoElement.appendChild(titleElement);
 
-  const releaseElement = document.createElement("h6");
+  /* const releaseElement = document.createElement("h6");
   releaseElement.classList.add("text", "stars");
   releaseElement.innerText = movie.release;
+  infoElement.appendChild(releaseElement); */
+
+  const releaseElement = document.createElement("h6");
+  releaseElement.classList.add("text", "stars");
+  releaseElement.innerText = movieInfo.Year;
   infoElement.appendChild(releaseElement);
+
+  const plotElement = document.createElement("h6");
+  plotElement.classList.add("text", "stars");
+  plotElement.innerText = movieInfo.Plot;
+  infoElement.appendChild(plotElement);
 
   const scoreElement = document.createElement("p");
   scoreElement.classList.add("text");
