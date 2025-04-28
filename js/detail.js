@@ -27,30 +27,36 @@ async function renderContent() {
 
   contentElement.innerHTML = "";
 
-  const detailElement = createDetailElement(movie, movieInfo);
-  contentElement.appendChild(detailElement);
+  //top-background image
+  const backImageElement = document.createElement("div");
+  backImageElement.classList.add("d-back-img");
+  backImageElement.style.background = "#0000FF";
+  contentElement.appendChild(backImageElement);
+
+  const detailElement = document.createElement("div");
+  detailElement.classList.add("d-stuff");
+
+  const detailInfoElement = createDetailInfoElement(movie, movieInfo);
+  detailElement.appendChild(detailInfoElement);
 
   const movieReviews = getAllReviewsOf(movie);
   for (let movieReview of movieReviews) {
     const reviewElement = createReviewElement(movieReview);
-    contentElement.appendChild(reviewElement);
+    detailElement.appendChild(reviewElement);
   }
+
+  contentElement.appendChild(detailElement);
 }
 
-function createDetailElement(movie, info) {
+function createDetailInfoElement(movie, info) {
   const detailElement = document.createElement("section");
   detailElement.classList.add("d-movie");
-
-  const imageElement = document.createElement("img");
-  imageElement.classList.add("poster");
-  imageElement.src = movie.posterImg;
-  detailElement.appendChild(imageElement);
 
   const infoElement = document.createElement("div");
   infoElement.classList.add("info");
   detailElement.appendChild(infoElement);
 
-  const titleElement = document.createElement("h4");
+  const titleElement = document.createElement("h1");
   titleElement.classList.add("text");
   titleElement.innerText = movie.title;
   infoElement.appendChild(titleElement);
@@ -62,12 +68,12 @@ function createDetailElement(movie, info) {
 
   const releaseElement = document.createElement("h6");
   releaseElement.classList.add("text", "stars");
-  releaseElement.innerText = movieInfo.Year;
+  releaseElement.innerText = info.Year;
   infoElement.appendChild(releaseElement);
 
   const plotElement = document.createElement("h6");
   plotElement.classList.add("text", "stars");
-  plotElement.innerText = movieInfo.Plot;
+  plotElement.innerText = info.Plot;
   infoElement.appendChild(plotElement);
 
   const scoreElement = document.createElement("p");
@@ -80,6 +86,11 @@ function createDetailElement(movie, info) {
   reviewByElement.innerText =
     "reviewed by " + getUserById(getReviewByMovie(movie).userId).name;
   infoElement.appendChild(reviewByElement);
+
+  const imageElement = document.createElement("img");
+  imageElement.classList.add("poster");
+  imageElement.src = movie.posterImg;
+  detailElement.appendChild(imageElement);
 
   return detailElement;
 }

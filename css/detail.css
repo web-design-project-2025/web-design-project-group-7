@@ -10,11 +10,22 @@
   width: 100%;
 }
 
+.d-back-img {
+  width: 98%;
+  height: 15rem;
+}
+
 .d-movie {
   display: flex;
   flex-direction: row;
   background-color: #c0f16c;
-  width: 98%;
+}
+
+.d-stuff {
+  width: 64%;
+
+  margin-inline: 18%;
+  margin-top: -5rem;
 }
 
 .poster {
