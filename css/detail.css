@@ -50,7 +50,7 @@ h3 {
   width: 100%;
 }
 
-.review-title-container {
+.review-header-container {
   margin-top: 1rem;
   padding-bottom: 5px;
   margin-bottom: 2rem;
@@ -100,8 +100,37 @@ h3 {
 .title-basedOn {
   font-weight: 100;
   font-style: italic;
+  color: #f6e3cf70;
 }
 
 .title-number {
   font-weight: bold;
+}
+
+.review-title-container {
+  display: flex;
+  align-items: flex-center;
+  gap: 2%;
+}
+
+.review-title {
+  margin: 0;
+  color: var(--white);
+  border: none;
+  font-weight: bold;
+}
+
+.review-name {
+  color: #f6e3cf70;
+  margin-top: 3px;
+  font-style: italic;
+}
+
+.small-stars {
+  margin: 0;
+}
+
+.review-text {
+  margin-bottom: 2rem;
+  border-bottom: solid 1px #f6e3cf50;
 }

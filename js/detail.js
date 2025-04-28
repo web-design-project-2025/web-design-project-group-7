@@ -38,7 +38,7 @@ async function renderContent() {
   const detailInfoElement = createDetailInfoElement(movie, movieInfo);
   detailElement.appendChild(detailInfoElement);
 
-  const reviewTitleElement = createReviewTitle();
+  const reviewTitleElement = createRecentReviewsHeader();
   detailElement.appendChild(reviewTitleElement);
 
   const movieReviews = getAllReviewsOf(movie);
@@ -112,21 +112,37 @@ function createReviewElement(review) {
   const reviewElement = document.createElement("article");
   /* detailElement.classList.add("d-movie"); */
 
-  const textElement = document.createElement("p");
-  textElement.innerText = review.text;
-  reviewElement.appendChild(textElement);
+  const titleContainerElement = document.createElement("div");
+  titleContainerElement.classList.add("review-title-container");
+
+  const titleElement = document.createElement("h4");
+  titleElement.classList.add("review-title");
+  titleElement.innerText = review.title;
+  titleContainerElement.appendChild(titleElement);
+
+  const nameElement = document.createElement("p");
+  nameElement.classList.add("review-name");
+  nameElement.innerText = "by " + getUserById(review.userId).name;
+  titleContainerElement.appendChild(nameElement);
+
+  reviewElement.appendChild(titleContainerElement);
 
   const scoreElement = document.createElement("p");
-  scoreElement.classList.add("text");
+  scoreElement.classList.add("small-stars");
   scoreElement.innerText = starScore(review.score).join(" ");
   reviewElement.appendChild(scoreElement);
+
+  const textElement = document.createElement("p");
+  textElement.classList.add("review-text");
+  textElement.innerText = review.text;
+  reviewElement.appendChild(textElement);
 
   return reviewElement;
 }
 
-function createReviewTitle() {
-  const reviewTitleContainerElement = document.createElement("section");
-  reviewTitleContainerElement.classList.add("review-title-container");
+function createRecentReviewsHeader() {
+  const reviewTitleContainerElement = document.createElement("div");
+  reviewTitleContainerElement.classList.add("review-header-container");
 
   const reviewTitleElement = document.createElement("h3");
   reviewTitleElement.innerText = "Recent Reviews";
