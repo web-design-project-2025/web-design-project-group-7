@@ -1,5 +1,37 @@
 const contentElement = document.getElementById("content");
 
+let page = 1;
+const numberPerPage = 5;
+
+const firstPagElement = document.getElementById("first-pag");
+const previousPagElement = document.getElementById("previous-pag");
+const nextPagElement = document.getElementById("next-pag");
+const lastPagElement = document.getElementById("last-pag");
+
+function changePage(newPage) {
+  page = newPage;
+  renderContent();
+  window.scrollTo({ top: 0 });
+}
+
+firstPagElement.addEventListener("click", function (e) {
+  changePage(1);
+});
+previousPagElement.addEventListener("click", function (e) {
+  if (page > 1) {
+    changePage(page - 1);
+  }
+});
+lastPagElement.addEventListener("click", function (e) {
+  changePage(Math.ceil(movies.length / numberPerPage));
+});
+nextPagElement.addEventListener("click", function (e) {
+  if (page < Math.ceil(movies.length / numberPerPage)) {
+    changePage(page + 1);
+  }
+  window.scrollTo({ top: 0 });
+});
+
 function createMovieElement(movie) {
   const movieLinkElement = document.createElement("a");
   movieLinkElement.classList.add("link");
@@ -33,9 +65,8 @@ function createMovieElement(movie) {
 
 function renderContent() {
   contentElement.innerHTML = ""; //empty everything
-
-  for (let movie of movies) {
-    const movieElement = createMovieElement(movie);
+  for (let i = (page - 1) * numberPerPage; i < page * numberPerPage; i++) {
+    const movieElement = createMovieElement(movies[i]);
     contentElement.appendChild(movieElement);
   }
 }

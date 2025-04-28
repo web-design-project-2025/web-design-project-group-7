@@ -119,6 +119,6 @@
   font-size: 2%;
 }
 
-.page-number {
-  color: var(--white);
+.pagination {
+  display: flex;
 }
