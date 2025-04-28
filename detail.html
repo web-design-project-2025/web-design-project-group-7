@@ -12,20 +12,39 @@
   </head>
   <body>
     <header>
-      <a class="navitem" href="index.html">
-        <p>⭐</p>
+      <a class="header-nav" id="logo-link" href="index.html">
+        <img
+          id="logo"
+          src="img/logo.svg"
+          alt="the logo of the website, a cute popcorn shaped like a star with two large eyes"
+        />
       </a>
-      <a class="navitem" href="browse.html">
-        <p>Browse Movies</p>
+      <div id="header-links">
+      <a href="index.html">
+        <p class="navlink">home</p>
       </a>
-      <a class="navitem" href="about-us.html">
-        <p>About Us</p>
+      <a href="browse.html">
+        <p class="navlink">browse</p>
       </a>
-      <input class="navitem" type="text" placeholder="Search" id="searchbar" />
-      <button id="searchbutton" type="submit">🔍</button>
-      <a class="navitem" href="new-review.html">
-        <p>➕</p>
+      <a href="about-us.html">
+        <p class="navlink">about us</p>
       </a>
+    </div>
+      <section class="header-search">
+        <input
+          class="navitem"
+          type="text"
+          placeholder="Search"
+          id="searchbar"
+        />
+        <button id="searchbutton" type="submit">
+          <img
+            id="searchlogo"
+            src="img/search new.svg"
+            alt="a magnifying glass, representing the search button"
+          />
+        </button>
+      </section>
     </header>
 
     <main class="d-container">
