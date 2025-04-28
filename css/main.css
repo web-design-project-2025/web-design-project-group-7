@@ -75,6 +75,8 @@ header {
   border-style: none;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
+  display: flex;
+  align-content: center;
 }
 
 #searchlogo{
