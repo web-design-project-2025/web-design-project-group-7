@@ -6,17 +6,16 @@ async function loadData() {
   const movieResponse = await fetch("data/movies.json");
   const movieJSON = await movieResponse.json();
   movies = movieJSON.movies;
-  console.log(movies);
 
   const reviewResponse = await fetch("data/reviews.json");
   const reviewJSON = await reviewResponse.json();
   reviews = reviewJSON.reviews;
-  console.log(reviews);
 
   const userResponse = await fetch("data/users.json");
   const userJSON = await userResponse.json();
   users = userJSON.users;
-  console.log(users);
+
+  renderContent();
 }
 
 function getMovieById(id) {
@@ -33,6 +32,26 @@ function getUserById(id) {
 
 function getReviewByMovie(movie) {
   return reviews.find((review) => review.movieId === movie.id);
+}
+
+function getAllReviewsOf(movie) {
+  let movieReviews = [];
+  for (let review of reviews) {
+    if (review.movieId === movie.id) {
+      movieReviews.push(review);
+    }
+  }
+  return movieReviews;
+}
+
+function starScore(value) {
+  let stars = ["☆", "☆", "☆", "☆", "☆"];
+  let score = Math.round(value);
+
+  for (let i = 0; i < score; i++) {
+    stars[i] = "★";
+  }
+  return stars;
 }
 
 loadData();

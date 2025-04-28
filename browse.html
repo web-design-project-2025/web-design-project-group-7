@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
     <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -19,7 +18,6 @@
         href="https://fonts.googleapis.com/css2?family=Monofett&display=swap"
         rel="stylesheet"
       />
-    </head>
   </head>
   <body>
     <header>
@@ -46,11 +44,55 @@
           <img id="searchlogo" src="img/search new.svg" alt="a magnifying glass, representing the search button" />
         </button>
       </section>
+
     </header>
 
-    <main>
-      <h1>Movies</h1>
-      <p>*imagine there are a bunch of movie posters here*</p>
+    <main class="container">
+      <section class="filter-container padding">
+        <h4 class="filter-sortby">Sort by</h4>
+        <ul class="filter-list">
+          <li class="filter-item">
+            <p>Title</p>
+            <img
+              id="title-arrow"
+              class="down-arrow"
+              src="img/down_arrow.svg"
+              alt="down arrow"
+            />
+            <div id="title-overlay" class="filter-overlay">
+              <ul class="overlay-options">
+                <li>A-Z</li>
+                <li>Z-A</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="filter-item">
+            <p>Rating</p>
+            <img
+              id="rating-arrow"
+              class="down-arrow"
+              src="img/down_arrow.svg"
+              alt="down arrow"
+            />
+
+            <div id="rating-overlay" class="filter-overlay">
+              <ul class="overlay-options">
+                <li>Best</li>
+                <li>Worse</li>
+              </ul>
+            </div>
+          </li>
+
+          <!-- <li class="filter-item">
+            <p>Genre</p>
+            <img class="down-arrow" src="img/down_arrow.svg" alt="down arrow" />
+          </li> -->
+        </ul>
+      </section>
+      <div class="content" id="content"></div>
+
+      <p class="page-number">page 1 of ...</p>
     </main>
 
     <footer>
