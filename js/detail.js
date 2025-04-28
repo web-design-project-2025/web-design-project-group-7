@@ -39,6 +39,9 @@ async function renderContent() {
   const detailInfoElement = createDetailInfoElement(movie, movieInfo);
   detailElement.appendChild(detailInfoElement);
 
+  const reviewTitleElement = createReviewTitle();
+  detailElement.appendChild(reviewTitleElement);
+
   const movieReviews = getAllReviewsOf(movie);
   for (let movieReview of movieReviews) {
     const reviewElement = createReviewElement(movieReview);
@@ -109,4 +112,20 @@ function createReviewElement(review) {
   reviewElement.appendChild(scoreElement);
 
   return reviewElement;
+}
+
+function createReviewTitle() {
+  const reviewTitleContainerElement = document.createElement("section");
+  reviewTitleContainerElement.classList.add("review-title-container");
+
+  const reviewTitleElement = document.createElement("h3");
+  reviewTitleElement.innerText = "Recent Reviews";
+  reviewTitleContainerElement.appendChild(reviewTitleElement);
+
+  const addReviewButtonElement = document.createElement("button");
+  addReviewButtonElement.innerText = "Add Review";
+  addReviewButtonElement.classList.add("add-review-button");
+  reviewTitleContainerElement.appendChild(addReviewButtonElement);
+
+  return reviewTitleContainerElement;
 }

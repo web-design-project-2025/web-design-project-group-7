@@ -1,3 +1,12 @@
+* {
+  font-family: "changa", sans-serif;
+  --red: #9f4125;
+  --brown: #1c140e;
+  --grey: #7d6f68;
+  --sand: #cda47b;
+  --white: #f6e3cf;
+}
+
 .d-container {
   padding: 1%;
   display: flex;
@@ -30,4 +39,23 @@
 
 .poster {
   width: 40%;
+}
+
+h3 {
+  margin: 0;
+  width: 100%;
+}
+
+.review-title-container {
+  margin-top: 1rem;
+  padding-bottom: 5px;
+  margin-bottom: 2rem;
+  width: 100%;
+  display: flex;
+  border-bottom: solid 2px var(--white);
+  align-items: flex-end;
+}
+
+.add-review-button {
+  width: 20%;
 }
