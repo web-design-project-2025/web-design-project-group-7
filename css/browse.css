@@ -9,9 +9,12 @@
 }
 
 .container {
-  width: 100vw;
   display: flex;
   flex-direction: column;
+}
+
+body {
+  background-color: #1c140e;
 }
 
 /* filter bar */
