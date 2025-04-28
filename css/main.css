@@ -1,4 +1,3 @@
-
 /* fonts:
 headers - "monofett";
 everyhing else - "changa", san-serif;
@@ -6,7 +5,7 @@ everyhing else - "changa", san-serif;
 
 * {
   font-family: "changa", sans-serif;
-    --red: #9f4125;
+  --red: #9f4125;
   --brown: #1c140e;
   --grey: #7d6f68;
   --sand: #cda47b;
@@ -15,13 +14,15 @@ everyhing else - "changa", san-serif;
 
 h1 {
   font-family: "monofett";
+  font-size: 3rem;
 }
 
 p {
   margin-top: 10px;
   margin-bottom: 0px;
   font-size: 10pt;
-  color: #1C140E;
+  /* color: #1c140e; */
+  color: var(--white);
 }
 
 body {
@@ -55,7 +56,7 @@ header {
   column-gap: 5rem;
 }
 
-.navlink{
+.navlink {
   color: #f6e3cf;
   text-decoration: underline;
   text-transform: uppercase;
@@ -73,7 +74,6 @@ header {
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
   width: 20rem;
-
 }
 
 #searchbutton {
@@ -85,8 +85,8 @@ header {
   align-content: center;
 }
 
-#searchlogo{
-width: 0.8rem;
+#searchlogo {
+  width: 0.8rem;
 }
 
 a {
@@ -110,33 +110,31 @@ main {
 footer {
   background-color: var(--sand);
   display: flex;
-  
 }
 /* sections of the footer */
-.footer-section{
+.footer-section {
   width: 25%;
   padding-left: 4%;
   padding-bottom: 5%;
 }
 /* contents of previous sections */
-.footer-container{
-  display:flex;
+.footer-container {
+  display: flex;
   align-items: baseline;
   margin: 0%;
 }
 /* titles of sections in footer */
 h4 {
   font-weight: 400;
-  color: #1C140E;
-  border-bottom: solid #1C140E;
+  color: #1c140e;
+  border-bottom: solid #1c140e;
 }
 /* small logos inside of footer */
-#footer-logo{
+#footer-logo {
   width: 1rem;
   padding-right: 3%;
-
 }
 /*for bold text in footer*/
-#footer-bold{
+#footer-bold {
   font-weight: bold;
 }

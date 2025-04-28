@@ -1,5 +1,6 @@
 * {
   font-family: "changa", sans-serif;
+  color: var(--white);
   --red: #9f4125;
   --brown: #1c140e;
   --grey: #7d6f68;
@@ -13,6 +14,7 @@
   width: 100%;
   min-height: 100vh;
   justify-content: center;
+  background-color: var(--brown);
 }
 
 .d-content {
@@ -27,7 +29,7 @@
 .d-movie {
   display: flex;
   flex-direction: row;
-  background-color: #c0f16c;
+  gap: 2%;
 }
 
 .d-stuff {
@@ -38,7 +40,9 @@
 }
 
 .poster {
-  width: 40%;
+  width: 30%;
+  height: auto;
+  align-self: flex-start;
 }
 
 h3 {
@@ -58,4 +62,46 @@ h3 {
 
 .add-review-button {
   width: 20%;
+  color: var(--brown);
+}
+
+.list-title {
+  margin: 0;
+  font-size: 0.75rem;
+}
+
+.list-items {
+  display: flex;
+  align-items: flex-end;
+  gap: 2%;
+  border-top: solid 1px #f6e3cf50;
+}
+
+.ul-info {
+  padding: 0;
+}
+
+.title-stars {
+  font-size: 1.5rem;
+  padding-right: 2%;
+}
+
+.d-title {
+  margin-top: 0;
+  margin-bottom: 0.2rem;
+}
+
+.score-container {
+  display: flex;
+  align-items: center;
+  gap: 1%;
+}
+
+.title-basedOn {
+  font-weight: 100;
+  font-style: italic;
+}
+
+.title-number {
+  font-weight: bold;
 }

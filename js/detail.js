@@ -23,7 +23,6 @@ async function renderContent() {
   const movie = getMovieById(Number(movieId));
 
   await loadMovieInfo(movie.title);
-  console.log(movieInfo);
 
   contentElement.innerHTML = "";
 
@@ -60,35 +59,46 @@ function createDetailInfoElement(movie, info) {
   detailElement.appendChild(infoElement);
 
   const titleElement = document.createElement("h1");
-  titleElement.classList.add("text");
+  titleElement.classList.add("d-title");
   titleElement.innerText = movie.title;
   infoElement.appendChild(titleElement);
 
-  /* const releaseElement = document.createElement("h6");
-  releaseElement.classList.add("text", "stars");
-  releaseElement.innerText = movie.release;
-  infoElement.appendChild(releaseElement); */
+  const scoreElement = document.createElement("section");
+  scoreElement.classList.add("score-container");
 
-  const releaseElement = document.createElement("h6");
-  releaseElement.classList.add("text", "stars");
-  releaseElement.innerText = info.Year;
-  infoElement.appendChild(releaseElement);
+  const starsElement = document.createElement("p");
+  starsElement.classList.add("title-stars");
+  starsElement.innerText = starScore(movie.score).join(" ");
+  scoreElement.appendChild(starsElement);
 
-  const plotElement = document.createElement("h6");
-  plotElement.classList.add("text", "stars");
+  const basedOnElement = document.createElement("p");
+  basedOnElement.classList.add("title-basedOn");
+  basedOnElement.innerText = "based on";
+  scoreElement.appendChild(basedOnElement);
+
+  const numberElement = document.createElement("p");
+  numberElement.classList.add("title-number");
+  numberElement.innerText = movie.reviews + " reviews";
+  scoreElement.appendChild(numberElement);
+
+  infoElement.appendChild(scoreElement);
+
+  const plotElement = document.createElement("p");
+  plotElement.classList.add("plot");
   plotElement.innerText = info.Plot;
   infoElement.appendChild(plotElement);
 
-  const scoreElement = document.createElement("p");
-  scoreElement.classList.add("text");
-  scoreElement.innerText = starScore(movie.score).join(" ");
-  infoElement.appendChild(scoreElement);
+  //list with recurring info fields
+  const infoUlElement = document.createElement("ul");
+  infoUlElement.classList.add("ul-info");
 
-  const reviewByElement = document.createElement("p");
-  reviewByElement.classList.add("text", "reviewed-by");
-  reviewByElement.innerText =
-    "reviewed by " + getUserById(getReviewByMovie(movie).userId).name;
-  infoElement.appendChild(reviewByElement);
+  const titles = ["Released", "Director", "Actors", "Runtime"];
+  for (let title of titles) {
+    const item = createInfoListElement(title, movieInfo);
+    infoUlElement.appendChild(item);
+  }
+
+  infoElement.appendChild(infoUlElement);
 
   const imageElement = document.createElement("img");
   imageElement.classList.add("poster");
@@ -128,4 +138,21 @@ function createReviewTitle() {
   reviewTitleContainerElement.appendChild(addReviewButtonElement);
 
   return reviewTitleContainerElement;
+}
+
+//creates li element with title and value or input-ed field (year, director...)
+function createInfoListElement(keyword, info) {
+  const itemElement = document.createElement("li");
+  itemElement.classList.add("list-items");
+  const titleElement = document.createElement("h6");
+  titleElement.classList.add("list-title");
+  titleElement.innerText = keyword + ":";
+  itemElement.appendChild(titleElement);
+
+  const descriptionElement = document.createElement("p");
+  descriptionElement.classList.add("list-description");
+  descriptionElement.innerText = info[keyword];
+  itemElement.appendChild(descriptionElement);
+
+  return itemElement;
 }
