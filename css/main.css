@@ -1,11 +1,31 @@
-* {
-  font-family: sans-serif;
 
-  --red: #9f4125;
+/* fonts:
+headers - "monofett";
+everyhing else - "changa", san-serif;
+*/
+
+* {
+  font-family: "changa", sans-serif;
+    --red: #9f4125;
   --brown: #1c140e;
   --grey: #7d6f68;
   --sand: #cda47b;
   --white: #f6e3cf;
+}
+
+h1 {
+  font-family: "monofett";
+}
+
+p {
+  margin-top: 10px;
+  margin-bottom: 0px;
+  font-size: 10pt;
+  color: #1C140E;
+}
+
+body {
+  margin: 0;
 }
 
 header {
@@ -13,15 +33,60 @@ header {
   top: 0;
   background-color: var(--red);
   width: 100%;
-  border-radius: 1rem;
-  justify-self: center;
-  justify-content: center;
   display: flex;
+  justify-content: flex-start;
+  align-content: center;
+  column-gap: 10%;
 }
 
-.navitem {
-  margin-left: 2%;
-  margin-right: 2%;
+#header-links {
+  display: flex;
+  width: 20%;
+  column-gap: 5%;
+}
+
+#logo {
+  margin-left: 20px;
+  width: 20px;
+}
+
+.header-nav {
+  display: flex;
+  column-gap: 5rem;
+}
+
+.navlink{
+  color: #f6e3cf;
+  text-decoration: underline;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.header-search {
+  display: flex;
+  padding: 0.5%;
+}
+
+#searchbar {
+  background-color: #f6e3cf;
+  border-style: none;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  width: 20rem;
+
+}
+
+#searchbutton {
+  background-color: #f6e3cf;
+  border-style: none;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  display: flex;
+  align-content: center;
+}
+
+#searchlogo{
+width: 0.8rem;
 }
 
 a {
@@ -40,8 +105,38 @@ main {
   /* color: var(--white); */
 }
 
+/* FOOTER */
+
 footer {
   background-color: var(--sand);
-  width: 100%;
-  height: 10rem;
+  display: flex;
+  
+}
+/* sections of the footer */
+.footer-section{
+  width: 25%;
+  padding-left: 4%;
+  padding-bottom: 5%;
+}
+/* contents of previous sections */
+.footer-container{
+  display:flex;
+  align-items: baseline;
+  margin: 0%;
+}
+/* titles of sections in footer */
+h4 {
+  font-weight: 400;
+  color: #1C140E;
+  border-bottom: solid #1C140E;
+}
+/* small logos inside of footer */
+#footer-logo{
+  width: 1rem;
+  padding-right: 3%;
+
+}
+/*for bold text in footer*/
+#footer-bold{
+  font-weight: bold;
 }
