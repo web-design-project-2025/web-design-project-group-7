@@ -6,10 +6,11 @@
   --grey: #7d6f68;
   --sand: #cda47b;
   --white: #f6e3cf;
+
+  --gap: 2%;
 }
 
 .d-container {
-  padding: 1%;
   display: flex;
   width: 100%;
   min-height: 100vh;
@@ -21,22 +22,49 @@
   width: 100%;
 }
 
-.d-back-img {
-  width: 98%;
+/* GRADIENT ON BACKGROUND IMAGE */
+/* Most code from the following 15 lines comes from: "How to Add Gradient Overlay to Image in CSS" by ByteGrad https://www.youtube.com/watch?v=5CztcrXpfec */
+.bg-img-container {
+  width: 100%;
   height: 15rem;
+  position: relative;
+  z-index: 0;
+}
+
+.bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.bg-gradient {
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to top, var(--brown), transparent);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
 
 .d-movie {
   display: flex;
   flex-direction: row;
-  gap: 2%;
+  gap: var(--gap);
 }
 
 .d-stuff {
   width: 64%;
-
   margin-inline: 18%;
   margin-top: -5rem;
+
+  position: relative;
+  z-index: 2;
 }
 
 .poster {
@@ -56,13 +84,25 @@ h3 {
   margin-bottom: 2rem;
   width: 100%;
   display: flex;
-  border-bottom: solid 2px var(--white);
+  border-bottom: solid 2px var(--sand);
   align-items: flex-end;
 }
 
 .add-review-button {
-  width: 20%;
+  width: 200px;
   color: var(--brown);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1%;
+  gap: 0.5rem;
+  border-radius: 100px;
+  border: none;
+  background-color: var(--white);
+}
+
+.button-icon {
+  width: 1rem;
 }
 
 .list-title {
@@ -73,7 +113,7 @@ h3 {
 .list-items {
   display: flex;
   align-items: flex-end;
-  gap: 2%;
+  gap: var(--gap);
   border-top: solid 1px #f6e3cf50;
 }
 
@@ -99,8 +139,6 @@ h3 {
 
 .title-basedOn {
   font-weight: 100;
-  font-style: italic;
-  color: #f6e3cf70;
 }
 
 .title-number {
@@ -110,7 +148,7 @@ h3 {
 .review-title-container {
   display: flex;
   align-items: flex-center;
-  gap: 2%;
+  gap: var(--gap);
 }
 
 .review-title {
@@ -121,9 +159,7 @@ h3 {
 }
 
 .review-name {
-  color: #f6e3cf70;
   margin-top: 3px;
-  font-style: italic;
 }
 
 .small-stars {
@@ -133,4 +169,9 @@ h3 {
 .review-text {
   margin-bottom: 2rem;
   border-bottom: solid 1px #f6e3cf50;
+}
+
+.transparent-white-italic {
+  font-style: italic;
+  color: #f6e3cf70;
 }

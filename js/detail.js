@@ -26,10 +26,7 @@ async function renderContent() {
 
   contentElement.innerHTML = "";
 
-  //top-background image
-  const backImageElement = document.createElement("div");
-  backImageElement.classList.add("d-back-img");
-  backImageElement.style.background = "#0000FF";
+  const backImageElement = createbackgroundImgElement(movie);
   contentElement.appendChild(backImageElement);
 
   const detailElement = document.createElement("div");
@@ -48,6 +45,23 @@ async function renderContent() {
   }
 
   contentElement.appendChild(detailElement);
+}
+
+function createbackgroundImgElement(movie) {
+  const backImageElement = document.createElement("div");
+  backImageElement.classList.add("bg-img-container");
+  backImageElement.style.background = "#0000FF";
+
+  const gradientElement = document.createElement("div");
+  gradientElement.classList.add("bg-gradient");
+  backImageElement.appendChild(gradientElement);
+
+  const imgElement = document.createElement("img");
+  imgElement.classList.add("bg-img");
+  imgElement.src = movie.posterImg;
+  backImageElement.appendChild(imgElement);
+
+  return backImageElement;
 }
 
 function createDetailInfoElement(movie, info) {
@@ -72,7 +86,7 @@ function createDetailInfoElement(movie, info) {
   scoreElement.appendChild(starsElement);
 
   const basedOnElement = document.createElement("p");
-  basedOnElement.classList.add("title-basedOn");
+  basedOnElement.classList.add("title-basedOn", "transparent-white-italic");
   basedOnElement.innerText = "based on";
   scoreElement.appendChild(basedOnElement);
 
@@ -121,7 +135,7 @@ function createReviewElement(review) {
   titleContainerElement.appendChild(titleElement);
 
   const nameElement = document.createElement("p");
-  nameElement.classList.add("review-name");
+  nameElement.classList.add("review-name", "transparent-white-italic");
   nameElement.innerText = "by " + getUserById(review.userId).name;
   titleContainerElement.appendChild(nameElement);
 
@@ -149,7 +163,8 @@ function createRecentReviewsHeader() {
   reviewTitleContainerElement.appendChild(reviewTitleElement);
 
   const addReviewButtonElement = document.createElement("button");
-  addReviewButtonElement.innerText = "Add Review";
+  addReviewButtonElement.innerHTML =
+    '<img class="button-icon" src="img/plus-circle.svg" alt="plus icon">Add Review';
   addReviewButtonElement.classList.add("add-review-button");
   reviewTitleContainerElement.appendChild(addReviewButtonElement);
 
