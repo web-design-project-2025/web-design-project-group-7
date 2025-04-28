@@ -13,8 +13,8 @@
   flex-direction: column;
 }
 
-body {
-  background-color: #1c140e;
+body{
+  background-color: var(--brown);
 }
 
 /* filter bar */
@@ -25,16 +25,15 @@ body {
 }
 
 .filter-container {
-  background-color: var(--sand);
+  background-color: var(--white);
   display: flex;
   align-items: bottom;
   border-radius: 1rem;
-  margin-top: 5rem;
-  margin-left: 7rem;
-  height: 5rem;
-  width: 60%;
-
   position: relative;
+  width: 40%;
+
+  margin-left: 19%;
+  margin-top: 5%;
 }
 
 .filter-list {
@@ -87,26 +86,32 @@ body {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   margin-top: 3rem;
-  column-gap: 7rem;
-  row-gap: 3rem;
   /* width: 85%; */
   margin-inline: 7rem;
+  column-gap: 5%;
+
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+h5 {
+  font-weight: 400;
+  color:var(--white);
 }
 
 .link {
-  text-decoration: none;
-  /* color: var(--white); */
-  color: var(--brown);
-}
+  width: 100%;
+} 
 
 .movie {
   display: flex;
   flex-direction: column;
+  width: 100%
 }
 
 .info {
   width: 100%;
-  margin-top: 1rem;
+  margin-bottom: 20%;
 }
 
 .movie img {
@@ -116,6 +121,8 @@ body {
 .text {
   margin-top: 2px;
   margin-bottom: 0;
+  color: var(--white);
+
 }
 
 .stars {
