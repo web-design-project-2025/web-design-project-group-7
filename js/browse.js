@@ -1,7 +1,7 @@
 const contentElement = document.getElementById("content");
 
 let page = 1;
-const numberPerPage = 5;
+const numberPerPage = 12;
 
 const firstPagElement = document.getElementById("first-pag");
 const previousPagElement = document.getElementById("previous-pag");
