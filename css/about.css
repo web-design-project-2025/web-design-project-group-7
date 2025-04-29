@@ -1,0 +1,46 @@
+
+/* fonts:
+headers - "monofett";
+everyhing else - "changa", san-serif;
+*/
+body {
+    background-color: var(--brown);
+}
+
+p {
+    color: var(--white);
+}
+* {
+    font-family: "changa", sans-serif;
+    --red: #9f4125;
+    --brown: #1c140e;
+    --grey: #7d6f68;
+    --sand: #cda47b;
+    --white: #f6e3cf;
+  }
+
+
+  h1 {
+    color: var(--red);
+    padding-left: 20%;
+    font-weight: 400;
+  }
+#text1 {
+    padding-left: 20%;
+    padding-right: 10%;
+}
+
+#text2 {
+    padding-left: 10%;
+}
+
+#aboutus {
+    padding-left: 20%;
+    padding-right: 20%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+#polaroid {
+    width: 90%;
+}
