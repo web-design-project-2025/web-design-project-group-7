@@ -2,7 +2,7 @@ const contentElement = document.getElementById("content");
 
 let page = 1;
 const numberPerPage = 12;
-let filter = "Show";
+let filter = "Show All";
 
 const firstPagElement = document.getElementById("first-pag");
 const previousPagElement = document.getElementById("previous-pag");
@@ -112,17 +112,20 @@ async function filterOverlayTitles() {
     }
   }
   genres.sort();
-  const showInd = genres.indexOf("Show");
+  const showInd = genres.indexOf("Show All");
   //console.log("sort" + genres);
   //console.log(showInd);
   genres.splice(showInd, 1);
-  genres.unshift("Show");
+  genres.unshift("Show All");
   //console.log("unshift" + genres);
 
   for (let genre of genres) {
     const filterLiElement = document.createElement("li");
     filterLiElement.classList.add("filter-name");
     filterLiElement.innerText = genre;
+    if (genre === "Show All") {
+      filterLiElement.classList.add("filter-show-all");
+    }
 
     filterLiElement.addEventListener("click", function (e) {
       filter = genre;
