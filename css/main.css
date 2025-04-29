@@ -50,7 +50,7 @@ h2 {
   text-transform: uppercase;
   font-weight: 400;
   margin-top: 0%;
-  margin-bottom: 8%;
+  line-height: 90%;
 }
 
 p {
@@ -90,38 +90,49 @@ p {
   background-color: #9f4125;
   border: none;
   color: #f6e3cf;
-  padding-left: 2%;
-  padding-right: 2%;
+  padding-inline: 10%;
   font-size: 14pt;
   border-radius: 10rem;
-  font-weight: bold;
+  text-transform: uppercase;
 }
 
 #homepage2 {
-  display: grid;
-  grid-template-columns: 60% 40%;
   padding-left: 20%;
   padding-right: 20%;
   padding-top: 3%;
   padding-bottom: 3%;
-  background-color: #c9a58b;
+  background-color:#f6e3cf;
   margin-top: 5rem;
   align-items: end;
 }
 
+#homepage2-div{
+  display: flex;
+  column-gap: 2%;
+}
+
+#homepage2-div-button{
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  column-gap: 2rem;
+}
+
+
 #home-image-2 {
   align-self: center;
   align-self: end;
-  width: 100%;
+  width: 70%;
 }
 
 #homepage2-text {
   font-family: "changa", san-serif;
-  font-size: 16pt;
+  color: hsl(14, 62%, 38%);
+  font-size: 14pt;
   line-height: 100%;
   margin-top: 0%;
-  padding-left: 10%;
   display: block;
+  text-transform: uppercase;
 }
 
 #barbie-button {
@@ -129,12 +140,10 @@ p {
   background-color: #9f4125;
   border: none;
   color: #f6e3cf;
-  padding-left: 5%;
-  padding-right: 5%;
-  font-size: 20pt;
+  padding-inline: 20%;
+  font-size: 16pt;
   border-radius: 10rem;
-  font-weight: bold;
-  margin-left: 10%;
+  text-transform: uppercase;
 }
 
 #homepage3 {
