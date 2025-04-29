@@ -73,13 +73,14 @@ p {
   display: grid;
   padding-left: 20%;
   padding-right: 20%;
-  padding-top: 5%;
+  padding-top: 3%;
+  padding-bottom: 2%;
   grid-template-columns: 55% 45%;
 }
 
 #home-image-1 {
+  padding-left: 22%;
   width: 100%;
-  scale: 0.9;
   justify-self: center;
   align-self: center;
 }
@@ -98,17 +99,68 @@ p {
 
 #homepage2 {
   display: grid;
-  grid-template-columns: 75% 25%;
+  grid-template-columns: 60% 40%;
   padding-left: 20%;
   padding-right: 20%;
+  padding-top: 4%;
+  padding-bottom: 7%;
   background-color: #c9a58b;
   margin-top: 5rem;
+  align-items: end;
 }
 
 #home-image-2 {
   align-self: center;
-  justify-self: center;
+  align-self: end;
+  width: 100%;
 }
+
+#homepage2-text {
+  font-family: "changa", san-serif;
+  font-size: 16pt;
+  line-height: 100%;
+  margin-top: 0%;
+  padding-left: 10%;
+  display: block;
+}
+
+#barbie-button {
+  font-family: "changa";
+  background-color: #9f4125;
+  border: none;
+  color: #f6e3cf;
+  padding-left: 5%;
+  padding-right: 5%;
+  font-size: 20pt;
+  border-radius: 10rem;
+  font-weight: bold;
+  margin-left: 10%;
+}
+
+#homepage3 {
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 5%;
+  background-color: #1c140e;
+}
+
+#homepage3-img {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+H3 {
+  font-family: "monofett";
+  color: #9f4125;
+  font-size: 36pt;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-top: 0%;
+  margin-bottom: 8%;
+}
+
 footer {
   background-color: #9f4125;
   width: 100%;
