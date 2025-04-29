@@ -98,7 +98,6 @@ function createDetailInfoElement(movie, info) {
 
   infoElement.appendChild(scoreElement);
 
-
   const plotElement = document.createElement("p");
   plotElement.classList.add("plot");
   plotElement.innerText = info.Plot;
@@ -189,3 +188,7 @@ function createInfoListElement(keyword, info) {
 
   return itemElement;
 }
+
+loadData().then(() => {
+  renderContent();
+});
