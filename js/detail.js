@@ -8,6 +8,7 @@ function renderContent() {
   const movieId = urlParams.get("movie");
   /* console.log(movieId + 2); */
   const movie = getMovieById(Number(movieId));
+  console.log(movie);
 
   contentElement.innerHTML = "";
 
@@ -49,12 +50,12 @@ function createDetailElement(movie) {
   scoreElement.innerText = starScore(movie.score).join(" ");
   infoElement.appendChild(scoreElement);
 
-  const reviewByElement = document.createElement("p");
+  /* const reviewByElement = document.createElement("p");
   reviewByElement.classList.add("text", "reviewed-by");
   reviewByElement.innerText =
     "reviewed by " + getUserById(getReviewByMovie(movie).userId).name;
   infoElement.appendChild(reviewByElement);
-
+ */
   return detailElement;
 }
 
