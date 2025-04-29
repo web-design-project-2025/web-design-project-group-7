@@ -21,6 +21,7 @@ async function renderContent() {
   const movieId = urlParams.get("movie");
   /* console.log(movieId + 2); */
   const movie = getMovieById(Number(movieId));
+  console.log(movie);
 
   await loadMovieInfo(movie.title);
 
@@ -96,6 +97,7 @@ function createDetailInfoElement(movie, info) {
   scoreElement.appendChild(numberElement);
 
   infoElement.appendChild(scoreElement);
+
 
   const plotElement = document.createElement("p");
   plotElement.classList.add("plot");

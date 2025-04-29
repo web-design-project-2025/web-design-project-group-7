@@ -6,12 +6,16 @@
   --grey: #7d6f68;
   --sand: #cda47b;
   --white: #f6e3cf;
-
   --gap: 2%;
+}
+
+body {
+  background-color: var(--brown);
 }
 
 .d-container {
   display: flex;
+
   width: 100%;
   min-height: 100vh;
   justify-content: center;
@@ -54,6 +58,7 @@
 
 .d-movie {
   display: flex;
+
   flex-direction: row;
   gap: var(--gap);
 }

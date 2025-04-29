@@ -30,15 +30,17 @@
           alt="the logo of the website, a cute popcorn shaped like a star with two large eyes"
         />
       </a>
-      <a href="index.html">
-        <p class="navlink">home</p>
-      </a>
-      <a href="browse.html">
-        <p class="navlink">browse</p>
-      </a>
-      <a href="about-us.html">
-        <p class="navlink">about us</p>
-      </a>
+      <div id="header-links">
+        <a href="index.html">
+          <p class="navlink">home</p>
+        </a>
+        <a href="browse.html">
+          <p class="navlink">browse</p>
+        </a>
+        <a href="about-us.html">
+          <p class="navlink">about us</p>
+        </a>
+      </div>
       <section class="header-search">
         <input
           class="navitem"
@@ -58,10 +60,10 @@
 
     <main class="container">
       <section class="filter-container padding">
-        <h4 class="filter-sortby">Sort by</h4>
+        <h6 class="filter-sortby">Sort by</h6>
         <ul class="filter-list">
           <li class="filter-item">
-            <p>Title</p>
+            <p class="filter-name" >Title</p>
             <img
               id="title-arrow"
               class="down-arrow"
@@ -70,14 +72,14 @@
             />
             <div id="title-overlay" class="filter-overlay">
               <ul class="overlay-options">
-                <li>A-Z</li>
-                <li>Z-A</li>
+                <li class="filter-name">A-Z</li>
+                <li class="filter-name">Z-A</li>
               </ul>
             </div>
           </li>
 
           <li class="filter-item">
-            <p>Rating</p>
+            <p class="filter-name">Rating</p>
             <img
               id="rating-arrow"
               class="down-arrow"
@@ -87,8 +89,8 @@
 
             <div id="rating-overlay" class="filter-overlay">
               <ul class="overlay-options">
-                <li>Best</li>
-                <li>Worse</li>
+                <li class="filter-name">Highest</li>
+                <li class="filter-name">Lowest</li>
               </ul>
             </div>
           </li>
@@ -101,7 +103,15 @@
       </section>
       <div class="content" id="content"></div>
 
-      <p class="page-number">page 1 of ...</p>
+
+      <div class="pagination">
+        <button id="first-pag"><<</button>
+        <button id="previous-pag"><</button>
+        <p>Page 1 of 1</p>
+        <button id="next-pag">></button>
+        <button id="last-pag">>></button>
+      </div>
+
     </main>
 
     <footer>
