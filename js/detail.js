@@ -21,9 +21,9 @@ async function renderContent() {
   const movieId = urlParams.get("movie");
   /* console.log(movieId + 2); */
   const movie = getMovieById(Number(movieId));
-  console.log(movie);
 
   await loadMovieInfo(movie.title);
+  updateMoviesScore(movies);
 
   contentElement.innerHTML = "";
 
@@ -93,11 +93,10 @@ function createDetailInfoElement(movie, info) {
 
   const numberElement = document.createElement("p");
   numberElement.classList.add("title-number");
-  numberElement.innerText = movie.reviews + " reviews";
+  numberElement.innerText = getAllReviewsOf(movie).length + " reviews";
   scoreElement.appendChild(numberElement);
 
   infoElement.appendChild(scoreElement);
-
 
   const plotElement = document.createElement("p");
   plotElement.classList.add("plot");

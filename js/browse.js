@@ -67,6 +67,7 @@ function createMovieElement(movie) {
 
 function renderContent() {
   contentElement.innerHTML = ""; //empty everything
+  updateMoviesScore(movies);
   for (let i = (page - 1) * numberPerPage; i < page * numberPerPage; i++) {
     const movieElement = createMovieElement(movies[i]);
     contentElement.appendChild(movieElement);

@@ -5,95 +5,83 @@
       "title": "Shrek",
       "posterImg": "posters/shrek_1.webp",
       "genre": "Animation, Comedy, Adventure",
-      "score": 4.1,
-      "reviews": 1250000
+      "score": 4.1
     },
     {
       "id": 2,
       "title": "Shrek 2",
       "posterImg": "posters/shrek_2.webp",
       "genre": "Animation, Comedy, Adventure",
-      "score": 3.9,
-      "reviews": 1150000
+      "score": 3.9
     },
     {
       "id": 3,
       "title": "Everything Everywhere All at Once",
       "posterImg": "posters/everything.webp",
       "genre": "Sci-Fi, Comedy",
-      "score": 1.2,
-      "reviews": 850000
+      "score": 1.2
     },
     {
       "id": 4,
       "title": "Nosferatu",
       "posterImg": "posters/nosferatu.webp",
       "genre": "Horror, Period-Piece",
-      "score": 4.8,
-      "reviews": 2100000
+      "score": 4.8
     },
     {
       "id": 5,
       "title": "Longlegs",
       "posterImg": "posters/longlegs.webp",
       "genre": "Horror",
-      "score": 2.6,
-      "reviews": 1900000
+      "score": 2.6
     },
     {
       "id": 6,
       "title": "Barbie",
       "posterImg": "posters/barbie.webp",
       "genre": "Comedy, Adventure",
-      "score": 5.0,
-      "reviews": 2300000
+      "score": 5.0
     },
     {
       "id": 7,
       "title": "The Substance",
       "posterImg": "posters/substance.webp",
       "genre": "Horror, Body-Horror, Thriller",
-      "score": 5.0,
-      "reviews": 2300000
+      "score": 5.0
     },
     {
       "id": 8,
       "title": "Argylle",
       "posterImg": "posters/argylle.webp",
       "genre": "Spy, Action",
-      "score": 5.0,
-      "reviews": 2300000
+      "score": 5.0
     },
     {
       "id": 9,
       "title": "Little Woman",
       "posterImg": "posters/little_woman.webp",
       "genre": "Drama, Period-Piece",
-      "score": 5.0,
-      "reviews": 2300000
+      "score": 5.0
     },
     {
       "id": 10,
       "title": "Mickey 17",
       "posterImg": "posters/mickey.webp",
       "genre": "Sci-Fi, Comedy, Action",
-      "score": 5.0,
-      "reviews": 2300000
+      "score": 5.0
     },
     {
       "id": 11,
       "title": "Conclave",
       "posterImg": "posters/conclave.webp",
       "genre": "Drama",
-      "score": 5.0,
-      "reviews": 2300000
+      "score": 5.0
     },
     {
       "id": 12,
       "title": "Parasite",
       "posterImg": "posters/parasite.webp",
-      "genre": "Drama, Comedy, Thriller",
-      "reviews": 2300000
+      "genre": "Drama, Comedy, Thriller"
     }
   ]
 }
