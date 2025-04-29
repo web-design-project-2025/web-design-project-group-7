@@ -1,9 +1,18 @@
+* {
+  font-family: "changa", sans-serif;
+  --red: #9f4125;
+  --brown: #1c140e;
+  --grey: #7d6f68;
+  --sand: #cda47b;
+  --white: #f6e3cf;
+}
+
+body {
+  background-color: var(--brown);
+}
+
 .d-container {
-  padding: 1%;
   display: flex;
-  width: 100%;
-  min-height: 100vh;
-  justify-content: center;
 }
 
 .d-content {
@@ -12,9 +21,12 @@
 
 .d-movie {
   display: flex;
-  flex-direction: row;
-  background-color: #c0f16c;
-  width: 98%;
+  flex-direction: row-reverse;
+  background-color: var(--sand);
+  margin-inline: 14rem;
+  justify-content: center;
+  column-gap: 5rem;
+  grid-template-columns: 75% 25%;
 }
 
 .poster {
