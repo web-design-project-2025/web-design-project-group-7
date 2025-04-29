@@ -65,6 +65,7 @@ body {
 .filter-name {
   margin: 0;
   font-size: 10pt;
+  color: var(--brown);
 }
 /* overlays */
 

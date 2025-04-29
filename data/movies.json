@@ -4,7 +4,7 @@
       "id": 1,
       "title": "Shrek",
       "posterImg": "posters/shrek_1.webp",
-      "genre": "Animation, Comedy, Adventure",
+      "genre": "Animation, Comedy, Adventure, Show",
       "score": 4.1,
       "reviews": 1250000
     },
@@ -12,7 +12,7 @@
       "id": 2,
       "title": "Shrek 2",
       "posterImg": "posters/shrek_2.webp",
-      "genre": "Animation, Comedy, Adventure",
+      "genre": "Animation, Comedy, Adventure, Show",
       "score": 3.9,
       "reviews": 1150000
     },
@@ -20,7 +20,7 @@
       "id": 3,
       "title": "Everything Everywhere All at Once",
       "posterImg": "posters/everything.webp",
-      "genre": "Sci-Fi, Comedy",
+      "genre": "Sci-Fi, Comedy, Show",
       "score": 1.2,
       "reviews": 850000
     },
@@ -28,7 +28,7 @@
       "id": 4,
       "title": "Nosferatu",
       "posterImg": "posters/nosferatu.webp",
-      "genre": "Horror, Period-Piece",
+      "genre": "Horror, Period-Piece, Show",
       "score": 4.8,
       "reviews": 2100000
     },
@@ -36,7 +36,7 @@
       "id": 5,
       "title": "Longlegs",
       "posterImg": "posters/longlegs.webp",
-      "genre": "Horror",
+      "genre": "Horror, Show",
       "score": 2.6,
       "reviews": 1900000
     },
@@ -44,7 +44,7 @@
       "id": 6,
       "title": "Barbie",
       "posterImg": "posters/barbie.webp",
-      "genre": "Comedy, Adventure",
+      "genre": "Comedy, Adventure, Show",
       "score": 5.0,
       "reviews": 2300000
     },
@@ -52,7 +52,7 @@
       "id": 7,
       "title": "The Substance",
       "posterImg": "posters/substance.webp",
-      "genre": "Horror, Body-Horror, Thriller",
+      "genre": "Horror, Body-Horror, Thriller, Show",
       "score": 5.0,
       "reviews": 2300000
     },
@@ -60,15 +60,15 @@
       "id": 8,
       "title": "Argylle",
       "posterImg": "posters/argylle.webp",
-      "genre": "Spy, Action",
+      "genre": "Spy, Action, Show",
       "score": 5.0,
       "reviews": 2300000
     },
     {
       "id": 9,
-      "title": "Little Woman",
+      "title": "Little Women",
       "posterImg": "posters/little_woman.webp",
-      "genre": "Drama, Period-Piece",
+      "genre": "Drama, Period-Piece, Show",
       "score": 5.0,
       "reviews": 2300000
     },
@@ -76,7 +76,7 @@
       "id": 10,
       "title": "Mickey 17",
       "posterImg": "posters/mickey.webp",
-      "genre": "Sci-Fi, Comedy, Action",
+      "genre": "Sci-Fi, Comedy, Action, Show",
       "score": 5.0,
       "reviews": 2300000
     },
@@ -84,7 +84,7 @@
       "id": 11,
       "title": "Conclave",
       "posterImg": "posters/conclave.webp",
-      "genre": "Drama",
+      "genre": "Drama, Show",
       "score": 5.0,
       "reviews": 2300000
     },
@@ -92,7 +92,7 @@
       "id": 12,
       "title": "Parasite",
       "posterImg": "posters/parasite.webp",
-      "genre": "Drama, Comedy, Thriller",
+      "genre": "Drama, Comedy, Thriller, Show",
       "reviews": 2300000
     }
   ]
