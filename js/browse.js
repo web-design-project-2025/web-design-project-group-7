@@ -7,9 +7,11 @@ const firstPagElement = document.getElementById("first-pag");
 const previousPagElement = document.getElementById("previous-pag");
 const nextPagElement = document.getElementById("next-pag");
 const lastPagElement = document.getElementById("last-pag");
+const pageNumberElement = document.getElementById("page-number");
 
 function changePage(newPage) {
   page = newPage;
+
   renderContent();
   window.scrollTo({ top: 0 });
 }
@@ -69,6 +71,8 @@ function renderContent() {
     const movieElement = createMovieElement(movies[i]);
     contentElement.appendChild(movieElement);
   }
+  pageNumberElement.innerText =
+    "Page " + page + " of " + Math.ceil(movies.length / numberPerPage);
 }
 
 /* function to open rating overlays */
