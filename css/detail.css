@@ -1,10 +1,12 @@
 * {
   font-family: "changa", sans-serif;
+  color: var(--white);
   --red: #9f4125;
   --brown: #1c140e;
   --grey: #7d6f68;
   --sand: #cda47b;
   --white: #f6e3cf;
+  --gap: 2%;
 }
 
 body {
@@ -13,22 +15,168 @@ body {
 
 .d-container {
   display: flex;
+
+  width: 100%;
+  min-height: 100vh;
+  justify-content: center;
+  background-color: var(--brown);
 }
 
 .d-content {
   width: 100%;
 }
 
+/* GRADIENT ON BACKGROUND IMAGE */
+/* Most code from the following 15 lines comes from: "How to Add Gradient Overlay to Image in CSS" by ByteGrad https://www.youtube.com/watch?v=5CztcrXpfec */
+.bg-img-container {
+  width: 100%;
+  height: 15rem;
+  position: relative;
+  z-index: 0;
+}
+
+.bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.bg-gradient {
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to top, var(--brown), transparent);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
 .d-movie {
   display: flex;
-  flex-direction: row-reverse;
-  background-color: var(--sand);
-  margin-inline: 14rem;
-  justify-content: center;
-  column-gap: 5rem;
-  grid-template-columns: 75% 25%;
+
+  flex-direction: row;
+  gap: var(--gap);
+}
+
+.d-stuff {
+  width: 64%;
+  margin-inline: 18%;
+  margin-top: -5rem;
+
+  position: relative;
+  z-index: 2;
 }
 
 .poster {
-  width: 40%;
+  width: 30%;
+  height: auto;
+  align-self: flex-start;
+}
+
+h3 {
+  margin: 0;
+  width: 100%;
+}
+
+.review-header-container {
+  margin-top: 1rem;
+  padding-bottom: 5px;
+  margin-bottom: 2rem;
+  width: 100%;
+  display: flex;
+  border-bottom: solid 2px var(--sand);
+  align-items: flex-end;
+}
+
+.add-review-button {
+  width: 200px;
+  color: var(--brown);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1%;
+  gap: 0.5rem;
+  border-radius: 100px;
+  border: none;
+  background-color: var(--white);
+}
+
+.button-icon {
+  width: 1rem;
+}
+
+.list-title {
+  margin: 0;
+  font-size: 0.75rem;
+}
+
+.list-items {
+  display: flex;
+  align-items: flex-end;
+  gap: var(--gap);
+  border-top: solid 1px #f6e3cf50;
+}
+
+.ul-info {
+  padding: 0;
+}
+
+.title-stars {
+  font-size: 1.5rem;
+  padding-right: 2%;
+}
+
+.d-title {
+  margin-top: 0;
+  margin-bottom: 0.2rem;
+}
+
+.score-container {
+  display: flex;
+  align-items: center;
+  gap: 1%;
+}
+
+.title-basedOn {
+  font-weight: 100;
+}
+
+.title-number {
+  font-weight: bold;
+}
+
+.review-title-container {
+  display: flex;
+  align-items: flex-center;
+  gap: var(--gap);
+}
+
+.review-title {
+  margin: 0;
+  color: var(--white);
+  border: none;
+  font-weight: bold;
+}
+
+.review-name {
+  margin-top: 3px;
+}
+
+.small-stars {
+  margin: 0;
+}
+
+.review-text {
+  margin-bottom: 2rem;
+  border-bottom: solid 1px #f6e3cf50;
+}
+
+.transparent-white-italic {
+  font-style: italic;
+  color: #f6e3cf70;
 }
