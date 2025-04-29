@@ -96,11 +96,6 @@ function downArrowOverlay(arrowId, overlayId) {
   });
 }
 
-/*filterDramaElement.addEventListener("click", function (e) {
-  filter = "Drama";
-  renderContent();
-});*/
-
 async function filterOverlayTitles() {
   let genres = [];
   await loadData();
@@ -131,11 +126,19 @@ async function filterOverlayTitles() {
 
     filterLiElement.addEventListener("click", function (e) {
       filter = genre;
+      closeOverlay("genre-arrow", "genre-overlay");
       page = 1;
       renderContent();
     });
     filterListElement.appendChild(filterLiElement);
   }
+}
+
+function closeOverlay(arrowId, overlayId) {
+  const arrowElement = document.getElementById(arrowId);
+  const overlayElement = document.getElementById(overlayId);
+  arrowElement.style.transform = "scaleY(1)";
+  overlayElement.style.display = "none";
 }
 
 function loadBrowsePage() {
