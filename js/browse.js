@@ -14,6 +14,13 @@ const pageNumberElement = document.getElementById("page-number");
 //const filterHorrorElement = document.getElementById("filter-horror");
 const filterListElement = document.getElementById("filter-list");
 
+const sortAzElement = document.getElementById("sort-a-z");
+const sortZaElement = document.getElementById("sort-z-a");
+const sortNewElement = document.getElementById("sort-new");
+const sortOldElement = document.getElementById("sort-old");
+const sortHighElement = document.getElementById("sort-high");
+const sortLowElement = document.getElementById("sort-low");
+
 function changePage(newPage) {
   page = newPage;
 
@@ -151,6 +158,7 @@ function loadBrowsePage() {
   renderContent();
   filterOverlayTitles();
   downArrowOverlay("title-arrow", "title-overlay");
+  downArrowOverlay("posted-arrow", "posted-overlay");
   downArrowOverlay("rating-arrow", "rating-overlay");
   downArrowOverlay("genre-arrow", "genre-overlay");
 
@@ -171,6 +179,73 @@ function loadBrowsePage() {
     }
     window.scrollTo({ top: 0 });
   });
+
+  sortAzElement.addEventListener("click", function (e) {
+    movies.sort(function (a, b) {
+      return compareStrings(a.title, b.title);
+    });
+
+    closeOverlay("title-arrow", "title-overlay");
+    page = 1;
+    renderContent();
+  });
+
+  sortZaElement.addEventListener("click", function (e) {
+    movies.sort(function (a, b) {
+      return compareStrings(a.title, b.title);
+    });
+    movies.reverse();
+
+    closeOverlay("title-arrow", "title-overlay");
+    page = 1;
+    renderContent();
+  });
+
+  sortNewElement.addEventListener("click", function (e) {
+    movies.sort(function (a, b) {
+      return compareStrings(a.id, b.id);
+    });
+    movies.reverse();
+
+    closeOverlay("posted-arrow", "posted-overlay");
+    page = 1;
+    renderContent();
+  });
+
+  sortOldElement.addEventListener("click", function (e) {
+    movies.sort(function (a, b) {
+      return compareStrings(a.id, b.id);
+    });
+
+    closeOverlay("posted-arrow", "posted-overlay");
+    page = 1;
+    renderContent();
+  });
+
+  sortHighElement.addEventListener("click", function (e) {
+    movies.sort(function (a, b) {
+      return compareStrings(a.score, b.score);
+    });
+
+    closeOverlay("rating-arrow", "rating-overlay");
+    page = 1;
+    renderContent();
+  });
+
+  sortLowElement.addEventListener("click", function (e) {
+    movies.sort(function (a, b) {
+      return compareStrings(a.score, b.score);
+    });
+    movies.reverse();
+    closeOverlay("rating-arrow", "rating-overlay");
+    page = 1;
+    renderContent();
+  });
+}
+
+//the following "compareStrings(a, b)" function is from: https://stackoverflow.com/questions/19259233/sorting-json-by-specific-element-alphabetically
+function compareStrings(a, b) {
+  return a < b ? -1 : a > b ? 1 : 0;
 }
 
 loadData().then(() => {
