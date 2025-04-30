@@ -6,7 +6,7 @@
     <title>Local Loser's Movie Club</title>
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/form.css" />
-    <script src="js/main.js"></script>
+    <script src="js/form.js" defer></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -21,7 +21,6 @@
       href="https://fonts.googleapis.com/css2?family=Monofett&display=swap"
       rel="stylesheet"
     />
-
   </head>
   <body>
     <header>
@@ -33,16 +32,16 @@
         />
       </a>
       <div id="header-links">
-      <a href="index.html">
-        <p class="navlink">home</p>
-      </a>
-      <a href="browse.html">
-        <p class="navlink">browse</p>
-      </a>
-      <a href="about-us.html">
-        <p class="navlink">about us</p>
-      </a>
-    </div>
+        <a href="index.html">
+          <p class="navlink">home</p>
+        </a>
+        <a href="browse.html">
+          <p class="navlink">browse</p>
+        </a>
+        <a href="about-us.html">
+          <p class="navlink">about us</p>
+        </a>
+      </div>
       <section class="header-search">
         <input
           class="navitem"
@@ -61,26 +60,44 @@
     </header>
 
     <main>
-        <section id="content" >
-            <h1>NEW REVIEW</h1>
-            <p id="text1" >How can you let other losers know your opinion?</p>
-            <p id="text2" >Type your name, give it a score, write something quirky and submit! </p>
-            <form id="form" action="">
-                <label id="label1" for="Your name">Your name</label><br>
-                <input type="text" name="" id="textbox1" placeholder="Type here..." ><br>
-            
-                <label id="label2" for="Title for your review:">title for your review</label><br>
-                <input type="text" name="" id="textbox2" placeholder="Type here..." ><br>
+      <section id="content">
+        <h1>NEW REVIEW</h1>
+        <p id="text1">How can you let other losers know your opinion?</p>
+        <p id="text2">
+          Type your name, give it a score, write something quirky and submit!
+        </p>
+        <form id="form" action="">
+          <label id="label1" for="Your name">Your name</label><br />
+          <input
+            type="text"
+            name=""
+            id="textbox1"
+            placeholder="Type here..."
+          /><br />
 
-                <p>Score</p>
-                <p>☆☆☆☆☆</p>
+          <label id="label2" for="Title for your review:"
+            >title for your review</label
+          ><br />
+          <input
+            type="text"
+            name=""
+            id="textbox2"
+            placeholder="Type here..."
+          /><br />
 
-                <label id="label3" for="Your review:">Your review:</label><br>
-                <input type="text" name="" id="textbox3" placeholder="Type here..." > <br>
-                <button>Post Rewiev</button>
-            </form>
-            
-        </section>
+          <p>Score</p>
+          <input id="star-1" class="star" type="checkbox" />
+          <input id="star-2" class="star" type="checkbox" />
+          <input id="star-3" class="star" type="checkbox" />
+          <input id="star-4" class="star" type="checkbox" />
+          <input id="star-5" class="star" type="checkbox" /><br />
+
+          <label id="label3" for="Your review:">Your review:</label><br />
+          <input type="text" name="" id="textbox3" placeholder="Type here..." />
+          <br />
+          <button>Post Rewiev</button>
+        </form>
+      </section>
     </main>
 
     <footer>

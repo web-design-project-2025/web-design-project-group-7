@@ -8,39 +8,37 @@
   --white: #f6e3cf;
 }
 
-  body {
-    background-color: var(--brown);
-  }
+body {
+  background-color: var(--brown);
+}
 
+p {
+  font-family: "changa", sans-serif;
+  color: var(--white);
+  font-size: 16pt;
+}
 
-  p {
-    font-family: "changa", sans-serif;
-    color: var(--white);
-    font-size: 16pt;
-  }
+h1 {
+  font-family: "monofett";
+  color: #9f4125;
+  font-size: 40pt;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-top: 0%;
+  margin-bottom: 8%;
+}
 
-  h1 {
-    font-family: "monofett";
-    color: #9f4125;
-    font-size: 40pt;
-    text-transform: uppercase;
-    font-weight: 400;
-    margin-top: 0%;
-    margin-bottom: 8%;
-  }
+#text1 {
+  font-weight: bold;
+}
 
-  #text1 {
-    font-weight: bold;
-  }
-
-  #content {
-    display: flex;
-    flex-direction: column;
-    padding-top: 5%;
-    padding-left: 20%;
-    padding-right: 20%;
-
-  }
+#content {
+  display: flex;
+  flex-direction: column;
+  padding-top: 5%;
+  padding-left: 20%;
+  padding-right: 20%;
+}
 
 #textbox1 {
   border-radius: 10rem;
@@ -90,4 +88,26 @@ button {
   background-color: var(--white);
   border: 0;
   padding: 1%;
+}
+
+/* STARS SCORE */
+/* The following 15 lines or code are from: https://jsfiddle.net/binaryben/aLx3m4k5/ */
+
+.star {
+  height: 1px;
+  width: 1px;
+  visibility: hidden;
+  font-size: 30px;
+  cursor: pointer;
+  margin-inline: 3.5%;
+  color: var(--white);
+}
+.star:before {
+  content: "\2606";
+  position: absolute;
+  visibility: visible;
+}
+.star:checked:before {
+  content: "\2605";
+  position: absolute;
 }
