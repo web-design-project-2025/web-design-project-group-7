@@ -7,7 +7,6 @@ const firstPagElement = document.getElementById("first-pag");
 const previousPagElement = document.getElementById("previous-pag");
 const nextPagElement = document.getElementById("next-pag");
 const lastPagElement = document.getElementById("last-pag");
-const pageNumberElement = document.getElementById("page-number");
 
 //const filterDramaElement = document.getElementById("filter-drama");
 //const filterHorrorElement = document.getElementById("filter-horror");
@@ -17,7 +16,6 @@ let filter = "Show";
 
 function changePage(newPage) {
   page = newPage;
-
   renderContent();
   window.scrollTo({ top: 0 });
 }
@@ -81,13 +79,10 @@ function filterBy(genre, movie) {
 
 function renderContent() {
   contentElement.innerHTML = ""; //empty everything
-  updateMoviesScore(movies);
   for (let i = (page - 1) * numberPerPage; i < page * numberPerPage; i++) {
     let movie = movies[i];
     filterBy(filter, movie);
   }
-  pageNumberElement.innerText =
-    "Page " + page + " of " + Math.ceil(movies.length / numberPerPage);
 }
 
 /* function to open rating overlays */

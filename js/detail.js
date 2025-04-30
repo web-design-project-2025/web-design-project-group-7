@@ -21,9 +21,9 @@ async function renderContent() {
   const movieId = urlParams.get("movie");
   /* console.log(movieId + 2); */
   const movie = getMovieById(Number(movieId));
+  console.log(movie);
 
   await loadMovieInfo(movie.title);
-  updateMoviesScore(movies);
 
   contentElement.innerHTML = "";
 
@@ -40,15 +40,9 @@ async function renderContent() {
   detailElement.appendChild(reviewTitleElement);
 
   const movieReviews = getAllReviewsOf(movie);
-  if (movieReviews.length <= 0) {
-    const noReviewElement = document.createElement("p");
-    noReviewElement.innerText = "No reviews yet";
-    detailElement.appendChild(noReviewElement);
-  } else {
-    for (let movieReview of movieReviews) {
-      const reviewElement = createReviewElement(movieReview);
-      detailElement.appendChild(reviewElement);
-    }
+  for (let movieReview of movieReviews) {
+    const reviewElement = createReviewElement(movieReview);
+    detailElement.appendChild(reviewElement);
   }
 
   contentElement.appendChild(detailElement);
@@ -99,10 +93,11 @@ function createDetailInfoElement(movie, info) {
 
   const numberElement = document.createElement("p");
   numberElement.classList.add("title-number");
-  numberElement.innerText = getAllReviewsOf(movie).length + " reviews";
+  numberElement.innerText = movie.reviews + " reviews";
   scoreElement.appendChild(numberElement);
 
   infoElement.appendChild(scoreElement);
+
 
   const plotElement = document.createElement("p");
   plotElement.classList.add("plot");

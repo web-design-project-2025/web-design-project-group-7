@@ -6,7 +6,7 @@
       "userId": 2,
       "title": "title title title",
       "text": "A hilarious and heartwarming fairy tale with unforgettable characters.",
-      "score": 3,
+      "score": 2,
       "likes": 320,
       "likedByUser": true
     },
@@ -66,7 +66,7 @@
       "userId": 4,
       "title": "title title title",
       "text": "A childhood classic that never gets old.",
-      "score": 5,
+      "score": 2,
       "likes": 300,
       "likedByUser": false
     },
