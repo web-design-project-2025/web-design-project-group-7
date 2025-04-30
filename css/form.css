@@ -1,0 +1,33 @@
+* {
+    --wide: 95%;
+  
+    --red: #9f4125;
+    --brown: #1c140e;
+    --grey: #7d6f68;
+    --sand: #cda47b;
+    --white: #f6e3cf;
+  }
+
+  body {
+    background-color: var(--brown);
+  }
+
+  p {
+    color: var(--white);
+    font-size: 400;
+  }
+
+  h1 {
+    color: var(--red);
+    font-weight: 20;
+  }
+
+  #content {
+    padding-left: 20%;
+    padding-right: 20%;
+  }
+
+  #form {
+
+  }
+
