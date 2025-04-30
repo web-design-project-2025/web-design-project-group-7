@@ -16,7 +16,6 @@
   p {
     font-family: "changa", sans-serif;
     color: var(--white);
-    font-size: 16pt;
   }
 
   h1 {
@@ -85,7 +84,7 @@
   font-size: 14pt;
 }
 
-button {
+#post-review-button {
   border-radius: 10rem;
   background-color: var(--white);
   border: 0;
