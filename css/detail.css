@@ -139,7 +139,7 @@ h3 {
 .score-container {
   display: flex;
   align-items: center;
-  gap: 1%;
+  gap: 0.3rem;
 }
 
 .title-basedOn {
@@ -179,4 +179,53 @@ h3 {
 .transparent-white-italic {
   font-style: italic;
   color: #f6e3cf70;
+}
+
+@media screen and (max-width: 750px) {
+  .d-movie {
+    flex-direction: column;
+  }
+  .score-container {
+    display: block;
+  }
+  .title-number {
+    display: inline;
+    margin-left: 0.3rem;
+  }
+  .title-basedOn {
+    display: inline;
+  }
+  .title-stars {
+    margin-top: 0;
+  }
+  .d-stuff {
+    width: 84%;
+    margin-inline: 8%;
+    margin-top: -5rem;
+
+    position: relative;
+    z-index: 2;
+  }
+}
+@media screen and (max-width: 450px) {
+  .review-title-container {
+    display: block;
+  }
+}
+@media screen and (max-width: 390px) {
+  .list-items {
+    align-items: flex-start;
+  }
+  .list-description {
+    margin-top: 0;
+  }
+}
+@media screen and (max-width: 300px) {
+  .review-header-container {
+    display: block;
+    border-bottom: none;
+  }
+  .add-review-button {
+    width: 150px;
+  }
 }
