@@ -56,4 +56,27 @@ function starScore(value) {
   return stars;
 }
 
+let shrek = {
+  id: 1,
+  title: "Shrek",
+  posterImg: "posters/shrek_1.webp",
+  genre: "Animation, Comedy, Adventure",
+  score: 4.1,
+};
+
+function calculateScore(movie) {
+  let reviews = getAllReviewsOf(movie);
+  let totalScore = 0;
+  for (let review of reviews) {
+    totalScore = totalScore + review.score;
+  }
+  return totalScore / reviews.length;
+}
+
+function updateMoviesScore(movies) {
+  for (let movie of movies) {
+    movie.score = calculateScore(movie);
+  }
+}
+
 loadData();
