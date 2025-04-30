@@ -9,6 +9,12 @@ const nextPagElement = document.getElementById("next-pag");
 const lastPagElement = document.getElementById("last-pag");
 const pageNumberElement = document.getElementById("page-number");
 
+//const filterDramaElement = document.getElementById("filter-drama");
+//const filterHorrorElement = document.getElementById("filter-horror");
+const filterListElement = document.getElementById("filter-list");
+
+let filter = "Show";
+
 function changePage(newPage) {
   page = newPage;
 
@@ -65,12 +71,20 @@ function createMovieElement(movie) {
   return movieLinkElement;
 }
 
+function filterBy(genre, movie) {
+  let filterGenere = movie.genre;
+  if (filterGenere.includes(genre)) {
+    const movieElement = createMovieElement(movie);
+    contentElement.appendChild(movieElement);
+  }
+}
+
 function renderContent() {
   contentElement.innerHTML = ""; //empty everything
   updateMoviesScore(movies);
   for (let i = (page - 1) * numberPerPage; i < page * numberPerPage; i++) {
-    const movieElement = createMovieElement(movies[i]);
-    contentElement.appendChild(movieElement);
+    let movie = movies[i];
+    filterBy(filter, movie);
   }
   pageNumberElement.innerText =
     "Page " + page + " of " + Math.ceil(movies.length / numberPerPage);
@@ -103,5 +117,44 @@ function downArrowOverlay(arrowId, overlayId) {
   });
 }
 
+/*filterDramaElement.addEventListener("click", function (e) {
+  filter = "Drama";
+  renderContent();
+});*/
 downArrowOverlay("title-arrow", "title-overlay");
 downArrowOverlay("rating-arrow", "rating-overlay");
+downArrowOverlay("genre-arrow", "genre-overlay");
+
+function filterOverlayTitles() {
+  let genres = [];
+  for (let movie of movies) {
+    let nowGenre = movie.genre;
+    const genreArray = nowGenre.split(" ");
+    //console.log(genreArray);
+
+    for (let i = 0; i < genreArray.length; i++) {
+      if (genres.includes(genreArray[i]) === false) {
+        genres.push(genreArray[i]);
+      }
+    }
+  }
+  genres.sort();
+  let showInd = genres.indexOf("Show");
+  genres.splice(showInd, 1);
+  genres.unshift("Show");
+  // console.log(genres);
+
+  for (let genre of genres) {
+    const filterLiElement = document.createElement("li");
+    filterLiElement.classList.add("filter-name");
+    filterLiElement.innerText = genre;
+
+    filterListElement.addEventListener("click", function (e) {
+      filter = genre;
+      renderContent();
+    });
+    filterListElement.appendChild(filterLiElement);
+  }
+}
+
+filterOverlayTitles();
