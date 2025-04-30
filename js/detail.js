@@ -40,9 +40,15 @@ async function renderContent() {
   detailElement.appendChild(reviewTitleElement);
 
   const movieReviews = getAllReviewsOf(movie);
-  for (let movieReview of movieReviews) {
-    const reviewElement = createReviewElement(movieReview);
-    detailElement.appendChild(reviewElement);
+  if (movieReviews.length <= 0) {
+    const noReviewElement = document.createElement("p");
+    noReviewElement.innerText = "No reviews yet";
+    detailElement.appendChild(noReviewElement);
+  } else {
+    for (let movieReview of movieReviews) {
+      const reviewElement = createReviewElement(movieReview);
+      detailElement.appendChild(reviewElement);
+    }
   }
 
   contentElement.appendChild(detailElement);
