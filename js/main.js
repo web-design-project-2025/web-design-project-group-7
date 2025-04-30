@@ -73,7 +73,12 @@ function calculateScore(movie) {
   for (let review of reviews) {
     totalScore = totalScore + review.score;
   }
-  return totalScore / reviews.length;
+  if (reviews.length === 0) {
+    totalScore = 0;
+  } else {
+    totalScore = totalScore / reviews.length;
+  }
+  return totalScore;
 }
 
 function updateMoviesScore(movies) {
@@ -87,3 +92,4 @@ function updateMoviesScore(movies) {
 }); */
 
 loadData();
+updateMoviesScore(movies);

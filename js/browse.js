@@ -3,6 +3,7 @@ const contentElement = document.getElementById("content");
 let page = 1;
 const numberPerPage = 12;
 let filter = "Show All";
+let searchValue = "";
 
 const firstPagElement = document.getElementById("first-pag");
 const previousPagElement = document.getElementById("previous-pag");
@@ -71,6 +72,19 @@ function renderContent() {
   contentElement.innerHTML = ""; //empty everything
 
   updateMoviesScore(movies);
+  if (searchValue !== "") {
+    movies = searchTitle(movies, searchValue);
+    const filtersContainerElement =
+      document.getElementById("filters-container");
+    const resultTitleElement = document.getElementById(
+      "result-title-container"
+    );
+    filtersContainerElement.style.display = "none";
+
+    const resultsElement = document.createElement("p");
+    resultsElement.innerText = "Showing results for: '" + searchValue + "'";
+    resultTitleElement.appendChild(resultsElement);
+  }
   for (let i = (page - 1) * numberPerPage; i < page * numberPerPage; i++) {
     let movie = movies[i];
     filterBy(filter, movie);
@@ -166,9 +180,10 @@ function searchTitle(movies, text) {
 }
 
 function loadBrowsePage() {
+  updateMoviesScore(movies);
+  console.log(updateMoviesScore(movies));
   renderContent();
   filterOverlayTitles();
-  console.log(searchTitle(movies, "a"));
   downArrowOverlay("title-arrow", "title-overlay");
   downArrowOverlay("posted-arrow", "posted-overlay");
   downArrowOverlay("rating-arrow", "rating-overlay");
@@ -215,9 +230,8 @@ function loadBrowsePage() {
 
   sortNewElement.addEventListener("click", function (e) {
     movies.sort(function (a, b) {
-      return compareStrings(a.id, b.id);
+      return b.id - a.id;
     });
-    movies.reverse();
 
     closeOverlay("posted-arrow", "posted-overlay");
     page = 1;
@@ -226,7 +240,7 @@ function loadBrowsePage() {
 
   sortOldElement.addEventListener("click", function (e) {
     movies.sort(function (a, b) {
-      return compareStrings(a.id, b.id);
+      return a.id - b.id;
     });
 
     closeOverlay("posted-arrow", "posted-overlay");
@@ -235,20 +249,21 @@ function loadBrowsePage() {
   });
 
   sortHighElement.addEventListener("click", function (e) {
+    //updateMoviesScore(movies);
     movies.sort(function (a, b) {
-      return compareStrings(a.score, b.score);
+      return b.score - a.score;
     });
-
     closeOverlay("rating-arrow", "rating-overlay");
     page = 1;
     renderContent();
   });
 
   sortLowElement.addEventListener("click", function (e) {
+    //updateMoviesScore(movies);
     movies.sort(function (a, b) {
-      return compareStrings(a.score, b.score);
+      return a.score - b.score;
     });
-    movies.reverse();
+
     closeOverlay("rating-arrow", "rating-overlay");
     page = 1;
     renderContent();

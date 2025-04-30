@@ -5,84 +5,84 @@
       "title": "Shrek",
       "posterImg": "posters/shrek_1.webp",
       "genre": "Animation, Comedy, Adventure, Show All",
-      "score": 4.1
+      "score": 0
     },
     {
       "id": 2,
       "title": "Shrek 2",
       "posterImg": "posters/shrek_2.webp",
       "genre": "Animation, Comedy, Adventure, Show All",
-      "score": 3.9
+      "score": 0
     },
     {
       "id": 3,
       "title": "Everything Everywhere All at Once",
       "posterImg": "posters/everything.webp",
       "genre": "Sci-Fi, Comedy, Show All",
-      "score": 1.2
+      "score": 0
     },
     {
       "id": 4,
       "title": "Nosferatu",
       "posterImg": "posters/nosferatu.webp",
       "genre": "Horror, Period-Piece, Show All",
-      "score": 4.8
+      "score": 0
     },
     {
       "id": 5,
       "title": "Longlegs",
       "posterImg": "posters/longlegs.webp",
       "genre": "Horror, Show All",
-      "score": 2.6
+      "score": 0
     },
     {
       "id": 6,
       "title": "Barbie",
       "posterImg": "posters/barbie.webp",
       "genre": "Comedy, Adventure, Show All",
-      "score": 5.0
+      "score": 0
     },
     {
       "id": 7,
       "title": "The Substance",
       "posterImg": "posters/substance.webp",
       "genre": "Horror, Body-Horror, Thriller, Show All",
-      "score": 5.0
+      "score": 0
     },
     {
       "id": 8,
       "title": "Argylle",
       "posterImg": "posters/argylle.webp",
       "genre": "Spy, Action, Show All",
-      "score": 5.0
+      "score": 0
     },
     {
       "id": 9,
       "title": "Little Women",
       "posterImg": "posters/little_woman.webp",
       "genre": "Drama, Period-Piece, Show All",
-      "score": 5.0
+      "score": 0
     },
     {
       "id": 10,
       "title": "Mickey 17",
       "posterImg": "posters/mickey.webp",
       "genre": "Sci-Fi, Comedy, Action, Show All",
-      "score": 5.0
+      "score": 0
     },
     {
       "id": 11,
       "title": "Conclave",
       "posterImg": "posters/conclave.webp",
       "genre": "Drama, Show All",
-      "score": 5.0
+      "score": 0
     },
     {
       "id": 12,
       "title": "Parasite",
       "posterImg": "posters/parasite.webp",
       "genre": "Drama, Comedy, Thriller, Show All",
-      "score": 5.0
+      "score": 0
     }
   ]
 }
