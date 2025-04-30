@@ -3,39 +3,33 @@
     {
       "id": 1,
       "movieId": 1,
-      "userId": 2,
-      "title": "title title title",
-      "text": "A hilarious and heartwarming fairy tale with unforgettable characters.",
-      "score": 2,
-      "likes": 320,
-      "likedByUser": true
+      "name": "nr 1 shrek fan",
+      "title": "Best movie ever!!!",
+      "text": "Its funny, stupid and gross. I love it!",
+      "score": 5
     },
     {
       "id": 2,
-      "movieId": 2,
-      "userId": 4,
-      "title": "title title title",
-      "text": "Shrek 2 is even funnier and more charming than the first. Loved Puss in Boots!",
-      "score": 4,
-      "likes": 280,
-      "likedByUser": false
+      "movieId": 1,
+      "name": "Slimy Jim",
+      "title": "Fun for kids and adults!",
+      "text": "The jokes for adults that go over the kids heads make this a great movie for the entire family, so long as your kids don't ask you why you're laughing.",
+      "score": 4
     },
     {
       "id": 3,
-      "movieId": 3,
-      "userId": 3,
-      "title": "title title title",
-      "text": "Not as strong as the first two, but still a fun adventure.",
-      "score": 3,
-      "likes": 150,
-      "likedByUser": false
+      "movieId": 2,
+      "name": "Hedvig",
+      "title": "I own several Shrek shirts because of this movie",
+      "text": "What the title said",
+      "score": 5
     },
     {
       "id": 4,
-      "movieId": 4,
-      "userId": 1,
-      "title": "title title title",
-      "text": "Inception is a mind-bending masterpiece that keeps you thinking for days.",
+      "movieId": 2,
+      "name": "Slimy Jim",
+      "title": "This one is somehow better than the first one",
+      "text": "If you thought the fisrt Shrek movie was good, you have not seen the second. Its funnier, wilder and somehow more innapropriate than the first.",
       "score": 5,
       "likes": 540,
       "likedByUser": true
@@ -43,62 +37,50 @@
     {
       "id": 5,
       "movieId": 5,
-      "userId": 2,
-      "title": "title title title",
-      "text": "Interstellar is an emotional and visually stunning space epic.",
-      "score": 5,
-      "likes": 490,
-      "likedByUser": false
+      "name": "Hedvig",
+      "title": "Writing this at 3 am",
+      "text": "Is it the best movie ive seen? No. Will i be able to sleep tonight? No.",
+      "score": 3
     },
     {
       "id": 6,
-      "movieId": 6,
-      "userId": 3,
-      "title": "title title title",
-      "text": "One of the greatest superhero movies of all time!",
-      "score": 5,
-      "likes": 610,
-      "likedByUser": true
+      "movieId": 5,
+      "name": "Slimy Jim",
+      "title": "Nicolas Cage was in this movie?",
+      "text": "The SFX team made Cage look unrecogniceable and his amazing performance only made it better! A must if you like horror.",
+      "score": 4
     },
     {
       "id": 7,
       "movieId": 1,
-      "userId": 4,
-      "title": "title title title",
-      "text": "A childhood classic that never gets old.",
-      "score": 2,
-      "likes": 300,
-      "likedByUser": false
+      "name": "jessica",
+      "title": "Funny",
+      "text": "A classic, I think the donkey is annoying but i like the rest. I hope he isn't in the sequel.",
+      "score": 3
     },
     {
       "id": 8,
       "movieId": 2,
-      "userId": 1,
-      "title": "title title title",
-      "text": "The humor and action make this a perfect family film.",
-      "score": 1,
-      "likes": 275,
-      "likedByUser": true
+      "name": "nr 1 shrek fan",
+      "title": "I changed my mind, this one is the best movie ever",
+      "text": "Its funnier, stupider and grosser than the first one! A masterpiece!",
+      "score": 5
     },
     {
       "id": 9,
       "movieId": 4,
-      "userId": 3,
-      "title": "title title title",
-      "text": "Christopher Nolan at his best! A film that challenges perception.",
-      "score": 5,
-      "likes": 520,
-      "likedByUser": false
+      "name": "jessica",
+      "title": "oooo Spooky",
+      "text": "I understand why people say they're dissapointed but i don't agree, Lilly-Rose Depp plays Ellen imaculately and nothing could make me dislike Bill Skarsgårds count Orlok. ",
+      "score": 4
     },
     {
       "id": 10,
-      "movieId": 6,
-      "userId": 2,
-      "title": "title title title",
-      "text": "Heath Ledger's Joker is legendary. A dark and gripping story.",
-      "score": 4,
-      "likes": 590,
-      "likedByUser": true
+      "movieId": 4,
+      "name": "Benny",
+      "title": "I'm dissapionted",
+      "text": "There's only one kind of movie thats worse than a bad one; a mediocre one.",
+      "score": 2
     }
   ]
 }
