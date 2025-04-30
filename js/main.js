@@ -2,6 +2,9 @@ let movies = [];
 let reviews = [];
 let users = [];
 
+const searchBarElement = document.getElementById("searchbar");
+const searchButtonElement = document.getElementById("searchbutton");
+
 async function loadData() {
   const movieResponse = await fetch("data/movies.json");
   const movieJSON = await movieResponse.json();
@@ -78,5 +81,9 @@ function updateMoviesScore(movies) {
     movie.score = calculateScore(movie);
   }
 }
+
+/* searchButtonElement.addEventListener("click", function (e) {
+  searchButtonElement.style.backgroundColor("#ff0000");
+}); */
 
 loadData();

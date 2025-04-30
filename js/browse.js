@@ -154,9 +154,21 @@ function closeOverlay(arrowId, overlayId) {
   overlayElement.style.display = "none";
 }
 
+function searchTitle(movies, text) {
+  let searchResults = [];
+  for (let movie of movies) {
+    const title = movie.title.toLowerCase();
+    if (title.includes(text)) {
+      searchResults.push(movie);
+    }
+  }
+  return searchResults;
+}
+
 function loadBrowsePage() {
   renderContent();
   filterOverlayTitles();
+  console.log(searchTitle(movies, "a"));
   downArrowOverlay("title-arrow", "title-overlay");
   downArrowOverlay("posted-arrow", "posted-overlay");
   downArrowOverlay("rating-arrow", "rating-overlay");
