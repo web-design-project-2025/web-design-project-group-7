@@ -15,7 +15,9 @@ async function loadData() {
   const userJSON = await userResponse.json();
   users = userJSON.users;
 
-  renderContent();
+  //renderContent();
+
+  return true;
 }
 
 function getMovieById(id) {

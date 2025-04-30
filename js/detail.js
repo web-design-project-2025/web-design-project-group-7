@@ -194,3 +194,7 @@ function createInfoListElement(keyword, info) {
 
   return itemElement;
 }
+
+loadData().then(() => {
+  renderContent();
+});
