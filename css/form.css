@@ -40,7 +40,7 @@ h1 {
   padding-right: 20%;
 }
 
-#textbox1 {
+.textbox {
   border-radius: 10rem;
   background-color: var(--white);
   border: 0;
@@ -48,36 +48,16 @@ h1 {
   padding: 1%;
 }
 
-#textbox2 {
-  border-radius: 10rem;
-  background-color: var(--white);
-  border: 0;
-  width: 50%;
-  padding: 1%;
-}
-
-#textbox3 {
-  border-radius: 2rem;
+#review-text-area {
+  border-radius: 1.5rem;
   background-color: var(--white);
   border: 0;
   width: 100%;
-  height: 40%;
-  padding: 5%;
+  height: 20vh;
+  padding: 2%;
 }
 
-#label1 {
-  font-family: "changa", sans-serif;
-  color: var(--white);
-  font-size: 14pt;
-}
-
-#label2 {
-  font-family: "changa", sans-serif;
-  color: var(--white);
-  font-size: 14pt;
-}
-
-#label3 {
+.label {
   font-family: "changa", sans-serif;
   color: var(--white);
   font-size: 14pt;
@@ -90,6 +70,11 @@ button {
   padding: 1%;
 }
 
+#form-score-stars {
+  margin-top: -2rem;
+  margin-left: -1rem;
+}
+
 /* STARS SCORE */
 /* The following 15 lines or code are from: https://jsfiddle.net/binaryben/aLx3m4k5/ */
 
@@ -97,9 +82,11 @@ button {
   height: 1px;
   width: 1px;
   visibility: hidden;
-  font-size: 30px;
+  font-size: 2rem;
   cursor: pointer;
-  margin-inline: 3.5%;
+  margin: 0;
+  margin-inline: 1rem;
+
   color: var(--white);
 }
 .star:before {

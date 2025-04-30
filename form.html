@@ -67,33 +67,46 @@
           Type your name, give it a score, write something quirky and submit!
         </p>
         <form id="form" action="">
-          <label id="label1" for="Your name">Your name</label><br />
+          <label class="label" for="review-name">Your name</label><br />
           <input
+            class="textbox"
             type="text"
             name=""
-            id="textbox1"
+            id="review-name"
             placeholder="Type here..."
           /><br />
 
-          <label id="label2" for="Title for your review:"
-            >title for your review</label
+          <label class="label" for="review-title">Title for your review</label
           ><br />
           <input
+            class="textbox"
             type="text"
             name=""
-            id="textbox2"
+            id="review-title"
             placeholder="Type here..."
           /><br />
 
-          <p>Score</p>
-          <input id="star-1" class="star" type="checkbox" />
-          <input id="star-2" class="star" type="checkbox" />
-          <input id="star-3" class="star" type="checkbox" />
-          <input id="star-4" class="star" type="checkbox" />
-          <input id="star-5" class="star" type="checkbox" /><br />
+          <label
+            id="score-label"
+            class="label"
+            for="star-1 star-2 star-3 star-4 star-5"
+            >Score</label
+          >
+          <div id="form-score-stars">
+            <input id="star-1" class="star" type="checkbox" />
+            <input id="star-2" class="star" type="checkbox" />
+            <input id="star-3" class="star" type="checkbox" />
+            <input id="star-4" class="star" type="checkbox" />
+            <input id="star-5" class="star" type="checkbox" />
+          </div>
+          <br />
 
-          <label id="label3" for="Your review:">Your review:</label><br />
-          <input type="text" name="" id="textbox3" placeholder="Type here..." />
+          <label class="label" for="review-text-area">Your review:</label><br />
+          <textarea
+            name="review-text-area"
+            id="review-text-area"
+            placeholder="Type here..."
+          ></textarea>
           <br />
           <button>Post Rewiev</button>
         </form>
