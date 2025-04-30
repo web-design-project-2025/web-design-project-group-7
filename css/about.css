@@ -10,6 +10,7 @@ body {
 p {
     color: var(--white);
 }
+
 * {
     font-family: "changa", sans-serif;
     --red: #9f4125;
@@ -20,18 +21,25 @@ p {
   }
 
 
-  h1 {
+h1 {
     color: var(--red);
     padding-left: 20%;
     font-weight: 400;
   }
+
 #text1 {
     padding-left: 20%;
     padding-right: 10%;
 }
 
 #text2 {
-    padding-left: 10%;
+    padding-right: 5%;
+    padding-bottom: 10%;
+}
+
+#text3 {
+    padding-left: 5%;
+    padding-bottom: 10%;
 }
 
 #aboutus {
@@ -42,5 +50,9 @@ p {
 }
 
 #polaroid {
+    padding-top: 20%;
     width: 90%;
+    padding-left: 20%;
+    rotate: 10deg;
 }
+
