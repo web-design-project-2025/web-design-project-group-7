@@ -81,6 +81,126 @@
       "title": "I'm dissapionted",
       "text": "There's only one kind of movie thats worse than a bad one; a mediocre one.",
       "score": 2
+    },
+    {
+      "id": 11,
+      "movieId": 3,
+      "name": "jessica",
+      "title": "Very good",
+      "text": "Im not surprised this movie won A oscar but All of them? Sure.",
+      "score": 4
+    },
+    {
+      "id": 12,
+      "movieId": 3,
+      "name": "Hedvig",
+      "title": "I watched it at leat 4 times",
+      "text": "Fantastic Spectacular give me 14 more",
+      "score": 5
+    },
+    {
+      "id": 14,
+      "movieId": 5,
+      "name": "Benny",
+      "title": "Im now scared of nicholas cage living in my basement",
+      "text": "A solid 3 from me, a good scary movie but not anything special",
+      "score": 3
+    },
+    {
+      "id": 15,
+      "movieId": 6,
+      "name": "Geek Barbie",
+      "title": "I owe Greta Gerwig my life",
+      "text": ":O",
+      "score": 5
+    },
+    {
+      "id": 16,
+      "movieId": 6,
+      "name": "Slimy Jim",
+      "title": "I think i need a pink cowboy hat",
+      "text": "I want to buy a pink house and a pink car and a pink fridge",
+      "score": 5
+    },
+    {
+      "id": 17,
+      "movieId": 7,
+      "name": "Hedvig",
+      "title": "I have no idea what I just watched",
+      "text": "I think I need a week to process what I just watched, but yeah you should see it if you like body horror.",
+      "score": 3
+    },
+    {
+      "id": 18,
+      "movieId": 7,
+      "name": "nr 1 shrek fan",
+      "title": "I wish I hadn't watched this movie",
+      "text": "I kind of wanted to puke after watching this, I need to watch Shrek 2 as a palete cleanser",
+      "score": 1
+    },
+    {
+      "id": 19,
+      "movieId": 8,
+      "name": "Benny",
+      "title": "Worste movie I've seen in a while",
+      "text": "It's just boring and bad, not worth the time and OH ITS 2,5 HOURS LONG",
+      "score": 1
+    },
+    {
+      "id": 20,
+      "movieId": 9,
+      "name": "Hedvig",
+      "title": "Women :( ",
+      "text": "Beautifully acted, written, directed, and the costumes?? Fantastic!",
+      "score": 4
+    },
+    {
+      "id": 21,
+      "movieId": 9,
+      "name": "jessica",
+      "title": "A very good adaptation of the book",
+      "text": "A must watch if you like the book",
+      "score": 4
+    },
+    {
+      "id": 22,
+      "movieId": 10,
+      "name": "Slimy Jim",
+      "title": "Hey... What?",
+      "text": "The fisrt half was a 4, the second a 2. I don't know what else to say. But let Robert Pattinson play more weird guys, ho does it so well! ",
+      "score": 3
+    },
+    {
+      "id": 23,
+      "movieId": 11,
+      "name": "Benny",
+      "title": "The pope died a day after I watched this... Should I be worried?",
+      "text": "It's a very well directed and acted movie, much more tense than I expected.",
+      "score": 4
+    },
+    {
+      "id": 24,
+      "movieId": 12,
+      "name": "Benny",
+      "title": "Probably the best movie I've seen",
+      "text": "You spend the whole movie sitting on the edge of your seat, never knowing whats going to happen next. Fantastic acting and directing. 5 stars!",
+      "score": 5
+    },
+    {
+      "id": 25,
+      "movieId": 12,
+      "name": "Slimy Jim",
+      "title": "The subtitles are DEFINITELY worth it",
+      "text": "Bong Joon-ho can do no wrong, his oscars speech was incredible",
+      "score": 5
+    },
+    {
+      "id": 26,
+      "movieId": 12,
+      "name": "Hedvig",
+      "title": "I love watching insane people do insane people thing",
+      "text": "Put your hand up if you did NOT expect a man living in the basement",
+      "score": 5
     }
   ]
 }
