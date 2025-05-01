@@ -36,9 +36,9 @@ header {
   background-color: var(--red);
   width: 100%;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-content: center;
-  column-gap: 10%;
+  column-gap: 8%;
 }
 
 #header-links {
