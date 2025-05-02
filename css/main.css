@@ -43,8 +43,9 @@ header {
 
 #header-links {
   display: flex;
-  width: 20%;
-  column-gap: 5%;
+  width: 40%;
+  column-gap: 10%;
+  justify-content: center;
 }
 
 #logo {
@@ -74,7 +75,7 @@ header {
   border-style: none;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
-  width: 20rem;
+  width: 20vw;
 }
 
 #searchbutton {
@@ -88,6 +89,15 @@ header {
 
 #searchlogo {
   width: 0.8rem;
+}
+
+/* RESPONSIVE HEADER */
+
+@media only screen and (min-width: 850px) {
+  #header-links {
+    justify-content: left;
+    width: 30%;
+  }
 }
 
 a {

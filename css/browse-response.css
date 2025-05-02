@@ -1,17 +1,17 @@
+/* WIDE SCREEN */
 @media only screen and (min-width: 850px) {
   .content {
     grid-template-columns: repeat(4, 1fr);
   }
 }
 
-@media only screen and (max-width: 600px) {
+/* (medium screen is in browse.css) */
+
+/* TINY SCREEN */
+@media only screen and (max-width: 452px) {
   .content {
     grid-template-columns: repeat(1, 1fr);
-    margin-inline: 18vw;
-  }
-
-  .movie {
-    width: 80%;
+    margin-inline: 30vw;
   }
 
   .filter-container {
