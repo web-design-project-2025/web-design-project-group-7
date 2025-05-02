@@ -24,7 +24,6 @@ const sortLowElement = document.getElementById("sort-low");
 
 function changePage(newPage) {
   page = newPage;
-
   renderContent();
   window.scrollTo({ top: 0 });
 }
