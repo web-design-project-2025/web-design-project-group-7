@@ -2,8 +2,15 @@ let movies = [];
 let reviews = [];
 let users = [];
 
+
 const contentElement = document.getElementById("content");
 const homepageElement = document.getElementById("homepage3-poster");
+
+let searchValue = "";
+
+const searchBarElement = document.getElementById("searchbar");
+const searchButtonElement = document.getElementById("searchbutton");
+
 
 async function loadData() {
   const movieResponse = await fetch("data/movies.json");
@@ -18,8 +25,8 @@ async function loadData() {
   const userJSON = await userResponse.json();
   users = userJSON.users;
 
- // renderContent();
-  homepage();
+  return true;
+
 }
 
 function getMovieById(id) {
@@ -38,6 +45,16 @@ function getReviewByMovie(movie) {
   return reviews.find((review) => review.movieId === movie.id);
 }
 
+function getAllReviewsOf(movie) {
+  let movieReviews = [];
+  for (let review of reviews) {
+    if (review.movieId === movie.id) {
+      movieReviews.push(review);
+    }
+  }
+  return movieReviews;
+}
+
 function starScore(value) {
   let stars = ["☆", "☆", "☆", "☆", "☆"];
   let score = Math.round(value);
@@ -48,44 +65,34 @@ function starScore(value) {
   return stars;
 }
 
-function createMovieElement(movie) {
-  const movieLinkElement = document.createElement("a");
-  movieLinkElement.classList.add("link");
+let shrek = {
+  id: 1,
+  title: "Shrek",
+  posterImg: "posters/shrek_1.webp",
+  genre: "Animation, Comedy, Adventure",
+  score: 4.1,
+};
 
-  const movieElement = document.createElement("article");
-  movieElement.classList.add("movie");
-  movieLinkElement.appendChild(movieElement);
-
-  const imageElement = document.createElement("img");
-  imageElement.classList.add("padding");
-  imageElement.src = movie.posterImg;
-  movieElement.appendChild(imageElement);
-
-  const infoElement = document.createElement("div");
-  infoElement.classList.add("padding", "info");
-  movieElement.appendChild(infoElement);
-
-  const titleElement = document.createElement("h4");
-  titleElement.classList.add("text");
-  titleElement.innerText = movie.title;
-  infoElement.appendChild(titleElement);
-
-  const scoreElement = document.createElement("p");
-  scoreElement.classList.add("text");
-  scoreElement.innerText = starScore(movie.score).join(" ");
-  infoElement.appendChild(scoreElement);
-
-  return movieLinkElement;
+function calculateScore(movie) {
+  let reviews = getAllReviewsOf(movie);
+  let totalScore = 0;
+  for (let review of reviews) {
+    totalScore = totalScore + review.score;
+  }
+  if (reviews.length === 0) {
+    totalScore = 0;
+  } else {
+    totalScore = totalScore / reviews.length;
+  }
+  return totalScore;
 }
 
-function renderContent() {
-  contentElement.innerHTML = ""; //empty everything
-
+function updateMoviesScore(movies) {
   for (let movie of movies) {
-    const movieElement = createMovieElement(movie);
-    contentElement.appendChild(movieElement);
+    movie.score = calculateScore(movie);
   }
 }
+
 
 function homepage () {
   const lastReviews = getLastReviews(3);
@@ -138,4 +145,20 @@ function getLastReviews(n) {
   return lastReviews;
 }
 
+searchBarElement.addEventListener("change", function (e) {
+  console.log(searchBarElement.value);
+  searchValue = this.value;
+  e.preventDefault();
+  window.location.href = `browse.html?value=${searchValue}`;
+});
+
+searchButtonElement.addEventListener("click", function (e) {
+  console.log(searchBarElement.value);
+  searchValue = searchBarElement.value;
+  e.preventDefault();
+  window.location.href = `browse.html?value=${searchValue}`;
+});
+
+
 loadData();
+updateMoviesScore(movies);

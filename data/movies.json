@@ -3,68 +3,86 @@
     {
       "id": 1,
       "title": "Shrek",
-      "posterImg": "img/SHREK.png",
-      "genre": "Animation, Comedy, Adventure",
-      "score": 4.1,
-      "tag": "Fairy Tale, Comedy",
-      "release": 2001,
-      "reviews": 1250000,
-      "reviewedByUser": false
+      "posterImg": "posters/shrek_1.webp",
+      "genre": "Animation, Comedy, Adventure, Show All",
+      "score": 0
     },
     {
       "id": 2,
       "title": "Shrek 2",
-      "posterImg": "img/SHREK_2.png",
-      "genre": "Animation, Comedy, Adventure",
-      "score": 3.9,
-      "tag": "Sequel, Fairy Tale",
-      "release": 2004,
-      "reviews": 1150000,
-      "reviewedByUser": false
+      "posterImg": "posters/shrek_2.webp",
+      "genre": "Animation, Comedy, Adventure, Show All",
+      "score": 0
     },
     {
       "id": 3,
-      "title": "Shrek the Third",
-      "posterImg": "img/SHREK_3.png",
-      "genre": "Animation, Comedy, Fantasy",
-      "score": 1.2,
-      "tag": "Fantasy, Sequel",
-      "release": 2007,
-      "reviews": 850000,
-      "reviewedByUser": false
+      "title": "Everything Everywhere All at Once",
+      "posterImg": "posters/everything.webp",
+      "genre": "Sci-Fi, Comedy, Show All",
+      "score": 0
     },
     {
       "id": 4,
-      "title": "Inception",
-      "posterImg": "img/INCEPTION.png",
-      "genre": "Sci-Fi, Action, Thriller",
-      "score": 4.8,
-      "tag": "Mind-Bending, Thriller",
-      "release": 2010,
-      "reviews": 2100000,
-      "reviewedByUser": true
+      "title": "Nosferatu",
+      "posterImg": "posters/nosferatu.webp",
+      "genre": "Horror, Period-Piece, Show All",
+      "score": 0
     },
     {
       "id": 5,
-      "title": "Interstellar",
-      "posterImg": "img/INTERSTELLAR.png",
-      "genre": "Sci-Fi, Adventure, Drama",
-      "score": 2.6,
-      "tag": "Space, Epic",
-      "release": 2014,
-      "reviews": 1900000,
-      "reviewedByUser": false
+      "title": "Longlegs",
+      "posterImg": "posters/longlegs.webp",
+      "genre": "Horror, Show All",
+      "score": 0
     },
     {
       "id": 6,
-      "title": "The Dark Knight",
-      "posterImg": "img/DARK_KNIGHT.png",
-      "genre": "Action, Crime, Drama",
-      "score": 5.0,
-      "tag": "Superhero, Crime",
-      "release": 2008,
-      "reviews": 2300000,
-      "reviewedByUser": true
+      "title": "Barbie",
+      "posterImg": "posters/barbie.webp",
+      "genre": "Comedy, Adventure, Show All",
+      "score": 0
+    },
+    {
+      "id": 7,
+      "title": "The Substance",
+      "posterImg": "posters/substance.webp",
+      "genre": "Horror, Body-Horror, Thriller, Show All",
+      "score": 0
+    },
+    {
+      "id": 8,
+      "title": "Argylle",
+      "posterImg": "posters/argylle.webp",
+      "genre": "Spy, Action, Show All",
+      "score": 0
+    },
+    {
+      "id": 9,
+      "title": "Little Women",
+      "posterImg": "posters/little_woman.webp",
+      "genre": "Drama, Period-Piece, Show All",
+      "score": 0
+    },
+    {
+      "id": 10,
+      "title": "Mickey 17",
+      "posterImg": "posters/mickey.webp",
+      "genre": "Sci-Fi, Comedy, Action, Show All",
+      "score": 0
+    },
+    {
+      "id": 11,
+      "title": "Conclave",
+      "posterImg": "posters/conclave.webp",
+      "genre": "Drama, Show All",
+      "score": 0
+    },
+    {
+      "id": 12,
+      "title": "Parasite",
+      "posterImg": "posters/parasite.webp",
+      "genre": "Drama, Comedy, Thriller, Show All",
+      "score": 0
     }
   ]
 }
