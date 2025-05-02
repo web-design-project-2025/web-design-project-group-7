@@ -2,15 +2,12 @@ let movies = [];
 let reviews = [];
 let users = [];
 
-
-const contentElement = document.getElementById("content");
 const homepageElement = document.getElementById("homepage3-poster");
 
 let searchValue = "";
 
 const searchBarElement = document.getElementById("searchbar");
 const searchButtonElement = document.getElementById("searchbutton");
-
 
 async function loadData() {
   const movieResponse = await fetch("data/movies.json");
@@ -25,8 +22,11 @@ async function loadData() {
   const userJSON = await userResponse.json();
   users = userJSON.users;
 
-  return true;
+  if (window.location.href === "index.html") {
+    homepage();
+  }
 
+  return true;
 }
 
 function getMovieById(id) {
@@ -93,18 +93,16 @@ function updateMoviesScore(movies) {
   }
 }
 
-
-function homepage () {
+function homepage() {
   const lastReviews = getLastReviews(3);
-  for(let lastReview of lastReviews) {
-      const posterElement = poster(lastReview);
-      homepageElement.appendChild(posterElement);
+  for (let lastReview of lastReviews) {
+    const posterElement = poster(lastReview);
+    homepageElement.appendChild(posterElement);
   }
-
 }
 
-function poster (review) {
-  const movie=getMovieById(review.movieId); 
+function poster(review) {
+  const movie = getMovieById(review.movieId);
   console.log(movie);
   const movieLinkElement = document.createElement("a");
   movieLinkElement.classList.add("link");
@@ -128,18 +126,18 @@ function poster (review) {
   scoreElement.classList.add("text");
   scoreElement.innerText = starScore(review.score).join(" ");
   movieElement.appendChild(scoreElement);
-  
+
   const reviewElement = document.createElement("p");
   reviewElement.classList.add("text", "reviewtext");
   reviewElement.innerText = review.text;
   movieElement.appendChild(reviewElement);
 
-  return movieLinkElement
+  return movieLinkElement;
 }
 
 function getLastReviews(n) {
   let lastReviews = [];
-  for(let i=reviews.length-n; i<=reviews.length; i++) {
+  for (let i = reviews.length - n; i <= reviews.length; i++) {
     lastReviews.push(reviews[i]);
   }
   return lastReviews;
@@ -158,7 +156,6 @@ searchButtonElement.addEventListener("click", function (e) {
   e.preventDefault();
   window.location.href = `browse.html?value=${searchValue}`;
 });
-
 
 loadData();
 updateMoviesScore(movies);

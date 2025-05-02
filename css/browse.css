@@ -155,21 +155,15 @@ h5 {
   display: flex;
 }
 
-.page-button:hover{
+.page-button:hover {
   background-color: var(--grey);
-}
-
-
-/* #page-arrow {
-  width: 0.5rem;
 }
 
 .filter-show-all {
   color: #9f4125;
-} */
+}
 
 .arrow-page-img {
   padding-top: 3px;
   height: 15px;
 }
-
