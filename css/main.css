@@ -27,12 +27,19 @@ p {
 
 body {
   margin: 0;
+
+}
+
+body {
+  background-color: #1c140e;
+  margin: 0%;
 }
 
 header {
   position: sticky;
   z-index: 100;
   top: 0;
+
   background-color: var(--red);
   width: 100%;
   display: flex;
@@ -100,15 +107,178 @@ body {
   /* background-color: var(--brown); */
 }
 
-main {
+h1 {
+  font-family: "monofett";
+  color: #9f4125;
+  font-size: 48pt;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-top: 0%;
+  margin-bottom: 8%;
+}
+
+h2 {
+  font-family: "monofett";
+  color: #9f4125;
+  font-size: 36pt;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-top: 0%;
+  line-height: 90%;
+}
+
+p {
+  font-family: "changa", san-serif;
+  font-size: 12pt;
+  line-height: 100%;
+  margin-top: 0%;
+  margin-bottom: 5%;
+}
+
+.text-white {
+  color: #f6e3cf;
+}
+
+#header-image {
   width: 100%;
-  min-height: 100vh;
-  /* color: var(--white); */
+}
+
+#homepage1 {
+  display: grid;
+  padding-left: 20%;
+  padding-right: 20%;
+  padding-top: 3%;
+  padding-bottom: 2%;
+  grid-template-columns: 55% 45%;
+}
+
+#home-image-1 {
+  padding-left: 22%;
+  width: 100%;
+
+  justify-self: center;
+  align-self: center;
+}
+
+#to-movies-button {
+  font-family: "changa";
+  background-color: #9f4125;
+  border: none;
+  color: #f6e3cf;
+  padding-inline: 10%;
+  font-size: 14pt;
+  border-radius: 10rem;
+  text-transform: uppercase;
+}
+
+#homepage2 {
+  padding-left: 20%;
+  padding-right: 20%;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  background-color:#f6e3cf;
+  margin-top: 5rem;
+  align-items: end;
+}
+
+#homepage2-div{
+  display: flex;
+  column-gap: 2%;
+}
+
+#homepage2-div-button{
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  column-gap: 2rem;
+}
+
+
+#home-image-2 {
+  align-self: center;
+  align-self: end;
+  width: 70%;
+}
+
+#homepage2-text {
+  font-family: "changa", san-serif;
+  color: hsl(14, 62%, 38%);
+  font-size: 14pt;
+  line-height: 100%;
+  margin-top: 0%;
+  display: block;
+  text-transform: uppercase;
+}
+
+#barbie-button {
+  font-family: "changa";
+  background-color: #9f4125;
+  border: none;
+  color: #f6e3cf;
+  font-size: 16pt;
+  border-radius: 10rem;
+  text-transform: uppercase;
+  width: 6rem;
+}
+
+#homepage3 {
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 5%;
+  background-color: #1c140e;
+  color: #f6e3cf;
+}
+
+#homepage3-poster {
+  display: flex;
+  gap: 20%;
+  padding-left: 12%;
+  padding-right: 12%;
+  padding-bottom: 5%;
+  justify-items: space-evenly;
+}
+
+.titlereview {
+  text-transform: uppercase;
+  font-size: 14pt;
+  margin-bottom: 5%;
+  margin-top: 3%;
+}
+
+.reviewtext {
+  font-size: 10pt;
+  line-height: 1.5;
+}
+
+.text {
+  color: #f6e3cf;
+}
+
+.reviewtext {
+  width: 100%
+
+}
+
+.poster {
+  width: 100%
+  
+}
+
+H3 {
+  font-family: "monofett";
+  color: #9f4125;
+  font-size: 36pt;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-top: 0%;
+  margin-bottom: 8%;
+
 }
 
 /* FOOTER */
 
 footer {
+
   background-color: var(--sand);
   display: flex;
 }
