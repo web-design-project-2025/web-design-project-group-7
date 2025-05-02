@@ -1,9 +1,11 @@
 const contentElement = document.getElementById("content");
 
+const urlParams = new URLSearchParams(window.location.search);
+searchValue = urlParams.get("value");
+
 let page = 1;
 const numberPerPage = 12;
 let filter = "Show All";
-let searchValue = "";
 
 const firstPagElement = document.getElementById("first-pag");
 const previousPagElement = document.getElementById("previous-pag");
@@ -71,7 +73,7 @@ function renderContent() {
   contentElement.innerHTML = ""; //empty everything
 
   updateMoviesScore(movies);
-  if (searchValue !== "") {
+  if (searchValue) {
     movies = searchTitle(movies, searchValue);
     const filtersContainerElement =
       document.getElementById("filters-container");

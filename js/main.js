@@ -2,6 +2,8 @@ let movies = [];
 let reviews = [];
 let users = [];
 
+let searchValue = "";
+
 const searchBarElement = document.getElementById("searchbar");
 const searchButtonElement = document.getElementById("searchbutton");
 
@@ -87,9 +89,19 @@ function updateMoviesScore(movies) {
   }
 }
 
-/* searchButtonElement.addEventListener("click", function (e) {
-  searchButtonElement.style.backgroundColor("#ff0000");
-}); */
+searchBarElement.addEventListener("change", function (e) {
+  console.log(searchBarElement.value);
+  searchValue = this.value;
+  e.preventDefault();
+  window.location.href = `browse.html?value=${searchValue}`;
+});
+
+searchButtonElement.addEventListener("click", function (e) {
+  console.log(searchBarElement.value);
+  searchValue = searchBarElement.value;
+  e.preventDefault();
+  window.location.href = `browse.html?value=${searchValue}`;
+});
 
 loadData();
 updateMoviesScore(movies);
