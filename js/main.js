@@ -2,6 +2,11 @@ let movies = [];
 let reviews = [];
 let users = [];
 
+let searchValue = "";
+
+const searchBarElement = document.getElementById("searchbar");
+const searchButtonElement = document.getElementById("searchbutton");
+
 async function loadData() {
   const movieResponse = await fetch("data/movies.json");
   const movieJSON = await movieResponse.json();
@@ -15,7 +20,9 @@ async function loadData() {
   const userJSON = await userResponse.json();
   users = userJSON.users;
 
-  renderContent();
+  //renderContent();
+
+  return true;
 }
 
 function getMovieById(id) {
@@ -54,4 +61,47 @@ function starScore(value) {
   return stars;
 }
 
+let shrek = {
+  id: 1,
+  title: "Shrek",
+  posterImg: "posters/shrek_1.webp",
+  genre: "Animation, Comedy, Adventure",
+  score: 4.1,
+};
+
+function calculateScore(movie) {
+  let reviews = getAllReviewsOf(movie);
+  let totalScore = 0;
+  for (let review of reviews) {
+    totalScore = totalScore + review.score;
+  }
+  if (reviews.length === 0) {
+    totalScore = 0;
+  } else {
+    totalScore = totalScore / reviews.length;
+  }
+  return totalScore;
+}
+
+function updateMoviesScore(movies) {
+  for (let movie of movies) {
+    movie.score = calculateScore(movie);
+  }
+}
+
+searchBarElement.addEventListener("change", function (e) {
+  console.log(searchBarElement.value);
+  searchValue = this.value;
+  e.preventDefault();
+  window.location.href = `browse.html?value=${searchValue}`;
+});
+
+searchButtonElement.addEventListener("click", function (e) {
+  console.log(searchBarElement.value);
+  searchValue = searchBarElement.value;
+  e.preventDefault();
+  window.location.href = `browse.html?value=${searchValue}`;
+});
+
 loadData();
+updateMoviesScore(movies);
