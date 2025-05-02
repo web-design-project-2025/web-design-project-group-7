@@ -8,9 +8,27 @@
   --white: #f6e3cf;
 }
 
-body {
-  background-color: var(--brown);
-}
+
+  body {
+    background-color: var(--brown);
+  }
+
+
+  p {
+    font-family: "changa", sans-serif;
+    color: var(--white);
+  }
+
+  h1 {
+    font-family: "monofett";
+    color: #9f4125;
+    font-size: 40pt;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-top: 0%;
+    margin-bottom: 8%;
+  }
+
 
 p {
   font-family: "changa", sans-serif;
@@ -63,7 +81,7 @@ h1 {
   font-size: 14pt;
 }
 
-button {
+#post-review-button {
   border-radius: 10rem;
   background-color: var(--white);
   border: 0;
