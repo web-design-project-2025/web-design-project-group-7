@@ -8,6 +8,7 @@
   --white: #f6e3cf;
 }
 
+
   body {
     background-color: var(--brown);
   }
@@ -28,20 +29,36 @@
     margin-bottom: 8%;
   }
 
-  #text1 {
-    font-weight: bold;
-  }
 
-  #content {
-    display: flex;
-    flex-direction: column;
-    padding-top: 5%;
-    padding-left: 20%;
-    padding-right: 20%;
+p {
+  font-family: "changa", sans-serif;
+  color: var(--white);
+  font-size: 16pt;
+}
 
-  }
+h1 {
+  font-family: "monofett";
+  color: #9f4125;
+  font-size: 40pt;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-top: 0%;
+  margin-bottom: 8%;
+}
 
-#textbox1 {
+#text1 {
+  font-weight: bold;
+}
+
+#content {
+  display: flex;
+  flex-direction: column;
+  padding-top: 5%;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+.textbox {
   border-radius: 10rem;
   background-color: var(--white);
   border: 0;
@@ -49,36 +66,16 @@
   padding: 1%;
 }
 
-#textbox2 {
-  border-radius: 10rem;
-  background-color: var(--white);
-  border: 0;
-  width: 50%;
-  padding: 1%;
-}
-
-#textbox3 {
-  border-radius: 2rem;
+#review-text-area {
+  border-radius: 1.5rem;
   background-color: var(--white);
   border: 0;
   width: 100%;
-  height: 40%;
-  padding: 5%;
+  height: 20vh;
+  padding: 2%;
 }
 
-#label1 {
-  font-family: "changa", sans-serif;
-  color: var(--white);
-  font-size: 14pt;
-}
-
-#label2 {
-  font-family: "changa", sans-serif;
-  color: var(--white);
-  font-size: 14pt;
-}
-
-#label3 {
+.label {
   font-family: "changa", sans-serif;
   color: var(--white);
   font-size: 14pt;
@@ -89,4 +86,33 @@
   background-color: var(--white);
   border: 0;
   padding: 1%;
+}
+
+#form-score-stars {
+  margin-top: -2rem;
+  margin-left: -1rem;
+}
+
+/* STARS SCORE */
+/* The following 15 lines or code are from: https://jsfiddle.net/binaryben/aLx3m4k5/ */
+
+.star {
+  height: 1px;
+  width: 1px;
+  visibility: hidden;
+  font-size: 2rem;
+  cursor: pointer;
+  margin: 0;
+  margin-inline: 1rem;
+
+  color: var(--white);
+}
+.star:before {
+  content: "\2606";
+  position: absolute;
+  visibility: visible;
+}
+.star:checked:before {
+  content: "\2605";
+  position: absolute;
 }
