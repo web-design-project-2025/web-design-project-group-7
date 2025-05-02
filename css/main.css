@@ -151,6 +151,7 @@ p {
   padding-right: 10%;
   padding-top: 5%;
   background-color: #1c140e;
+  color: #f6e3cf;
 }
 
 #homepage3-img {
@@ -158,6 +159,15 @@ p {
   grid-template-columns: 33% 33% 33%;
   padding-left: 20%;
   padding-right: 20%;
+}
+
+.text {
+  color: #f6e3cf;
+}
+
+.poster {
+  width: 100px;
+  
 }
 
 H3 {

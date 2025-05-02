@@ -3,6 +3,7 @@ let reviews = [];
 let users = [];
 
 const contentElement = document.getElementById("content");
+const homepageElement = document.getElementById("homepage3-poster");
 
 async function loadData() {
   const movieResponse = await fetch("data/movies.json");
@@ -17,7 +18,8 @@ async function loadData() {
   const userJSON = await userResponse.json();
   users = userJSON.users;
 
-  renderContent();
+ // renderContent();
+  homepage();
 }
 
 function getMovieById(id) {
@@ -83,6 +85,57 @@ function renderContent() {
     const movieElement = createMovieElement(movie);
     contentElement.appendChild(movieElement);
   }
+}
+
+function homepage () {
+  const lastReviews = getLastReviews(3);
+  for(let lastReview of lastReviews) {
+      const posterElement = poster(lastReview);
+      homepageElement.appendChild(posterElement);
+  }
+
+}
+
+function poster (review) {
+  const movie=getMovieById (review.movieId); 
+  console.log(movie);
+  const movieLinkElement = document.createElement("a");
+  movieLinkElement.classList.add("link");
+  movieLinkElement.href = "detail.html?movie=" + movie.id;
+
+  const movieElement = document.createElement("article");
+  movieElement.classList.add("movie");
+  movieLinkElement.appendChild(movieElement);
+
+  const imageElement = document.createElement("img");
+  imageElement.classList.add("poster", "padding");
+  imageElement.src = movie.posterImg;
+  movieElement.appendChild(imageElement);
+
+  const titleElement = document.createElement("h5");
+  titleElement.classList.add("text");
+  titleElement.innerText = movie.title;
+  movieElement.appendChild(titleElement);
+
+  const scoreElement = document.createElement("p");
+  scoreElement.classList.add("text");
+  scoreElement.innerText = starScore(review.score).join(" ");
+  movieElement.appendChild(scoreElement);
+  
+  const reviewElement = document.createElement("p");
+  reviewElement.classList.add("text");
+  reviewElement.innerText = review.text;
+  movieElement.appendChild(reviewElement);
+
+  return movieLinkElement
+}
+
+function getLastReviews(n) {
+  let lastReviews = [];
+  for(let i=reviews.length-n; i<=reviews.length; i++) {
+    lastReviews.push(reviews[i]);
+  }
+  return lastReviews;
 }
 
 loadData();
