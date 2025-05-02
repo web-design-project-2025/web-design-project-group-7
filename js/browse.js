@@ -7,6 +7,8 @@ let page = 1;
 const numberPerPage = 12;
 let filter = "Show All";
 
+let openOverlay = "none";
+
 const firstPagElement = document.getElementById("first-pag");
 const previousPagElement = document.getElementById("previous-pag");
 const nextPagElement = document.getElementById("next-pag");
@@ -94,21 +96,45 @@ function renderContent() {
     "Page " + page + " of " + Math.ceil(movies.length / numberPerPage);
 }
 
+function closeOtherOverlays(overlayId) {
+  if (overlayId === "title-overlay") {
+    closeOverlay("rating-arrow", "rating-overlay");
+    closeOverlay("genre-arrow", "genre-overlay");
+    closeOverlay("posted-arrow", "posted-overlay");
+  }
+  if (overlayId === "genre-overlay") {
+    closeOverlay("title-arrow", "title-overlay");
+    closeOverlay("rating-arrow", "rating-overlay");
+    closeOverlay("posted-arrow", "posted-overlay");
+  }
+  if (overlayId === "rating-overlay") {
+    closeOverlay("title-arrow", "title-overlay");
+    closeOverlay("genre-arrow", "genre-overlay");
+    closeOverlay("posted-arrow", "posted-overlay");
+  }
+  if (overlayId === "posted-overlay") {
+    closeOverlay("rating-arrow", "rating-overlay");
+    closeOverlay("genre-arrow", "genre-overlay");
+    closeOverlay("title-arrow", "title-overlay");
+  }
+}
+
 /* function to open rating overlays */
-function downArrowOverlay(arrowId, overlayId) {
+function downArrowOverlay(wordId, arrowId, overlayId) {
+  const wordElement = document.getElementById(wordId);
   const arrowElement = document.getElementById(arrowId);
   const overlayElement = document.getElementById(overlayId);
-  let isOpen = false;
 
-  arrowElement.addEventListener("click", function (e) {
-    if (!isOpen) {
-      arrowElement.style.transform = "scaleY(-1)";
-      overlayElement.style.display = "block";
-      isOpen = true;
-    } else {
+  wordElement.addEventListener("click", function (e) {
+    if (openOverlay === overlayId) {
       arrowElement.style.transform = "scaleY(1)";
       overlayElement.style.display = "none";
-      isOpen = false;
+      openOverlay = "none";
+    } else {
+      closeOtherOverlays(overlayId);
+      arrowElement.style.transform = "scaleY(-1)";
+      overlayElement.style.display = "block";
+      openOverlay = overlayId;
     }
 
     /*  https://www.30secondsofcode.org/js/s/listen-click-outside-event/ 
@@ -185,10 +211,10 @@ function loadBrowsePage() {
   console.log(updateMoviesScore(movies));
   renderContent();
   filterOverlayTitles();
-  downArrowOverlay("title-arrow", "title-overlay");
-  downArrowOverlay("posted-arrow", "posted-overlay");
-  downArrowOverlay("rating-arrow", "rating-overlay");
-  downArrowOverlay("genre-arrow", "genre-overlay");
+  downArrowOverlay("title-word", "title-arrow", "title-overlay");
+  downArrowOverlay("posted-word", "posted-arrow", "posted-overlay");
+  downArrowOverlay("rating-word", "rating-arrow", "rating-overlay");
+  downArrowOverlay("genre-word", "genre-arrow", "genre-overlay");
 
   firstPagElement.addEventListener("click", function (e) {
     changePage(1);
