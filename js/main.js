@@ -97,7 +97,7 @@ function homepage () {
 }
 
 function poster (review) {
-  const movie=getMovieById (review.movieId); 
+  const movie=getMovieById(review.movieId); 
   console.log(movie);
   const movieLinkElement = document.createElement("a");
   movieLinkElement.classList.add("link");
@@ -113,7 +113,7 @@ function poster (review) {
   movieElement.appendChild(imageElement);
 
   const titleElement = document.createElement("h5");
-  titleElement.classList.add("text");
+  titleElement.classList.add("text", "titlereview");
   titleElement.innerText = movie.title;
   movieElement.appendChild(titleElement);
 
@@ -123,7 +123,7 @@ function poster (review) {
   movieElement.appendChild(scoreElement);
   
   const reviewElement = document.createElement("p");
-  reviewElement.classList.add("text");
+  reviewElement.classList.add("text", "reviewtext");
   reviewElement.innerText = review.text;
   movieElement.appendChild(reviewElement);
 

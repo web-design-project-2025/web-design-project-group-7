@@ -140,10 +140,10 @@ p {
   background-color: #9f4125;
   border: none;
   color: #f6e3cf;
-  padding-inline: 20%;
   font-size: 16pt;
   border-radius: 10rem;
   text-transform: uppercase;
+  width: 6rem;
 }
 
 #homepage3 {
@@ -154,19 +154,38 @@ p {
   color: #f6e3cf;
 }
 
-#homepage3-img {
-  display: grid;
-  grid-template-columns: 33% 33% 33%;
-  padding-left: 20%;
-  padding-right: 20%;
+#homepage3-poster {
+  display: flex;
+  gap: 20%;
+  padding-left: 12%;
+  padding-right: 12%;
+  padding-bottom: 5%;
+  justify-items: space-evenly;
+}
+
+.titlereview {
+  text-transform: uppercase;
+  font-size: 14pt;
+  margin-bottom: 5%;
+  margin-top: 3%;
+}
+
+.reviewtext {
+  font-size: 10pt;
+  line-height: 1.5;
 }
 
 .text {
   color: #f6e3cf;
 }
 
+.reviewtext {
+  width: 100%
+
+}
+
 .poster {
-  width: 100px;
+  width: 100%
   
 }
 
