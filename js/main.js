@@ -22,10 +22,6 @@ async function loadData() {
   const userJSON = await userResponse.json();
   users = userJSON.users;
 
-  if (window.location.href === "index.html") {
-    homepage();
-  }
-
   return true;
 }
 
@@ -159,3 +155,7 @@ searchButtonElement.addEventListener("click", function (e) {
 
 loadData();
 updateMoviesScore(movies);
+
+loadData().then(() => {
+  homepage();
+});
