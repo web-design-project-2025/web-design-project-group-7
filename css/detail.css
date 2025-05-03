@@ -167,6 +167,7 @@ h3 {
   display: flex;
   align-items: flex-center;
   gap: var(--gap);
+  margin-bottom: 1%;
 }
 
 .review-title {
@@ -177,21 +178,49 @@ h3 {
 }
 
 .review-name {
-  margin-top: 3px;
+  margin: 0;
+  margin-top: 7px;
 }
 
 .small-stars {
   margin: 0;
+  margin-bottom: 3%;
 }
 
 .review-text {
   margin-bottom: 2rem;
   border-bottom: solid 1px #f6e3cf50;
+  padding-bottom: 1rem;
 }
 
 .transparent-white-italic {
   font-style: italic;
   color: #f6e3cf70;
+}
+
+.recent-header {
+  text-align: center;
+  margin-top: 1rem;
+  padding-bottom: 5px;
+  margin-bottom: 2rem;
+  border-bottom: solid 2px var(--sand);
+}
+
+.recent-container {
+  margin-top: 1rem;
+  display: flex;
+  width: 100%;
+  gap: 10%;
+}
+
+.movie-img {
+  width: 100%;
+}
+
+.recent-title {
+  text-align: center;
+  margin: 0;
+  padding-bottom: 2rem;
 }
 
 @media screen and (max-width: 750px) {

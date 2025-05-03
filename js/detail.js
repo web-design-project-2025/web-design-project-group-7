@@ -25,6 +25,7 @@ async function renderContent() {
   await loadMovieInfo(movie.title);
   updateMoviesScore(movies);
   localStorage.visited = movie.id;
+  recentlyVisited(movie);
   contentElement.innerHTML = "";
 
   const backImageElement = createbackgroundImgElement(movie);
@@ -50,6 +51,21 @@ async function renderContent() {
       detailElement.appendChild(reviewElement);
     }
   }
+
+  const recentlyVisitedElement = document.createElement("h3");
+  recentlyVisitedElement.innerText = "Recently Visited";
+  recentlyVisitedElement.classList.add("recent-header");
+  detailElement.appendChild(recentlyVisitedElement);
+
+  const recents = JSON.parse(localStorage.recentlyVisited);
+  const recentContainer = document.createElement("div");
+  recentContainer.classList.add("recent-container");
+
+  for (let recent of recents) {
+    const recentElement = createRecentlyVisited(recent);
+    recentContainer.appendChild(recentElement);
+  }
+  detailElement.appendChild(recentContainer);
 
   contentElement.appendChild(detailElement);
 }
@@ -193,6 +209,48 @@ function createInfoListElement(keyword, info) {
   itemElement.appendChild(descriptionElement);
 
   return itemElement;
+}
+
+function recentlyVisited(movie) {
+  let visited = [];
+  if (localStorage.recentlyVisited) {
+    visited = JSON.parse(localStorage.recentlyVisited);
+  }
+  if (visited.includes(movie.id)) {
+    const index = visited.indexOf(movie.id);
+    visited.splice(index, 1);
+  }
+  visited.unshift(movie.id);
+
+  if (visited.length > 4) {
+    visited.pop();
+  }
+
+  localStorage.recentlyVisited = JSON.stringify(visited);
+}
+
+function createRecentlyVisited(id) {
+  const movie = getMovieById(id);
+
+  const movieLinkElement = document.createElement("a");
+  movieLinkElement.classList.add("link");
+  movieLinkElement.href = "detail.html?movie=" + movie.id;
+
+  const movieElement = document.createElement("article");
+  movieElement.classList.add("movie");
+  movieLinkElement.appendChild(movieElement);
+
+  const imageElement = document.createElement("img");
+  imageElement.classList.add("movie-img");
+  imageElement.src = movie.posterImg;
+  movieLinkElement.appendChild(imageElement);
+
+  const titleElement = document.createElement("h5");
+  titleElement.classList.add("recent-title");
+  titleElement.innerText = movie.title;
+  movieLinkElement.appendChild(titleElement);
+
+  return movieLinkElement;
 }
 
 loadData().then(() => {
