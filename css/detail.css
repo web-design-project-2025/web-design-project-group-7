@@ -208,7 +208,8 @@ h3 {
 
 .recent-container {
   margin-top: 1rem;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   width: 100%;
   gap: 10%;
 }
@@ -256,6 +257,11 @@ h3 {
   .review-title-container {
     display: block;
   }
+
+  .recent-container {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 0;
+  }
 }
 @media screen and (max-width: 390px) {
   .list-items {
@@ -264,6 +270,9 @@ h3 {
   .list-description {
     margin-top: 3pt;
     margin-bottom: 3%;
+  }
+  .recent-container {
+    display: block;
   }
 }
 @media screen and (max-width: 300px) {
