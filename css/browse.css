@@ -145,7 +145,8 @@ h5 {
 }
 
 #page-number {
-  margin-top: 0;
+  margin: 0;
+  margin-top: 4px;
 }
 
 .page-button {

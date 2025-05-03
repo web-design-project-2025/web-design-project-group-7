@@ -85,6 +85,7 @@ h1 {
 h3 {
   margin: 0;
   width: 100%;
+  font-size: 2rem;
   color: var(--white);
 }
 
@@ -125,6 +126,11 @@ h3 {
   align-items: flex-end;
   gap: var(--gap);
   border-top: solid 1px #f6e3cf50;
+}
+
+.list-description {
+  margin-top: 5%;
+  margin-bottom: 3px;
 }
 
 .ul-info {
@@ -213,6 +219,9 @@ h3 {
     position: relative;
     z-index: 2;
   }
+  .list-description {
+    margin-top: 3%;
+  }
 }
 @media screen and (max-width: 450px) {
   .review-title-container {
@@ -224,7 +233,8 @@ h3 {
     align-items: flex-start;
   }
   .list-description {
-    margin-top: 0;
+    margin-top: 3pt;
+    margin-bottom: 3%;
   }
 }
 @media screen and (max-width: 300px) {
