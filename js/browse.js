@@ -52,12 +52,16 @@ function createMovieElement(movie) {
 
   const lastVisitedElement = document.createElement("div");
   lastVisitedElement.classList.add("visited");
+  lastVisitedElement.style.display = "none";
   posterContainerElement.appendChild(lastVisitedElement);
 
   const lastTextElement = document.createElement("p");
   lastTextElement.classList.add("visited-text");
   lastTextElement.innerText = "You Were Here";
   lastVisitedElement.appendChild(lastTextElement);
+  if (movie.id == localStorage.visited) {
+    lastVisitedElement.style.display = "block";
+  }
 
   const infoElement = document.createElement("div");
   infoElement.classList.add("info");

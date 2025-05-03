@@ -24,7 +24,7 @@ async function renderContent() {
 
   await loadMovieInfo(movie.title);
   updateMoviesScore(movies);
-
+  localStorage.visited = movie.id;
   contentElement.innerHTML = "";
 
   const backImageElement = createbackgroundImgElement(movie);
