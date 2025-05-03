@@ -120,10 +120,6 @@ h5 {
   margin-bottom: 20%;
 }
 
-.movie img {
-  width: 100%;
-}
-
 .text {
   margin-top: 2px;
   margin-bottom: 0;
@@ -132,6 +128,31 @@ h5 {
 
 .stars {
   font-size: 2%;
+}
+
+.poster-container {
+  width: 100%;
+  position: relative;
+  z-index: 0;
+}
+
+.movie-img {
+  width: 100%;
+  height: 100%;
+}
+.visited {
+  background-color: var(--red);
+  opacity: 70%;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  align-content: center;
+}
+
+.visited-text {
+  text-align: center;
 }
 
 /* Page number and buttons */
