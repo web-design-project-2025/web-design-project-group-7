@@ -41,10 +41,27 @@ function createMovieElement(movie) {
   movieElement.classList.add("movie");
   movieLinkElement.appendChild(movieElement);
 
+  const posterContainerElement = document.createElement("div");
+  posterContainerElement.classList.add("poster-container");
+  movieElement.appendChild(posterContainerElement);
+
   const imageElement = document.createElement("img");
-  imageElement.classList.add("poster", "padding");
+  imageElement.classList.add("movie-img");
   imageElement.src = movie.posterImg;
-  movieElement.appendChild(imageElement);
+  posterContainerElement.appendChild(imageElement);
+
+  const lastVisitedElement = document.createElement("div");
+  lastVisitedElement.classList.add("visited");
+  lastVisitedElement.style.display = "none";
+  posterContainerElement.appendChild(lastVisitedElement);
+
+  const lastTextElement = document.createElement("p");
+  lastTextElement.classList.add("visited-text");
+  lastTextElement.innerText = "You Were Here";
+  lastVisitedElement.appendChild(lastTextElement);
+  if (movie.id == localStorage.visited) {
+    lastVisitedElement.style.display = "block";
+  }
 
   const infoElement = document.createElement("div");
   infoElement.classList.add("info");
