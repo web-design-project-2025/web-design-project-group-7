@@ -82,6 +82,7 @@ function createMovieElement(movie) {
 
 function filterBy(genre, movie) {
   const filterGeneres = movie.genre.split(", ");
+  console.log(filterGeneres);
   if (filterGeneres.includes(genre)) {
     const movieElement = createMovieElement(movie);
     contentElement.appendChild(movieElement);
@@ -93,20 +94,22 @@ function renderContent() {
 
   updateMoviesScore(movies);
   if (searchValue) {
-    movies = searchTitle(movies, searchValue);
+    searchMovies = searchTitle(movies, searchValue);
+    movies = searchMovies;
     const filtersContainerElement =
       document.getElementById("filters-container");
     const resultTitleElement = document.getElementById(
       "result-title-container"
     );
-    filtersContainerElement.style.display = "none";
-
+    //filtersContainerElement.style.display = "none";
+    resultTitleElement.innerHTML = "";
     const resultsElement = document.createElement("p");
     resultsElement.innerText = "Showing results for: '" + searchValue + "'";
     resultTitleElement.appendChild(resultsElement);
   }
   for (let i = (page - 1) * numberPerPage; i < page * numberPerPage; i++) {
     let movie = movies[i];
+    console.log(movie);
     filterBy(filter, movie);
   }
   pageNumberElement.innerText =
@@ -226,8 +229,9 @@ function searchTitle(movies, text) {
 function loadBrowsePage() {
   updateMoviesScore(movies);
   console.log(updateMoviesScore(movies));
-  renderContent();
+
   filterOverlayTitles();
+
   downArrowOverlay("title-word", "title-arrow", "title-overlay");
   downArrowOverlay("posted-word", "posted-arrow", "posted-overlay");
   downArrowOverlay("rating-word", "rating-arrow", "rating-overlay");
@@ -312,6 +316,7 @@ function loadBrowsePage() {
     page = 1;
     renderContent();
   });
+  renderContent();
 }
 
 //the following "compareStrings(a, b)" function is from: https://stackoverflow.com/questions/19259233/sorting-json-by-specific-element-alphabetically
