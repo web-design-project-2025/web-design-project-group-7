@@ -75,4 +75,5 @@ responsiveBackButton.addEventListener("click", function () {
   responsiveSearchButton.style.display = "flex";
 });
 
+
 loadData();
