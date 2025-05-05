@@ -2,6 +2,13 @@ let movies = [];
 let reviews = [];
 let users = [];
 
+const responsiveSearchButton = document.getElementById("responsive-search");
+const headerLinksDiv = document.getElementById("header-links");
+const responsiveSearchSection = document.getElementById(
+  "responsive-search-section"
+);
+const responsiveBackButton = document.getElementById("responsive-back-button");
+
 async function loadData() {
   const movieResponse = await fetch("data/movies.json");
   const movieJSON = await movieResponse.json();
@@ -53,5 +60,19 @@ function starScore(value) {
   }
   return stars;
 }
+
+responsiveSearchButton.addEventListener("click", function () {
+  headerLinksDiv.style.display = "none";
+  responsiveSearchButton.style.display = "none";
+
+  responsiveSearchSection.style.display = "flex";
+});
+
+responsiveBackButton.addEventListener("click", function () {
+  responsiveSearchSection.style.display = "none";
+
+  headerLinksDiv.style.display = "flex";
+  responsiveSearchButton.style.display = "flex";
+});
 
 loadData();
