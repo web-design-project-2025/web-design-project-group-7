@@ -25,7 +25,7 @@ async function renderContent() {
   await loadMovieInfo(movie.title);
   updateMoviesScore(movies);
   localStorage.visited = movie.id;
-  recentlyVisited(movie);
+
   contentElement.innerHTML = "";
 
   const backImageElement = createbackgroundImgElement(movie);
@@ -52,22 +52,20 @@ async function renderContent() {
     }
   }
 
-  const recentlyVisitedElement = document.createElement("h3");
-  recentlyVisitedElement.innerText = "Recently Visited";
-  recentlyVisitedElement.classList.add("recent-header");
-  detailElement.appendChild(recentlyVisitedElement);
+  if (localStorage.recentlyVisited) {
+    recentlyVisitedRemoveThis(movie);
 
-  const recents = JSON.parse(localStorage.recentlyVisited);
-  const recentContainer = document.createElement("div");
-  recentContainer.classList.add("recent-container");
+    const recentlyVisitedElement = document.createElement("h3");
+    recentlyVisitedElement.innerText = "Recently Visited";
+    recentlyVisitedElement.classList.add("recent-header");
+    detailElement.appendChild(recentlyVisitedElement);
 
-  for (let recent of recents) {
-    const recentElement = createRecentlyVisited(recent);
-    recentContainer.appendChild(recentElement);
+    const recentContainer = displayRecentlyVisited();
+    detailElement.appendChild(recentContainer);
   }
-  detailElement.appendChild(recentContainer);
 
   contentElement.appendChild(detailElement);
+  recentlyVisitedUpdate(movie);
 }
 
 function createbackgroundImgElement(movie) {
@@ -211,7 +209,7 @@ function createInfoListElement(keyword, info) {
   return itemElement;
 }
 
-function recentlyVisited(movie) {
+function recentlyVisitedUpdate(movie) {
   let visited = [];
   if (localStorage.recentlyVisited) {
     visited = JSON.parse(localStorage.recentlyVisited);
@@ -222,8 +220,21 @@ function recentlyVisited(movie) {
   }
   visited.unshift(movie.id);
 
-  if (visited.length > 4) {
+  if (visited.length > 10) {
     visited.pop();
+  }
+
+  localStorage.recentlyVisited = JSON.stringify(visited);
+}
+
+function recentlyVisitedRemoveThis(movie) {
+  let visited = [];
+  if (localStorage.recentlyVisited) {
+    visited = JSON.parse(localStorage.recentlyVisited);
+  }
+  if (visited.includes(movie.id)) {
+    const index = visited.indexOf(movie.id);
+    visited.splice(index, 1);
   }
 
   localStorage.recentlyVisited = JSON.stringify(visited);
@@ -234,7 +245,7 @@ function createRecentlyVisited(id) {
 
   const movieLinkElement = document.createElement("a");
   movieLinkElement.classList.add("link");
-  movieLinkElement.href = "detail.html?movie=" + movie.id;
+  movieLinkElement.href = "detail.html?movie=" + id;
 
   const movieElement = document.createElement("article");
   movieElement.classList.add("movie");
@@ -251,6 +262,22 @@ function createRecentlyVisited(id) {
   movieLinkElement.appendChild(titleElement);
 
   return movieLinkElement;
+}
+
+function displayRecentlyVisited() {
+  const recents = JSON.parse(localStorage.recentlyVisited);
+  const recentContainer = document.createElement("div");
+  recentContainer.classList.add("recent-container");
+
+  for (let i = 0; i < 4; i++) {
+    let recent = recents[i];
+    if (recent) {
+      const recentElement = createRecentlyVisited(recent);
+      recentContainer.appendChild(recentElement);
+    }
+  }
+
+  return recentContainer;
 }
 
 loadData().then(() => {
