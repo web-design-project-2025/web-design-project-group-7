@@ -96,6 +96,7 @@ function renderContent() {
   if (searchValue) {
     searchMovies = searchTitle(movies, searchValue);
     movies = searchMovies;
+    filterOverlayTitles();
     const filtersContainerElement =
       document.getElementById("filters-container");
     const resultTitleElement = document.getElementById(
@@ -167,9 +168,9 @@ function downArrowOverlay(wordId, arrowId, overlayId) {
   });
 }
 
-async function filterOverlayTitles() {
+function filterOverlayTitles() {
   let genres = [];
-  await loadData();
+  //await loadData();
   for (let movie of movies) {
     let nowGenre = movie.genre;
     const genreArray = nowGenre.split(", ");
@@ -189,6 +190,7 @@ async function filterOverlayTitles() {
   genres.splice(showInd, 1);
   genres.unshift("Show All");
   //console.log("unshift" + genres);
+  filterListElement.innerHTML = "";
 
   for (let genre of genres) {
     const filterLiElement = document.createElement("li");
