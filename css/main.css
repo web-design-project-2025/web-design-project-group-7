@@ -108,7 +108,6 @@ header {
 }
 
 #responsive-searchbar {
-
   border-style: none;
   background-color: var(--white);
   border-top-left-radius: 10px;
@@ -127,6 +126,12 @@ header {
   #header-links {
     justify-content: left;
     width: 30%;
+  }
+}
+
+@media screen and (min-width: 469px) {
+  #responsive-search {
+    display: none;
   }
 }
 /* narrow screen */

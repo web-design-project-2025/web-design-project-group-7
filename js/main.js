@@ -75,5 +75,22 @@ responsiveBackButton.addEventListener("click", function () {
   responsiveSearchButton.style.display = "flex";
 });
 
+function removeButton(x) {
+  if (x.matches) {
+    responsiveSearchButton.style.display = "none";
+    responsiveSearchSection.style.display = "none";
+    headerLinksDiv.style.display = "flex";
+  } else {
+    responsiveSearchButton.style.display = "flex";
+  }
+}
+
+var x = window.matchMedia("(min-width: 469px)");
+
+removeButton(x);
+
+x.addEventListener("change", function () {
+  removeButton(x);
+});
 
 loadData();
