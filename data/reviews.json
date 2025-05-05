@@ -201,6 +201,102 @@
       "title": "I love watching insane people do insane people thing",
       "text": "Put your hand up if you did NOT expect a man living in the basement",
       "score": 5
+    },
+    {
+      "id": 27,
+      "movieId": 13,
+      "name": "GlizzyLizzy",
+      "title": "I love the 90s",
+      "text": "Blade is so unseriously serious and so seriously good I don't think I could think of a sigle bad thing to say.",
+      "score": 5
+    },
+    {
+      "id": 28,
+      "movieId": 13,
+      "name": "Benny",
+      "title": "CGI so bad it's amazing",
+      "text": "If you want to watch a gory, funny, and wildly 90's super hero movie this one is the one. Some of the jokes have aged poorly but you can't escape that with an almost 30 year old movie. ",
+      "score": 3
+    },
+    {
+      "id": 29,
+      "movieId": 13,
+      "name": "Hedvig",
+      "title": "Never seen a super hero movie like this before",
+      "text": "Watched this in cinema with my dad and we both loved it",
+      "score": 4
+    },
+    {
+      "id": 30,
+      "movieId": 14,
+      "name": "GlizzyLizzy",
+      "title": "No other movie can do it like this one",
+      "text": "Ru Pauls character in this movie scares me to my bones, but a movie dosen't become a classic without reason. Its funny, charming and increadibly satirical of other teen rom-coms of its time. A great watch!",
+      "score": 4
+    },
+    {
+      "id": 31,
+      "movieId": 15,
+      "name": "Slimy Jim",
+      "title": "I had more fun than my kids had",
+      "text": "Watched this with my kids for the first time and they found it a bit boring, but I couldn't care less. It's a really funny movie with an increadibly lovable cast and it's great nostalgia to see it again. If it was up to me id give it a 4, but they insist it was just a 3!",
+      "score": 3
+    },
+    {
+      "id": 32,
+      "movieId": 15,
+      "name": "Rebecca",
+      "title": "This is rebeccas favourite moive",
+      "text": "She can write something smart here",
+      "score": 5
+    },
+    {
+      "id": 33,
+      "movieId": 16,
+      "name": "jessica",
+      "title": "Visualy stunning, lackin plotwise",
+      "text": "It's one of those movies that you leave feeling as if the creators came up with the plot just to have an excuse to make a bunch of pretty shots.",
+      "score": 2
+    },
+    {
+      "id": 34,
+      "movieId": 16,
+      "name": "Benny",
+      "title": "Too long",
+      "text": "The acting and visuals are very stylized and I had a hard time finding myself in it, but im impressed of the attention to details.",
+      "score": 3
+    },
+    {
+      "id": 35,
+      "movieId": 17,
+      "name": "Hedvig",
+      "title": "I think it was good but I'm too dumb to say why",
+      "text": "The animation is incredible and I was very immersed in the story as I was watching it, but afterwards I felt more confused than anything else.",
+      "score": 3
+    },
+    {
+      "id": 36,
+      "movieId": 18,
+      "name": "GlizzyLizzy",
+      "title": "Watch But I'm a Cheerleader instead",
+      "text": "At it's time I'm sure this movie was groundbreaking, but coming back 40 years later it just feels somewhat bland",
+      "score": 3
+    },
+    {
+      "id": 37,
+      "movieId": 18,
+      "name": "jessica",
+      "title": "Must watch ",
+      "text": "A movie that shaped a generation and changed hollywood forever!",
+      "score": 4
+    },
+    {
+      "id": 38,
+      "movieId": 19,
+      "name": "Benny",
+      "title": "Too long",
+      "text": "The acting and visuals are very stylized and I had a hard time finding myself in it, but im impressed of the attention to details",
+      "score": 3
     }
   ]
 }
