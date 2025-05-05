@@ -208,7 +208,8 @@ p {
 }
 
 #homepage3-poster {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 20%;
   padding-left: 12%;
   padding-right: 12%;
