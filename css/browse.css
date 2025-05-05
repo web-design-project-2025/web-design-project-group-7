@@ -88,6 +88,18 @@ body {
   padding: 0;
 }
 
+/* search results */
+
+#result-title-container {
+  margin-left: 18vw;
+  padding-left: 2vw;
+  margin-top: 2vw;
+}
+
+.search-results {
+  margin: 0;
+}
+
 /* movies grid */
 
 .content {

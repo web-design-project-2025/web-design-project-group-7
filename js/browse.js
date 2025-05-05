@@ -105,6 +105,7 @@ function renderContent() {
     //filtersContainerElement.style.display = "none";
     resultTitleElement.innerHTML = "";
     const resultsElement = document.createElement("p");
+    resultsElement.classList.add("search-results");
     resultsElement.innerText = "Showing results for: '" + searchValue + "'";
     resultTitleElement.appendChild(resultsElement);
   }
