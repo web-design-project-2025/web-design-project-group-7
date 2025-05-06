@@ -12,31 +12,20 @@ everyhing else - "changa", san-serif;
   --white: #f6e3cf;
 }
 
-h1 {
-  font-family: "monofett";
-  font-size: 3rem;
-}
-
-p {
-  margin-top: 10px;
-  margin-bottom: 0px;
-  font-size: 10pt;
-  /* color: #1c140e; */
-  color: var(--white);
-}
-
 body {
-  margin: 0;
+  background-color: var(--brown);
+  margin: 0%;
 }
 
 header {
   position: sticky;
   z-index: 100;
   top: 0;
+
   background-color: var(--red);
   width: 100%;
   display: flex;
-  align-content: center;
+  align-items: center;
   justify-content: center;
   column-gap: 8%;
 }
@@ -46,6 +35,7 @@ header {
   width: 40%;
   column-gap: 10%;
   justify-content: center;
+
 }
 
 #logo {
@@ -59,7 +49,7 @@ header {
 }
 
 .navlink {
-  color: #f6e3cf;
+  color: var(--white);
   text-decoration: underline;
   text-transform: uppercase;
   font-weight: bold;
@@ -71,7 +61,7 @@ header {
 }
 
 #searchbar {
-  background-color: #f6e3cf;
+  background-color: var(--white);
   border-style: none;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
@@ -79,7 +69,7 @@ header {
 }
 
 #searchbutton {
-  background-color: #f6e3cf;
+  background-color: var(--white);
   border-style: none;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
@@ -172,15 +162,170 @@ a {
   color: var(--brown);
 }
 
-body {
-  margin: 0;
-  /* background-color: var(--brown); */
+h1 {
+  font-family: "monofett";
+  color: var(--red);
+  font-size: 48pt;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-top: 0%;
+  margin-bottom: 8%;
 }
 
-main {
+h2 {
+  font-family: "monofett";
+  color: var(--red);
+  font-size: 36pt;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-top: 0%;
+  line-height: 90%;
+}
+
+p {
+  color: var(--white);
+  font-family: "changa", san-serif;
+  font-size: 12pt;
+  line-height: 100%;
+  margin-top: 0%;
+  margin-bottom: 5%;
+}
+
+.text-white {
+  color: var(--white);
+}
+
+#header-image {
   width: 100%;
-  min-height: 100vh;
-  /* color: var(--white); */
+}
+
+#homepage1 {
+  display: grid;
+  padding-left: 20%;
+  padding-right: 20%;
+  padding-top: 3%;
+  padding-bottom: 2%;
+  grid-template-columns: 55% 45%;
+}
+
+#home-image-1 {
+  padding-left: 22%;
+  width: 100%;
+
+  justify-self: center;
+  align-self: center;
+}
+
+#to-movies-button {
+  font-family: "changa";
+  background-color: var(--red);
+  border: none;
+  color: var(--white);
+  padding-inline: 10%;
+  font-size: 14pt;
+  border-radius: 10rem;
+  text-transform: uppercase;
+}
+
+#homepage2 {
+  padding-left: 20%;
+  padding-right: 20%;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  background-color: var(--white);
+  margin-top: 5rem;
+  align-items: end;
+}
+
+#homepage2-div {
+  display: flex;
+  column-gap: 2%;
+}
+
+#homepage2-div-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  column-gap: 2rem;
+}
+
+#home-image-2 {
+  align-self: center;
+  align-self: end;
+  width: 70%;
+}
+
+#homepage2-text {
+  font-family: "changa", san-serif;
+  color: var(--red);
+  font-size: 14pt;
+  line-height: 100%;
+  margin-top: 0%;
+  display: block;
+  text-transform: uppercase;
+}
+
+#barbie-button {
+  font-family: "changa";
+  background-color: var(--red);
+  border: none;
+  color: var(--white);
+  font-size: 16pt;
+  border-radius: 10rem;
+  text-transform: uppercase;
+  width: 6rem;
+}
+
+#homepage3 {
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 5%;
+  background-color: var(--brown) ù;
+  color: var(--white);
+}
+
+#homepage3-poster {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20%;
+  padding-left: 12%;
+  padding-right: 12%;
+  padding-bottom: 5%;
+  justify-items: space-evenly;
+}
+
+.titlereview {
+  text-transform: uppercase;
+  font-size: 14pt;
+  margin-bottom: 5%;
+  margin-top: 3%;
+}
+
+.reviewtext {
+  font-size: 10pt;
+  line-height: 1.5;
+}
+
+.text {
+  color: var(--white);
+}
+
+.reviewtext {
+  width: 100%;
+}
+
+.poster {
+  width: 100%;
+}
+
+H3 {
+  font-family: "monofett";
+  color: var(--red);
+  font-size: 36pt;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-top: 0%;
+  margin-bottom: 8%;
 }
 
 /* FOOTER */
@@ -204,8 +349,8 @@ footer {
 /* titles of sections in footer */
 h4 {
   font-weight: 400;
-  color: #1c140e;
-  border-bottom: solid #1c140e;
+  color: var(--brown);
+  border-bottom: solid --brown;
 }
 /* small logos inside of footer */
 #footer-logo {

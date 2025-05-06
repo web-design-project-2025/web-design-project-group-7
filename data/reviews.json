@@ -6,7 +6,7 @@
       "userId": 2,
       "title": "title title title",
       "text": "A hilarious and heartwarming fairy tale with unforgettable characters.",
-      "score": 2,
+      "score": 1,
       "likes": 320,
       "likedByUser": true
     },
@@ -36,7 +36,7 @@
       "userId": 1,
       "title": "title title title",
       "text": "Inception is a mind-bending masterpiece that keeps you thinking for days.",
-      "score": 5,
+      "score": 2,
       "likes": 540,
       "likedByUser": true
     },
@@ -66,7 +66,7 @@
       "userId": 4,
       "title": "title title title",
       "text": "A childhood classic that never gets old.",
-      "score": 2,
+      "score": 1,
       "likes": 300,
       "likedByUser": false
     },
@@ -86,7 +86,7 @@
       "userId": 3,
       "title": "title title title",
       "text": "Christopher Nolan at his best! A film that challenges perception.",
-      "score": 5,
+      "score": 2,
       "likes": 520,
       "likedByUser": false
     },
