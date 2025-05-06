@@ -35,7 +35,6 @@ header {
   width: 40%;
   column-gap: 10%;
   justify-content: center;
-
 }
 
 #logo {
@@ -53,6 +52,7 @@ header {
   text-decoration: underline;
   text-transform: uppercase;
   font-weight: bold;
+  font-size: 10pt;
 }
 
 .header-search {
@@ -81,6 +81,12 @@ header {
   width: 0.8rem;
 }
 
+#searchlogo-back{
+  width: 0.8rem;
+  rotate: 180deg;
+  margin-left: 10px;
+}
+
 #responsive-search {
   display: none;
 }
@@ -105,56 +111,13 @@ header {
 }
 
 #responsive-back-button {
+  display: flex;
   background-color: transparent;
   border-radius: 10px;
   border-style: none;
-}
-/* RESPONSIVE HEADER */
-
-/* wide screen */
-@media only screen and (min-width: 850px) {
-  #header-links {
-    justify-content: left;
-    width: 30%;
-  }
-}
-
-@media screen and (min-width: 469px) {
-  #responsive-search {
-    display: none;
-  }
-}
-/* narrow screen */
-@media only screen and (max-width: 468px) {
-  header {
-    justify-content: center;
-    column-gap: 5%;
-  }
-
-  #logo {
-    margin: 0%;
-    padding: 0%;
-  }
-
-  #header-links {
-    width: 60%;
-  }
-
-  .header-search {
-    display: none;
-  }
-
-  #responsive-search {
-    display: flex;
-    background-color: var(--white);
-    border-style: none;
-    border-radius: 5px;
-    height: 30px;
-    width: 30px;
-    align-content: center;
-    justify-content: center;
-    margin-top: 2.5px;
-  }
+  justify-content: center;
+  align-content: center;
+  
 }
 
 a {
@@ -360,4 +323,63 @@ h4 {
 /*for bold text in footer*/
 #footer-bold {
   font-weight: bold;
+}
+
+/* RESPONSIVE HEADER & FOOTER */
+
+/* wide screen */
+@media only screen and (min-width: 850px) {
+  #header-links {
+    justify-content: left;
+    width: 30%;
+  }
+}
+
+@media screen and (min-width: 469px) {
+  #responsive-search {
+    display: none;
+  }
+}
+/* narrow screen */
+@media only screen and (max-width: 468px) {
+  header {
+    justify-content: center;
+    column-gap: 5%;
+  }
+
+  #logo {
+    margin: 0%;
+    padding: 0%;
+  }
+
+  #header-links {
+    width: 60%;
+  }
+
+  .header-search {
+    display: none;
+  }
+
+  #responsive-search {
+    display: flex;
+    background-color: var(--white);
+    border-style: none;
+    border-radius: 5px;
+    height: 30px;
+    width: 30px;
+    align-content: center;
+    justify-content: center;
+    margin-top: 2.5px;
+  }
+
+  footer{
+    flex-direction: column;
+    padding-top: 10%;
+  }
+
+  .footer-section{
+    width: 60%;
+    padding-inline: 20%;
+    
+  }
 }
