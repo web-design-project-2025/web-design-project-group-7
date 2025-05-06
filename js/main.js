@@ -2,6 +2,13 @@ let movies = [];
 let reviews = [];
 let users = [];
 
+const responsiveSearchButton = document.getElementById("responsive-search");
+const headerLinksDiv = document.getElementById("header-links");
+const responsiveSearchSection = document.getElementById(
+  "responsive-search-section"
+);
+const responsiveBackButton = document.getElementById("responsive-back-button");
+
 const homepageElement = document.getElementById("homepage3-poster");
 
 let searchValue = "";
@@ -9,6 +16,8 @@ let searchValue = "";
 const searchBarElement = document.getElementById("searchbar");
 const searchButtonElement = document.getElementById("searchbutton");
 
+
+// DATA LOADING - movies and reviews from JSON files, moviesInfos from OMDB Api (or LocalStorage)
 async function loadData() {
   const movieResponse = await fetch("data/movies.json");
   const movieJSON = await movieResponse.json();
@@ -61,14 +70,42 @@ function starScore(value) {
   return stars;
 }
 
-let shrek = {
-  id: 1,
-  title: "Shrek",
-  posterImg: "posters/shrek_1.webp",
-  genre: "Animation, Comedy, Adventure",
-  score: 4.1,
-};
+responsiveSearchButton.addEventListener("click", function () {
+  headerLinksDiv.style.display = "none";
+  responsiveSearchButton.style.display = "none";
 
+  responsiveSearchSection.style.display = "flex";
+});
+
+responsiveBackButton.addEventListener("click", function () {
+  responsiveSearchSection.style.display = "none";
+
+  headerLinksDiv.style.display = "flex";
+  responsiveSearchButton.style.display = "flex";
+});
+
+function removeButton(x) {
+  if (x.matches) {
+    responsiveSearchButton.style.display = "none";
+    responsiveSearchSection.style.display = "none";
+    headerLinksDiv.style.display = "flex";
+  } else {
+    responsiveSearchButton.style.display = "flex";
+  }
+}
+
+var x = window.matchMedia("(min-width: 469px)");
+
+removeButton(x);
+
+x.addEventListener("change", function () {
+  removeButton(x);
+});
+
+loadData();
+
+
+// CALCULATE SCORE - calculates average score based on all reviews for a movie
 function calculateScore(movie) {
   let reviews = getAllReviewsOf(movie);
   let totalScore = 0;
