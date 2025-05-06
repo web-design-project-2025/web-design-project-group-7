@@ -90,7 +90,7 @@ function updateMoviesScore(movies) {
 }
 
 function homepage() {
-  const lastReviews = getLastReviews(3);
+  const lastReviews = getLastReviews(4);
   for (let lastReview of lastReviews) {
     const posterElement = poster(lastReview);
     homepageElement.appendChild(posterElement);
