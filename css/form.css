@@ -116,3 +116,59 @@ h1 {
   content: "\2605";
   position: absolute;
 }
+
+#thank-you-overlay {
+  padding-left: 20%;
+  padding-right: 20%;
+  padding-top: 8.5%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(159, 65, 37);
+  height: 100vh;
+}
+
+#thankyoutext {
+  color: var(--white);
+}
+
+#thankyou-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+#reviews-button {
+  border: none;
+  color: #9f4125;
+  padding-left: 2%;
+  padding-right: 2%;
+  font-size: 14pt;
+  border-radius: 10rem;
+  font-weight: bold;
+  background-color: var(--white);
+  margin-top: 6%;
+}
+
+#logo-overlay {
+  width: 80%;
+  padding-top: 10%;
+  padding-left: 20%;
+}
+
+@media screen and (max-width: 900px) {
+  #thankyou-content {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  #logo-overlay {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  #thankyoutext {
+    line-height: 3rem;
+    font-size: 3rem;
+  }
+}

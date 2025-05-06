@@ -3,6 +3,7 @@ const starTwoElement = document.getElementById("star-2");
 const starThreeElement = document.getElementById("star-3");
 const starFourElement = document.getElementById("star-4");
 const starFiveElement = document.getElementById("star-5");
+const reviewsButton = document.getElementById("reviews-button")
 
 let stars = [
   starOneElement,
@@ -33,3 +34,7 @@ function setStarScore(stars, score) {
     stars[i].checked = "true";
   }
 }
+
+reviewsButton.addEventListener("click", function(e){
+  window.location.href = "detail.html";
+}); 
