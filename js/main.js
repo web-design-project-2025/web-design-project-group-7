@@ -231,6 +231,23 @@ function getLastReviews(n) {
   return lastReviews;
 }
 
+searchBarElement.addEventListener("change", function (e) {
+  console.log(searchBarElement.value);
+  searchValue = this.value;
+  e.preventDefault();
+  window.location.href = `browse.html?value=${searchValue}`;
+});
+
+searchButtonElement.addEventListener("click", function (e) {
+  console.log(searchBarElement.value);
+  searchValue = searchBarElement.value;
+  e.preventDefault();
+  window.location.href = `browse.html?value=${searchValue}`;
+});
+
+loadData();
+updateMoviesScore(movies);
+
 loadData().then(() => {
   homepage();
 });
