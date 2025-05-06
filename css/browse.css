@@ -34,7 +34,7 @@ body {
   position: relative;
   width: 40%;
   height: 3rem;
-  margin-inline: 14rem;
+  margin-inline: 18vw;
   margin-top: 6rem;
 }
 
@@ -109,11 +109,10 @@ body {
 .content {
   align-self: center;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   margin-top: 3rem;
-  margin-inline: 7rem;
+  margin-inline: 18vw;
   column-gap: 5%;
-  padding-inline: 7rem;
 }
 
 h5 {

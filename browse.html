@@ -6,6 +6,7 @@
     <title>Local Loser's Movie Club</title>
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/browse.css" />
+    <link rel="stylesheet" href="css/browse-response.css" />
     <script src="js/main.js" defer></script>
     <script src="js/browse.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -56,6 +57,31 @@
           />
         </button>
       </section>
+      <button id="responsive-search">
+        <img
+          id="searchlogo"
+          src="img/search new.svg"
+          alt="a magnifying glass, representing the search button"
+        />
+      </button>
+    <section id="responsive-search-section">
+      <input
+      class="navitem"
+      type="text"
+      placeholder="Search"
+      id="responsive-searchbar"
+    />
+    <button id="responsive-search-button" type="submit">
+      <img
+        id="searchlogo"
+        src="img/search new.svg"
+        alt="a magnifying glass, representing the search button"
+        />
+    <button id="responsive-back-button">
+      <img id="searchlogo" src="img/left_arrow.svg" alt="an arrow poing left, indication back">
+    </button>
+    </section>
+
     </header>
 
     <main class="container">
@@ -136,19 +162,34 @@
       <div class="pagination">
 
         <button class="page-button" id="first-pag">
-          <img class="arrow-page-img" src="img/dubble_left_arrow.svg" alt="button to first page">
+          <img
+            class="arrow-page-img"
+            src="img/dubble_left_arrow.svg"
+            alt="button to first page"
+          />
         </button>
         <button class="page-button" id="previous-pag">
-          <img class="arrow-page-img" src="img/left_arrow.svg" alt="button to previous page">
+          <img
+            class="arrow-page-img"
+            src="img/left_arrow.svg"
+            alt="button to previous page"
+          />
         </button>
         <p id="page-number">Page 1 of 1</p>
         <button class="page-button" id="next-pag">
-          <img class="arrow-page-img" src="img/right_arrow.svg" alt="button to next page">
+          <img
+            class="arrow-page-img"
+            src="img/right_arrow.svg"
+            alt="button to next page"
+          />
         </button>
         <button class="page-button" id="last-pag">
-          <img class="arrow-page-img" src="img/dubble_right_arrow.svg" alt="button to last page">
+          <img
+            class="arrow-page-img"
+            src="img/dubble_right_arrow.svg"
+            alt="button to last page"
+          />
         </button>
-
       </div>
     </main>
 
