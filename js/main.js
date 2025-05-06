@@ -1,6 +1,7 @@
 let movies = [];
 let reviews = [];
 let users = [];
+let moviesInfos = [];
 
 const homepageElement = document.getElementById("homepage3-poster");
 
@@ -9,6 +10,7 @@ let searchValue = "";
 const searchBarElement = document.getElementById("searchbar");
 const searchButtonElement = document.getElementById("searchbutton");
 
+// DATA LOADING - movies and reviews from JSON files, moviesInfos from OMDB Api (or LocalStorage)
 async function loadData() {
   const movieResponse = await fetch("data/movies.json");
   const movieJSON = await movieResponse.json();
@@ -22,9 +24,44 @@ async function loadData() {
   const userJSON = await userResponse.json();
   users = userJSON.users;
 
+  if (localStorage.moviesInfos) {
+    moviesInfos = JSON.parse(localStorage.moviesInfos);
+  } else {
+    moviesInfos = [];
+
+    for (let movie of movies) {
+      const infoResponse = await fetch(
+        `http://www.omdbapi.com/?t=${movie.title}&apikey=1d35b601`
+      );
+      const movieInfo = await infoResponse.json();
+
+      moviesInfos.push({
+        movieId: movie.id,
+        info: movieInfo,
+      });
+    }
+    localStorage.moviesInfos = JSON.stringify(moviesInfos);
+  }
+
   return true;
 }
 
+//SEARCH BAR/BUTTON - Event listeners
+searchBarElement.addEventListener("change", function (e) {
+  console.log(searchBarElement.value);
+  searchValue = this.value;
+  e.preventDefault();
+  window.location.href = `browse.html?value=${searchValue}`;
+});
+
+searchButtonElement.addEventListener("click", function (e) {
+  console.log(searchBarElement.value);
+  searchValue = searchBarElement.value;
+  e.preventDefault();
+  window.location.href = `browse.html?value=${searchValue}`;
+});
+
+// PRACTICAL FUNCTIONS
 function getMovieById(id) {
   return movies.find((movie) => movie.id === id);
 }
@@ -51,6 +88,23 @@ function getAllReviewsOf(movie) {
   return movieReviews;
 }
 
+// GET MOVIE INFO - if no info available, returns empties for just the "searcheable" properties
+function getMovieInfo(id) {
+  for (let moviesInfo of moviesInfos) {
+    if (moviesInfo.movieId === id) {
+      return moviesInfo.info;
+    }
+  }
+  return {
+    Plot: "No info available",
+    Released: "-",
+    Director: "-",
+    Actors: "-",
+    Runtime: "-",
+  };
+}
+
+// STAR SCORE - rounds score and displays it as empty (☆) or full (★) stars [ex. SCORE: 3.5 - RETURNS: ★★★★☆]
 function starScore(value) {
   let stars = ["☆", "☆", "☆", "☆", "☆"];
   let score = Math.round(value);
@@ -61,45 +115,40 @@ function starScore(value) {
   return stars;
 }
 
-let shrek = {
-  id: 1,
-  title: "Shrek",
-  posterImg: "posters/shrek_1.webp",
-  genre: "Animation, Comedy, Adventure",
-  score: 4.1,
-};
-
+// CALCULATE SCORE - calculates average score based on all reviews for a movie
 function calculateScore(movie) {
-  let reviews = getAllReviewsOf(movie);
+  let allReviews = getAllReviewsOf(movie);
   let totalScore = 0;
-  for (let review of reviews) {
-    totalScore = totalScore + review.score;
+  for (let allReview of allReviews) {
+    totalScore = totalScore + allReview.score;
   }
-  if (reviews.length === 0) {
+  if (allReviews.length === 0) {
     totalScore = 0;
   } else {
-    totalScore = totalScore / reviews.length;
+    totalScore = totalScore / allReviews.length;
   }
   return totalScore;
 }
 
-function updateMoviesScore(movies) {
+// UPDATE SCORE - updates the movie score in the movies array
+function updateScore(movies) {
   for (let movie of movies) {
     movie.score = calculateScore(movie);
   }
 }
 
+// HOME PAGE - recent reviews rendering
 function homepage() {
   const lastReviews = getLastReviews(3);
   for (let lastReview of lastReviews) {
-    const posterElement = poster(lastReview);
+    const posterElement = createHomeReview(lastReview);
     homepageElement.appendChild(posterElement);
   }
 }
 
-function poster(review) {
+// HOME REVIEW - creates a recent review, Includes: Poster, MovieTitle, Score and ReviewText
+function createHomeReview(review) {
   const movie = getMovieById(review.movieId);
-  console.log(movie);
   const movieLinkElement = document.createElement("a");
   movieLinkElement.classList.add("link");
   movieLinkElement.href = "detail.html?movie=" + movie.id;
@@ -131,30 +180,14 @@ function poster(review) {
   return movieLinkElement;
 }
 
+// GET LAST REVIEWS - gets the last reviews added to the review array (most recent)
 function getLastReviews(n) {
   let lastReviews = [];
-  for (let i = reviews.length - n; i <= reviews.length; i++) {
+  for (let i = reviews.length - n; i < reviews.length; i++) {
     lastReviews.push(reviews[i]);
   }
   return lastReviews;
 }
-
-searchBarElement.addEventListener("change", function (e) {
-  console.log(searchBarElement.value);
-  searchValue = this.value;
-  e.preventDefault();
-  window.location.href = `browse.html?value=${searchValue}`;
-});
-
-searchButtonElement.addEventListener("click", function (e) {
-  console.log(searchBarElement.value);
-  searchValue = searchBarElement.value;
-  e.preventDefault();
-  window.location.href = `browse.html?value=${searchValue}`;
-});
-
-loadData();
-updateMoviesScore(movies);
 
 loadData().then(() => {
   homepage();
