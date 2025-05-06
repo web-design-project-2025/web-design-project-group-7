@@ -17,6 +17,13 @@ let searchValue = "";
 const searchBarElement = document.getElementById("searchbar");
 const searchButtonElement = document.getElementById("searchbutton");
 
+const responsiveSearchBarElement = document.getElementById(
+  "responsive-searchbar"
+);
+const responsiveSearchButtonElement = document.getElementById(
+  "responsive-search-button"
+);
+
 // DATA LOADING - movies and reviews from JSON files, moviesInfos from OMDB Api (or LocalStorage)
 
 async function loadData() {
@@ -65,6 +72,20 @@ searchBarElement.addEventListener("change", function (e) {
 searchButtonElement.addEventListener("click", function (e) {
   console.log(searchBarElement.value);
   searchValue = searchBarElement.value;
+  e.preventDefault();
+  window.location.href = `browse.html?value=${searchValue}`;
+});
+
+responsiveSearchBarElement.addEventListener("change", function (e) {
+  console.log(responsiveSearchBarElement.value);
+  searchValue = this.value;
+  e.preventDefault();
+  window.location.href = `browse.html?value=${searchValue}`;
+});
+
+responsiveSearchButtonElement.addEventListener("click", function (e) {
+  console.log(responsiveSearchBarElement.value);
+  searchValue = responsiveSearchBarElement.value;
   e.preventDefault();
   window.location.href = `browse.html?value=${searchValue}`;
 });
@@ -156,7 +177,6 @@ x.addEventListener("change", function () {
 });
 
 loadData();
-
 
 // CALCULATE SCORE - calculates average score based on all reviews for a movie
 function calculateScore(movie) {

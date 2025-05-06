@@ -84,6 +84,12 @@ header {
 #searchlogo-back{
   width: 0.8rem;
   rotate: 180deg;
+
+}
+
+#searchlogo-back{
+  width: 0.8rem;
+  rotate: 180deg;
   margin-left: 10px;
 }
 

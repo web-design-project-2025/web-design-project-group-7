@@ -32,14 +32,15 @@ body {
   align-items: bottom;
   border-radius: 1rem;
   position: relative;
-  width: 40%;
-  height: 3rem;
+  width: 18rem;
+  height: 6rem;
   margin-inline: 18vw;
   margin-top: 6rem;
 }
 
 .filter-list {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   align-items: center;
   justify-self: center;
   list-style: none;
@@ -203,4 +204,38 @@ h5 {
 .arrow-page-img {
   padding-top: 3px;
   height: 15px;
+}
+
+/* WIDE SCREEN */
+@media screen and (min-width: 850px) {
+  .content {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .filter-container {
+    display: flex;
+    align-items: bottom;
+    border-radius: 1rem;
+    position: relative;
+    width: 30rem;
+    height: 3rem;
+    margin-inline: 18vw;
+    margin-top: 6rem;
+  }
+
+  .filter-list {
+    display: flex;
+  }
+}
+
+/* TINY SCREEN */
+@media screen and (max-width: 468px) {
+  .content {
+    grid-template-columns: repeat(1, 1fr);
+    margin-inline: 30vw;
+  }
+
+  .filter-container {
+    margin-inline: 8vw;
+  }
 }
