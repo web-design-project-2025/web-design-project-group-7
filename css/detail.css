@@ -27,7 +27,8 @@ body {
 }
 
 /* GRADIENT ON BACKGROUND IMAGE */
-/* Most code from the following 15 lines comes from: "How to Add Gradient Overlay to Image in CSS" by ByteGrad https://www.youtube.com/watch?v=5CztcrXpfec */
+/* Most of the code in the following 15 lines comes from: "How to Add Gradient Overlay to Image in CSS" 
+   by ByteGrad https://www.youtube.com/watch?v=5CztcrXpfec */
 .bg-img-container {
   width: 100%;
   height: 15rem;
@@ -67,7 +68,7 @@ h1 {
   gap: var(--gap);
 }
 
-.d-stuff {
+.d-detail {
   width: 64%;
   margin-inline: 18%;
   margin-top: -5rem;
@@ -219,7 +220,6 @@ h3 {
 }
 
 .recent-title {
-  text-align: center;
   margin: 0;
   padding-bottom: 2rem;
 }
