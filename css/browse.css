@@ -88,6 +88,22 @@ body {
   padding: 0;
 }
 
+/* search results */
+
+#result-title-container {
+  margin-left: 18vw;
+  padding-left: 2vw;
+  margin-top: 2vw;
+}
+
+.search-results {
+  margin: 0;
+}
+
+.no-res-logo {
+  width: 10%;
+}
+
 /* movies grid */
 
 .content {
@@ -188,3 +204,5 @@ h5 {
   padding-top: 3px;
   height: 15px;
 }
+
+/* okay */
