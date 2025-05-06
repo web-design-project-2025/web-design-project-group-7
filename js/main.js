@@ -157,7 +157,6 @@ x.addEventListener("change", function () {
 
 loadData();
 
-
 // CALCULATE SCORE - calculates average score based on all reviews for a movie
 function calculateScore(movie) {
   let allReviews = getAllReviewsOf(movie);
@@ -235,3 +234,5 @@ function getLastReviews(n) {
 loadData().then(() => {
   homepage();
 });
+
+//okay

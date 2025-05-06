@@ -35,7 +35,6 @@ header {
   width: 40%;
   column-gap: 10%;
   justify-content: center;
-
 }
 
 #logo {
@@ -361,3 +360,4 @@ h4 {
 #footer-bold {
   font-weight: bold;
 }
+/* okay */
