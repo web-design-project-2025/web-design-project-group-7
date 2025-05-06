@@ -80,6 +80,8 @@ header {
   width: 0.8rem;
 }
 
+/* main */
+
 a {
   text-decoration: none;
   color: var(--brown);
@@ -280,6 +282,11 @@ H3 {
 }
 
 @media screen and (max-width: 800px) {
+  #searchbar {
+    display: none;
+  }
+
+  /* homepage1 */
   #homepage1 {
     grid-template-columns: repeat(1, 1fr);
   }
@@ -291,11 +298,36 @@ H3 {
 
   #welcometext {
     margin-bottom: 0;
+    width: 80%;
+    font-size: 40pt;
   }
 
   #welcomeimg {
     padding-top: 10%;
-    height: 15rem;
+    height: 10rem;
+  }
+
+  #homepage1textbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  
+  }
+
+
+
+  /* homepage2 */
+
+  #homepage2-div {
+    display: block;
+  }
+
+  #barbietext {
+    font-size: 30pt;
+  }
+  
+  #home-image-2 {
+    width: 100%;
   }
 }
 
