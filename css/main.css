@@ -158,6 +158,11 @@ p {
   text-transform: uppercase;
 }
 
+#to-movies-button:hover {
+  background-color: #5c2110;
+  transition: 0,7s;
+}
+
 #homepage2 {
   padding-left: 20%;
   padding-right: 20%;
@@ -207,6 +212,11 @@ p {
   width: 6rem;
 }
 
+#barbie-button:hover {
+  background-color: #5c2110;
+  transition: 0,7s;
+}
+
 #homepage3 {
   padding-left: 10%;
   padding-right: 10%;
@@ -232,6 +242,11 @@ p {
   margin-top: 3%;
 }
 
+.titlereview:hover {
+  color: var(--sand);
+  transition: 0,7s;
+}
+
 .reviewtext {
   font-size: 10pt;
   line-height: 1.5;
@@ -247,6 +262,17 @@ p {
 
 .poster {
   width: 100%;
+}
+
+.poster:hover {
+  animation-name: posterhover;
+  animation-duration: 2s;
+}
+
+@keyframes posterhover {
+  50% {
+    scale: 1.1;
+  }
 }
 
 H3 {
