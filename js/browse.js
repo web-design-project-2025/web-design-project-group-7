@@ -229,19 +229,23 @@ function renderContent() {
       filterOverlayTitles();
     } else {
       const noResultsElement = document.createElement("section");
-      noResultsElement.classList.add("no-res-container");
+      noResultsElement.classList.add("no-res-section");
       const noResultsHeaderElement = document.createElement("h3");
       noResultsHeaderElement.innerText = "OH NO! WE ARE REAL LOSERS!";
       noResultsHeaderElement.classList.add("no-res-header");
       noResultsElement.appendChild(noResultsHeaderElement);
-      const noResultsTextElement = document.createElement("P");
-      noResultsTextElement.innerText = "We could find what you are looking for";
+      const noResultsContainerElement = document.createElement("div");
+      noResultsContainerElement.classList.add("no-res-container");
+      const noResultsTextElement = document.createElement("p");
+      noResultsTextElement.innerText =
+        "We couldn't find what you are looking for";
       noResultsTextElement.classList.add("no-res-text");
-      noResultsElement.appendChild(noResultsTextElement);
+      noResultsContainerElement.appendChild(noResultsTextElement);
       const sadLogo = document.createElement("img");
-      sadLogo.src = "img/logo.svg";
+      sadLogo.src = "img/logo_sad.svg";
       sadLogo.classList.add("no-res-logo");
-      noResultsElement.appendChild(sadLogo);
+      noResultsContainerElement.appendChild(sadLogo);
+      noResultsElement.appendChild(noResultsContainerElement);
       resultTitleElement.appendChild(noResultsElement);
 
       movies = searchMovies;
