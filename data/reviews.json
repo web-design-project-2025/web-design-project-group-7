@@ -293,10 +293,42 @@
     {
       "id": 38,
       "movieId": 19,
-      "name": "Benny",
-      "title": "Too long",
-      "text": "The acting and visuals are very stylized and I had a hard time finding myself in it, but im impressed of the attention to details",
+      "name": "Slimy Jim",
+      "title": "Childhood favourite",
+      "text": "This was my favourite movie as a kid and I still think it holds up well even though I'm an adult now.",
+      "score": 5
+    },
+    {
+      "id": 39,
+      "movieId": 19,
+      "name": "GlizzyLizzy",
+      "title": "I get why people love it...",
+      "text": "...It's just not a story for me. I didn't have any special relationship to this movie as a kid and i think thats why I'm very neutral about it still.",
       "score": 3
+    },
+    {
+      "id": 40,
+      "movieId": 20,
+      "name": "jessica",
+      "title": "Why can't holywood make more movies like this?!",
+      "text": "Meryl Streep plays her character so well that I think she actually is that evil in real life, no one can act that well. Beside Streep's performance its a really solid movie that I HIGHLY recomend any rom-com fan to watch!",
+      "score": 4
+    },
+    {
+      "id": 41,
+      "movieId": 21,
+      "name": "Hedvig",
+      "title": "I liked it but it's not Wes Andersson's best movie",
+      "text": "It's a fun movie and I enjoyed my time in the theater but I'm probably going to have forgotten most of the plot in about a week",
+      "score": 3
+    },
+    {
+      "id": 42,
+      "movieId": 21,
+      "name": "Benny",
+      "title": "Too much and not enough all at once",
+      "text": "There's too much going on for me to be able to really get attatched to any of the characters or stories. ",
+      "score": 2
     }
   ]
 }
