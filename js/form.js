@@ -1,3 +1,7 @@
+const urlParams = new URLSearchParams(window.location.search);
+const movieId = urlParams.get("movie");
+
+
 const starOneElement = document.getElementById("star-1");
 const starTwoElement = document.getElementById("star-2");
 const starThreeElement = document.getElementById("star-3");
@@ -6,6 +10,7 @@ const starFiveElement = document.getElementById("star-5");
 const reviewsButton = document.getElementById("reviews-button")
 const postReviewButton = document.getElementById("post-review-button");
 const thankYouOverlay =document.getElementById("thank-you-overlay");
+
 let stars = [
   starOneElement,
   starTwoElement,
@@ -13,6 +18,8 @@ let stars = [
   starFourElement,
   starFiveElement,
 ];
+
+
 
 stars.forEach(function (star) {
   star.addEventListener("click", function (e) {
@@ -44,5 +51,5 @@ postReviewButton.addEventListener("click", function(e){
 
 /* overlay back to reviews */
 reviewsButton.addEventListener("click", function(e){
-  window.location.href = "detail.html";
+  window.location.href = "detail.html?movie=" + movieId;
 }); 
