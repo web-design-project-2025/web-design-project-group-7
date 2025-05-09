@@ -4,7 +4,8 @@ const starThreeElement = document.getElementById("star-3");
 const starFourElement = document.getElementById("star-4");
 const starFiveElement = document.getElementById("star-5");
 const reviewsButton = document.getElementById("reviews-button")
-
+const postReviewButton = document.getElementById("post-review-button");
+const thankYouOverlay =document.getElementById("thank-you-overlay");
 let stars = [
   starOneElement,
   starTwoElement,
@@ -35,6 +36,13 @@ function setStarScore(stars, score) {
   }
 }
 
+postReviewButton.addEventListener("click", function(e){
+  e.preventDefault();
+  thankYouOverlay.style.display = "block";
+});
+
+
+/* overlay back to reviews */
 reviewsButton.addEventListener("click", function(e){
   window.location.href = "detail.html";
 }); 

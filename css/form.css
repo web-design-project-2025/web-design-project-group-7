@@ -86,10 +86,15 @@ h1 {
 }
 
 #post-review-button {
+  font-size: 9pt;
   border-radius: 10rem;
   background-color: var(--white);
   border: 0;
   padding: 1%;
+}
+
+#post-review-button:hover {
+  background-color: #9f4125;
 }
 
 #form-score-stars {
@@ -220,6 +225,7 @@ h1 {
   left: 0;
   background-color: rgba(159, 65, 37);
   height: 100vh;
+  display: none;
 }
 
 #thankyoutext {
