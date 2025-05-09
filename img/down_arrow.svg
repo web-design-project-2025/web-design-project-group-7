@@ -1,8 +1,12 @@
-<?xml version="1.0" encoding="iso-8859-1"?>
-<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
-<svg fill="#000000" height="800px" width="800px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
-	 viewBox="0 0 330 330" xml:space="preserve">
-<path id="XMLID_225_" d="M325.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001l-139.39,139.393L25.607,79.393
-	c-5.857-5.857-15.355-5.858-21.213,0.001c-5.858,5.858-5.858,15.355,0,21.213l150.004,150c2.813,2.813,6.628,4.393,10.606,4.393
-	s7.794-1.581,10.606-4.394l149.996-150C331.465,94.749,331.465,85.251,325.607,79.393z"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 800 800">
+  <!-- Generator: Adobe Illustrator 29.5.0, SVG Export Plug-In . SVG Version: 2.1.0 Build 137)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: #1c140e;
+      }
+    </style>
+  </defs>
+  <path class="st0" d="M789.35,192.47c-14.2-14.2-37.22-14.2-51.43,0l-337.92,337.92L62.08,192.47c-14.2-14.2-37.22-14.2-51.43,0-14.2,14.2-14.2,37.22,0,51.43l363.65,363.64c6.82,6.82,16.07,10.65,25.71,10.65s18.89-3.83,25.71-10.65l363.63-363.64c14.2-14.2,14.2-37.22,0-51.43Z"/>
 </svg>

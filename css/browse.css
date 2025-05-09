@@ -34,7 +34,7 @@ body {
   position: relative;
   width: 40%;
   height: 3rem;
-  margin-inline: 14rem;
+  margin-inline: 18vw;
   margin-top: 6rem;
 }
 
@@ -67,6 +67,13 @@ body {
   font-size: 10pt;
   color: var(--brown);
 }
+
+.filter-name:hover {
+  animation-name: filterhover;
+  animation-duration: 2s;
+  color: var(--red);
+}
+
 /* overlays */
 
 .filter-overlay {
@@ -88,16 +95,44 @@ body {
   padding: 0;
 }
 
+/* search results */
+
+#result-title-container {
+  margin-inline: 18vw;
+
+  margin-top: 2vw;
+}
+
+.search-results {
+  margin: 0;
+}
+
+.no-res-header {
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+.no-res-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+}
+.no-res-section {
+  width: 100%;
+}
+.no-res-logo {
+  width: 75%;
+  justify-self: end;
+}
+
 /* movies grid */
 
 .content {
   align-self: center;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   margin-top: 3rem;
-  margin-inline: 7rem;
+  margin-inline: 18vw;
   column-gap: 5%;
-  padding-inline: 7rem;
 }
 
 h5 {
@@ -126,6 +161,15 @@ h5 {
   color: var(--white);
 }
 
+.title {
+  font-size: 16px;
+}
+
+.title:hover {
+  animation-name: texthover;
+  color: var(--red);
+}
+
 .stars {
   font-size: 2%;
 }
@@ -140,6 +184,18 @@ h5 {
   width: 100%;
   height: 100%;
 }
+
+.movie-img:hover {
+  animation-name: moviehover;
+  animation-duration: 2s;
+}
+
+@keyframes moviehover {
+  50% {
+    scale: 1.1;
+  }
+}
+
 .visited {
   background-color: var(--red);
   opacity: 70%;
@@ -189,3 +245,30 @@ h5 {
   padding-top: 3px;
   height: 15px;
 }
+
+
+@media screen and (max-width: 940px) {
+  .no-res-header {
+    font-size: 2.5rem;
+  }
+
+  .no-res-container {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .no-res-logo {
+    width: 60%;
+    justify-self: end;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .no-res-header {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+  }
+  .no-res-container {
+    grid-template-columns: 1fr;
+  }
+}
+
