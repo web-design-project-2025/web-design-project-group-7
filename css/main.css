@@ -54,6 +54,11 @@ header {
   font-weight: bold;
 }
 
+.navlink:hover {
+  color: var(--brown);
+  transition: 0,7s;
+}
+
 .header-search {
   display: flex;
   padding: 0.5%;
