@@ -85,6 +85,9 @@ header {
   width: 0.8rem;
 }
 
+
+/* main */
+
 #responsive-search {
   display: none;
 }
@@ -212,13 +215,19 @@ p {
   grid-template-columns: 55% 45%;
 }
 
+#welcomeimg {
+  width: 100%;
+}
 #home-image-1 {
   padding-left: 22%;
   width: 100%;
-
+  height: 100%;
   justify-self: center;
   align-self: center;
+  object-fit: cover;
 }
+
+
 
 #to-movies-button {
   font-family: "changa";
@@ -229,6 +238,11 @@ p {
   font-size: 14pt;
   border-radius: 10rem;
   text-transform: uppercase;
+}
+
+#to-movies-button:hover {
+  background-color: #5c2110;
+  transition: 0,7s;
 }
 
 #homepage2 {
@@ -280,6 +294,11 @@ p {
   width: 6rem;
 }
 
+#barbie-button:hover {
+  background-color: #5c2110;
+  transition: 0,7s;
+}
+
 #homepage3 {
   padding-left: 10%;
   padding-right: 10%;
@@ -290,8 +309,8 @@ p {
 
 #homepage3-poster {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20%;
+  gap: 10%;
+  grid-template-columns: repeat(4, 1fr);
   padding-left: 12%;
   padding-right: 12%;
   padding-bottom: 5%;
@@ -301,8 +320,13 @@ p {
 .titlereview {
   text-transform: uppercase;
   font-size: 14pt;
-  margin-bottom: 5%;
+  margin-bottom: 3%;
   margin-top: 3%;
+}
+
+.titlereview:hover {
+  color: var(--sand);
+  transition: 0,7s;
 }
 
 .reviewtext {
@@ -322,6 +346,17 @@ p {
   width: 100%;
 }
 
+.poster:hover {
+  animation-name: posterhover;
+  animation-duration: 2s;
+}
+
+@keyframes posterhover {
+  50% {
+    scale: 1.1;
+  }
+}
+
 H3 {
   font-family: "monofett";
   color: var(--red);
@@ -330,6 +365,78 @@ H3 {
   font-weight: 400;
   margin-top: 0%;
   margin-bottom: 8%;
+}
+
+@media screen and (max-width: 880px) {
+  #homepage3 {
+    
+  }
+  #homepage3-poster {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0%;
+
+  }
+  #recentreviews {
+    padding-left: 11%;
+  }
+  .poster {
+    width: 90%;
+  }
+
+  .reviewtext {
+    width: 90%;
+  }
+
+}
+
+@media screen and (max-width: 800px) {
+  #searchbar {
+    display: none;
+  }
+
+  /* homepage1 */
+  #homepage1 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  #home-image-1 {
+    padding-left: 0;
+    width: 100%;
+  }
+
+  #welcometext {
+    margin-bottom: 0;
+    width: 80%;
+    font-size: 40pt;
+  }
+
+  #welcomeimg {
+    padding-top: 10%;
+    height: 10rem;
+  }
+
+  #homepage1textbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  
+  }
+
+
+
+  /* homepage2 */
+
+  #homepage2-div {
+    display: block;
+  }
+
+  #barbietext {
+    font-size: 30pt;
+  }
+  
+  #home-image-2 {
+    width: 100%;
+  }
 }
 
 /* FOOTER */

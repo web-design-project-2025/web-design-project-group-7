@@ -181,7 +181,7 @@ function updateScore(movies) {
 
 // HOME PAGE - recent reviews rendering
 function homepage() {
-  const lastReviews = getLastReviews(3);
+  const lastReviews = getLastReviews(4);
   for (let lastReview of lastReviews) {
     const posterElement = createHomeReview(lastReview);
     homepageElement.appendChild(posterElement);
