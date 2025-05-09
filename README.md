@@ -33,7 +33,7 @@ _about-us.html_ = About us page **_(editorial page)_**
 
 ## Branching Strategy
 
-This project implements a variation of the _GitLab Flow_ strategy. The default branch is named **_"production,"_** all feature development branches originate from there. The **_main_** branch is the one with the finalised code, ready for deployment.
+This project implements a variation of the _GitLab Flow_ strategy. The default branch is named **_"production,"_** all feature development branches originate from there. The **_"main"_** branch is the one with the finalised code, ready for deployment.
 
 ## Features
 
