@@ -91,8 +91,8 @@ body {
 /* search results */
 
 #result-title-container {
-  margin-left: 18vw;
-  padding-left: 2vw;
+  margin-inline: 18vw;
+
   margin-top: 2vw;
 }
 
@@ -100,8 +100,21 @@ body {
   margin: 0;
 }
 
+.no-res-header {
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+.no-res-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+}
+.no-res-section {
+  width: 100%;
+}
 .no-res-logo {
-  width: 10%;
+  width: 75%;
+  justify-self: end;
 }
 
 /* movies grid */
@@ -205,4 +218,27 @@ h5 {
   height: 15px;
 }
 
-/* okay */
+@media screen and (max-width: 940px) {
+  .no-res-header {
+    font-size: 2.5rem;
+  }
+
+  .no-res-container {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .no-res-logo {
+    width: 60%;
+    justify-self: end;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .no-res-header {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+  }
+  .no-res-container {
+    grid-template-columns: 1fr;
+  }
+}
