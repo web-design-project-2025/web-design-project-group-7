@@ -194,7 +194,7 @@ function createMovieElement(movie) {
   movieElement.appendChild(infoElement);
 
   const titleElement = document.createElement("h5");
-  titleElement.classList.add("text");
+  titleElement.classList.add("text", "title");
   titleElement.innerText = movie.title;
   infoElement.appendChild(titleElement);
 
