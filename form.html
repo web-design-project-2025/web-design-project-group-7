@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Local Loser's Movie Club</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/form.css" />
+    <script src="js/form.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Changa:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Monofett&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <a class="header-nav" id="logo-link" href="index.html">
+        <img
+          id="logo"
+          src="img/logo.svg"
+          alt="the logo of the website, a cute popcorn shaped like a star with two large eyes"
+        />
+      </a>
+      <div id="header-links">
+        <a href="index.html">
+          <p class="navlink">home</p>
+        </a>
+        <a href="browse.html">
+          <p class="navlink">browse</p>
+        </a>
+        <a href="about-us.html">
+          <p class="navlink">about us</p>
+        </a>
+      </div>
+      <section class="header-search">
+        <input
+          class="navitem"
+          type="text"
+          placeholder="Search"
+          id="searchbar"
+        />
+        <button id="searchbutton" type="submit">
+          <img
+            id="searchlogo"
+            src="img/search new.svg"
+            alt="a magnifying glass, representing the search button"
+          />
+        </button>
+      </section>
+    </header>
+
+    <main>
+      <section id="content">
+        <h1>NEW REVIEW</h1>
+        <p id="text1">How can you let other losers know your opinion?</p>
+        <p id="text2">
+          Type your name, give it a score, write something quirky and submit!
+        </p>
+        <form id="form" action="">
+          <label class="label" for="review-name">Your name</label><br />
+          <input
+            class="textbox"
+            type="text"
+            name=""
+            id="review-name"
+            placeholder="Type here..."
+          /><br />
+
+          <label class="label" for="review-title">Title for your review</label
+          ><br />
+          <input
+            class="textbox"
+            type="text"
+            name=""
+            id="review-title"
+            placeholder="Type here..."
+          /><br />
+
+          <label
+            id="score-label"
+            class="label"
+            for="star-1 star-2 star-3 star-4 star-5"
+            >Score</label
+          >
+          <div id="form-score-stars">
+            <input id="star-1" class="star" type="checkbox" />
+            <input id="star-2" class="star" type="checkbox" />
+            <input id="star-3" class="star" type="checkbox" />
+            <input id="star-4" class="star" type="checkbox" />
+            <input id="star-5" class="star" type="checkbox" />
+          </div>
+          <br />
+
+
+          <label class="label" for="review-text-area">Your review:</label><br />
+          <textarea
+            name="review-text-area"
+            id="review-text-area"
+            placeholder="Type here..."
+          ></textarea>
+          <br />
+           <button id="post-review-button">Post Rewiev</button>
+        </form>
+        <div id="thank-you-overlay" >
+          <h1 id="thankyoutext" >THANK YOU FOR YOUR REVIEW!</h1>
+          <div  id="thankyou-content" >
+            <div  id="thankyou-textbox">
+          <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. </p>
+          <button id="reviews-button" >Back to reviews!</button>
+        </div>
+          <img id="logo-overlay" src="img/logo.svg" alt="">
+        </div>
+        </div>
+   
+    </main>
+
+    <footer>
+      <section class="footer-section">
+        <h4 class="footer-title">Local Loser's Movie Club™</h4>
+        <p>
+          Want to become a member? Ask us a question? Debate about movie
+          ratings? Contact us here!
+        </p>
+        <p id="footer-bold">locallosersmovieclub@gmail.com</p>
+      </section>
+
+      <section class="footer-section">
+        <h4>Stalk us on social media!</h4>
+        <div class="footer-container">
+          <img
+            id="footer-logo"
+            src="img/instagram icon.svg"
+            alt="instagram logo"
+          />
+          <p>LocalLosersMovieClub</p>
+        </div>
+        <div class="footer-container">
+          <img
+            id="footer-logo"
+            src="img/facebook icon.svg"
+            alt="facebook logo"
+          />
+          <p>Local Loser's Movie Club</p>
+        </div>
+        <div class="footer-container">
+          <img id="footer-logo" src="img/twitter icon.svg" alt="twitter logo" />
+          <p>LocalLosersMovieClub</p>
+        </div>
+      </section>
+      <section class="footer-section">
+        <h4>Who are we?</h4>
+        <p>
+          Do you not know who we are? How did you get here? Who are you?
+          Anyways, check out our about us page!
+        </p>
+        <div class="footer-container">
+          <img id="footer-logo" src="img/home icon.svg" alt="about us logo" />
+          <a href="about-us.html">
+            <p id="footer-bold">About us</p>
+          </a>
+        </div>
+      </section>
+    </footer>
+  </body>
+</html>

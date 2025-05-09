@@ -1,0 +1,297 @@
+* {
+  --wide: 95%;
+
+  --red: #9f4125;
+  --brown: #1c140e;
+  --grey: #7d6f68;
+  --sand: #cda47b;
+  --white: #f6e3cf;
+}
+
+.header-search {
+  height: 3vh;
+
+}
+
+  body {
+    background-color: var(--brown);
+  }
+
+
+  p {
+    font-family: "changa", sans-serif;
+    color: var(--white);
+  }
+
+  h1 {
+    font-family: "monofett";
+    color: #9f4125;
+    font-size: 40pt;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-top: 0%;
+    margin-bottom: 8%;
+  }
+
+
+p {
+  font-family: "changa", sans-serif;
+  color: var(--white);
+  font-size: 16pt;
+}
+
+h1 {
+  font-family: "monofett";
+  color: #9f4125;
+  font-size: 40pt;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-top: 0%;
+  margin-bottom: 8%;
+}
+
+#text1 {
+  font-weight: bold;
+}
+
+#content {
+  display: flex;
+  flex-direction: column;
+  padding-top: 5%;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+.textbox {
+  border-radius: 10rem;
+  background-color: var(--white);
+  border: 0;
+  width: 50%;
+  padding: 1%;
+}
+
+#review-text-area {
+  border-radius: 1.5rem;
+  background-color: var(--white);
+  border: 0;
+  width: 100%;
+  height: 20vh;
+  padding: 2%;
+}
+
+.label {
+  font-family: "changa", sans-serif;
+  color: var(--white);
+  font-size: 14pt;
+}
+
+#post-review-button {
+  font-size: 9pt;
+  border-radius: 10rem;
+  background-color: var(--white);
+  border: 0;
+  padding: 1%;
+}
+
+#post-review-button:hover {
+  background-color: #9f4125;
+}
+
+#form-score-stars {
+  margin-top: -2rem;
+  margin-left: -1rem;
+}
+
+/* STARS SCORE */
+/* The following 15 lines or code are from: https://jsfiddle.net/binaryben/aLx3m4k5/ */
+
+.star {
+  height: 1px;
+  width: 1px;
+  visibility: hidden;
+  font-size: 2rem;
+  cursor: pointer;
+  margin: 0;
+  margin-inline: 1rem;
+
+  color: var(--white);
+}
+.star:before {
+  content: "\2606";
+  position: absolute;
+  visibility: visible;
+}
+.star:checked:before {
+  content: "\2605";
+  position: absolute;
+}
+
+@media screen and (max-width: 700px) {
+  #content {
+    padding-left: 10%;
+  }
+  
+  #text1 {
+    font-size: 15pt;
+  }
+
+  #text2 {
+    font-size: 12pt;
+  }
+
+  .label {
+    font-size: 10pt;
+    padding-bottom: 0;
+  }
+
+  #review-text-area {
+    height: 15vh;
+  }
+
+  .textbox {
+    width: 70%;
+  }
+
+}
+
+@media screen and (max-width: 500px) {
+  #content {
+    padding-left: 10%;
+  }
+
+  h1 {
+    font-size: 30pt;
+  }
+
+  #text1 {
+    font-size: 13pt;
+  }
+
+  #text2 {
+    font-size: 10pt;
+  }
+
+  .label {
+    font-size: 8pt;
+  }
+
+  #review-text-area {
+    height: 10vh;
+  }
+
+  .textbox {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  #content {
+    padding-left: 10%;
+  }
+  h1 {
+    font-size: 25pt;
+  }
+
+  #text1 {
+    font-size: 12pt;
+  }
+
+  #text2 {
+    font-size: 8pt;
+  }
+
+  .label {
+    font-size: 8pt;
+  }
+
+  #review-text-area {
+    height: 10vh;
+  }
+
+  .textbox {
+    width: 70%;
+  }
+}
+
+
+/* overlay */
+
+#thank-you-overlay {
+  padding-left: 20%;
+  padding-right: 20%;
+  padding-top: 8.5%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(159, 65, 37);
+  height: 100vh;
+  display: none;
+}
+
+#thankyoutext {
+  color: var(--white);
+}
+
+#thankyou-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+#reviews-button {
+  border: none;
+  color: #9f4125;
+  padding-left: 2%;
+  padding-right: 2%;
+  font-size: 14pt;
+  border-radius: 10rem;
+  font-weight: bold;
+  background-color: var(--white);
+  margin-top: 6%;
+}
+
+#logo-overlay {
+  width: 80%;
+  padding-top: 10%;
+  padding-left: 20%;
+}
+
+@media screen and (max-width: 900px) {
+  #thankyou-content {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  #logo-overlay {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #logo-overlay {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #logo-overlay {
+    padding-left: 60%;
+    padding-bottom: 30%;
+    padding-top: 0;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  #thankyoutext {
+    line-height: 3rem;
+    font-size: 3rem;
+  }
+  
+  #thankyou-content {
+    line-height: 2rem;
+  }
+
+  #logo-overlay {
+    padding-left: 50%;
+  }
+
+} 
