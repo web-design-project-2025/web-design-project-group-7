@@ -56,7 +56,7 @@ header {
 
 .navlink:hover {
   color: var(--brown);
-  transition: 0,7s;
+  transition: 0, 7s;
 }
 
 .header-search {
@@ -84,7 +84,6 @@ header {
 #searchlogo {
   width: 0.8rem;
 }
-
 
 /* main */
 
@@ -227,8 +226,6 @@ p {
   object-fit: cover;
 }
 
-
-
 #to-movies-button {
   font-family: "changa";
   background-color: var(--red);
@@ -242,7 +239,7 @@ p {
 
 #to-movies-button:hover {
   background-color: #5c2110;
-  transition: 0,7s;
+  transition: 0, 7s;
 }
 
 #homepage2 {
@@ -296,7 +293,7 @@ p {
 
 #barbie-button:hover {
   background-color: #5c2110;
-  transition: 0,7s;
+  transition: 0, 7s;
 }
 
 #homepage3 {
@@ -326,10 +323,10 @@ p {
 
 .titlereview:hover {
   color: var(--sand);
-  transition: 0,7s;
+  transition: 0, 7s;
 }
 
-#recentreviews{
+#recentreviews {
   margin-left: 10vw;
 }
 
@@ -373,12 +370,11 @@ H3 {
 
 @media screen and (max-width: 880px) {
   #homepage3 {
-    
+    padding-left: 10%;
   }
   #homepage3-poster {
     grid-template-columns: repeat(2, 1fr);
     gap: 0%;
-
   }
   #recentreviews {
     padding-left: 11%;
@@ -390,7 +386,6 @@ H3 {
   .reviewtext {
     width: 90%;
   }
-
 }
 
 @media screen and (max-width: 800px) {
@@ -423,10 +418,7 @@ H3 {
     display: flex;
     flex-direction: column;
     justify-content: center;
-  
   }
-
-
 
   /* homepage2 */
 
@@ -437,7 +429,7 @@ H3 {
   #barbietext {
     font-size: 30pt;
   }
-  
+
   #home-image-2 {
     width: 100%;
   }

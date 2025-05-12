@@ -46,7 +46,7 @@
       "id": 7,
       "title": "The Substance",
       "posterImg": "posters/substance.webp",
-      "genre": "Horror, Body-Horror, Thriller, Show All",
+      "genre": "Horror, Body Horror, Thriller, Show All",
       "score": 0
     },
     {
@@ -229,7 +229,7 @@
       "id": 33,
       "title": "Monsters vs Aliens",
       "posterImg": "posters/monsters_vs_aliens.webp",
-      "genre": "Animation, Super Hero, Action, Sci-fi, Comedy, Show All",
+      "genre": "Animation, Super Hero, Action, Sci-Fi, Comedy, Show All",
       "score": 5.0
     },
     {
@@ -241,14 +241,14 @@
     },
     {
       "id": 35,
-      "title": "Guardians of the Galaxy 2",
+      "title": "Guardians of the Galaxy vol. 2",
       "posterImg": "posters/guardians_2.webp",
       "genre": "Super Hero, Action, Sci-Fi, Comedy, Show All",
       "score": 5.0
     },
     {
       "id": 36,
-      "title": "guardians of the Galaxy",
+      "title": "Guardians of the Galaxy",
       "posterImg": "posters/guardians.webp",
       "genre": "Super Hero, Action, Sci-Fi, Comedy, Show All",
       "score": 5.0
