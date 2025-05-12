@@ -29,12 +29,17 @@ function changePage(newPage) {
 }
 
 // FILTER BY - creates the movieElements only for movies that match the applied filter
-function filterBy(genre, movie) {
-  const filterGeneres = movie.genre.split(", ");
-  if (filterGeneres.includes(genre)) {
-    const movieElement = createMovieElement(movie);
-    contentElement.appendChild(movieElement);
+function filterBy(genre, movies) {
+  let filterMovies = [];
+  for (let movie of movies) {
+    const filterGeneres = movie.genre.split(", ");
+    if (filterGeneres.includes(genre)) {
+      filterMovies.push(movie);
+      // const movieElement = createMovieElement(movie);
+      // contentElement.appendChild(movieElement);
+    }
   }
+  return filterMovies;
 }
 
 // COMPARE STRING
@@ -253,10 +258,14 @@ function renderContent() {
     }
   }
 
+  let filterMovies = filterBy(filter, movies);
+  movies = filterMovies;
+
   // Pagination
   for (let i = (page - 1) * numberPerPage; i < page * numberPerPage; i++) {
     let movie = movies[i];
-    filterBy(filter, movie); // This creates movieElements
+    const movieElement = createMovieElement(movie);
+    contentElement.appendChild(movieElement);
   }
   pageNumberElement.innerText =
     "Page " + page + " of " + Math.ceil(movies.length / numberPerPage);
