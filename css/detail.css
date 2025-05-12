@@ -27,7 +27,8 @@ body {
 }
 
 /* GRADIENT ON BACKGROUND IMAGE */
-/* Most code from the following 15 lines comes from: "How to Add Gradient Overlay to Image in CSS" by ByteGrad https://www.youtube.com/watch?v=5CztcrXpfec */
+/* Most of the code in the following 15 lines comes from: "How to Add Gradient Overlay to Image in CSS" 
+   by ByteGrad https://www.youtube.com/watch?v=5CztcrXpfec */
 .bg-img-container {
   width: 100%;
   height: 15rem;
@@ -56,6 +57,10 @@ body {
   z-index: 1;
 }
 
+h1 {
+  color: var(--white);
+}
+
 .d-movie {
   display: flex;
 
@@ -63,7 +68,7 @@ body {
   gap: var(--gap);
 }
 
-.d-stuff {
+.d-detail {
   width: 64%;
   margin-inline: 18%;
   margin-top: -5rem;
@@ -81,6 +86,8 @@ body {
 h3 {
   margin: 0;
   width: 100%;
+  font-size: 2rem;
+  color: var(--white);
 }
 
 .review-header-container {
@@ -122,6 +129,11 @@ h3 {
   border-top: solid 1px #f6e3cf50;
 }
 
+.list-description {
+  margin-top: 5%;
+  margin-bottom: 3px;
+}
+
 .ul-info {
   padding: 0;
 }
@@ -134,12 +146,14 @@ h3 {
 .d-title {
   margin-top: 0;
   margin-bottom: 0.2rem;
+  font-weight: 400;
+  text-transform: uppercase;
 }
 
 .score-container {
   display: flex;
   align-items: center;
-  gap: 1%;
+  gap: 0.3rem;
 }
 
 .title-basedOn {
@@ -154,6 +168,7 @@ h3 {
   display: flex;
   align-items: flex-center;
   gap: var(--gap);
+  margin-bottom: 1%;
 }
 
 .review-title {
@@ -164,19 +179,110 @@ h3 {
 }
 
 .review-name {
-  margin-top: 3px;
+  margin: 0;
+  margin-top: 7px;
 }
 
 .small-stars {
   margin: 0;
+  margin-bottom: 3%;
 }
 
 .review-text {
   margin-bottom: 2rem;
   border-bottom: solid 1px #f6e3cf50;
+  padding-bottom: 1rem;
 }
 
 .transparent-white-italic {
   font-style: italic;
   color: #f6e3cf70;
 }
+
+.recent-header {
+  text-align: center;
+  margin-top: 1rem;
+  padding-bottom: 5px;
+  margin-bottom: 2rem;
+  border-bottom: solid 2px var(--sand);
+}
+
+.recent-container {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+  gap: 10%;
+}
+
+.movie-img {
+  width: 100%;
+}
+
+.recent-title {
+  margin: 0;
+  padding-bottom: 2rem;
+}
+
+@media screen and (max-width: 750px) {
+  .d-movie {
+    flex-direction: column;
+  }
+  .score-container {
+    display: block;
+  }
+  .title-number {
+    display: inline;
+    margin-left: 0.3rem;
+  }
+  .title-basedOn {
+    display: inline;
+  }
+  .title-stars {
+    margin-top: 0;
+  }
+  .d-stuff {
+    width: 84%;
+    margin-inline: 8%;
+    margin-top: -5rem;
+
+    position: relative;
+    z-index: 2;
+  }
+  .list-description {
+    margin-top: 3%;
+  }
+}
+@media screen and (max-width: 450px) {
+  .review-title-container {
+    display: block;
+  }
+
+  .recent-container {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 0;
+  }
+}
+@media screen and (max-width: 390px) {
+  .list-items {
+    align-items: flex-start;
+  }
+  .list-description {
+    margin-top: 3pt;
+    margin-bottom: 3%;
+  }
+  .recent-container {
+    display: block;
+  }
+}
+@media screen and (max-width: 300px) {
+  .review-header-container {
+    display: block;
+    border-bottom: none;
+  }
+  .add-review-button {
+    width: 150px;
+  }
+}
+
+/* okay */

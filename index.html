@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Local Loser's Movie Club</title>
     <link rel="stylesheet" href="css/main.css" />
-    <script src="js/main.js"></script>
+    <script src="js/main.js" defer></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -56,11 +56,85 @@
           />
         </button>
       </section>
+      <button id="responsive-search">
+        <img
+          id="searchlogo"
+          src="img/search new.svg"
+          alt="a magnifying glass, representing the search button"
+        />
+      </button>
+    <section id="responsive-search-section">
+      <input
+      class="navitem"
+      type="text"
+      placeholder="Search"
+      id="responsive-searchbar"
+    />
+    <button id="responsive-search-button" type="submit">
+      <img
+        id="searchlogo"
+        src="img/search new.svg"
+        alt="a magnifying glass, representing the search button"
+        />
+    <button id="responsive-back-button">
+      <img id="searchlogo" src="img/left_arrow.svg" alt="an arrow poing left, indication back">
+    </button>
+    </section>
     </header>
 
     <main>
-      <h1>Welcome!</h1>
-      <p>This is a website for reviewing movies</p>
+      <img
+        id="header-image"
+        src="img/cinema3.jpg"
+        alt="a dark, empty cinema auditorium with plush red chairs"
+      />
+      <section id="homepage1">
+        <div id="homepage1textbox" >
+          <h1 id="welcometext" >Welcome!</h1>
+          <p class="text-white">
+            Are you a loser? We know we are! We got tired of the oversaturated
+            movie reviewing websites where it seems everyone loves whatever is
+            popular and nobody cares about anything else. So, we made this! A
+            place where members of the Local Losers Movie Club can share our
+            thoughts and opinions about movies WE care about!
+          </p>
+          <a href="browse.html">
+            <button id="to-movies-button">To Movies</button>
+          </a>
+        </div>
+        <div id="welcomeimg" >
+        <img
+          id="home-image-1"
+          src="img/movie.jpg"
+          alt="a stack of old VHS cases"
+        />
+      </div>
+      </section>
+
+      <section id="homepage2">
+        <h2 id="barbietext" >
+          Movie of the week: <br />
+          Barbie!
+        </h2>
+        <div id="homepage2-div">
+          <img
+            id="home-image-2"
+            src="img/barbie_movie.jpg"
+            alt="Margot Robbie portraying Barbie in a pink outfit and white cowboy hat standing, smiling with her arms wide, in a highschool cafeteria infront of a group of teenage girls"
+          />
+          <div id="homepage2-div-button">
+            <p id="homepage2-text">READ ALL ABOUT IT</p>
+            <a href="detail.html?movie=6">
+              <button id="barbie-button">Here</button>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="homepage3">
+        <h3 id="recentreviews" >recent reviews</h3>
+        <div id="homepage3-poster"></div>
+      </section>
     </main>
 
     <footer>
