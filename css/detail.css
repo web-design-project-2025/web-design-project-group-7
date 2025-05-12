@@ -111,6 +111,11 @@ h3 {
   border-radius: 100px;
   border: none;
   background-color: var(--white);
+  text-transform: uppercase;
+}
+
+.add-review-button:hover{
+  background-color: var(--red);
 }
 
 .button-icon {
@@ -284,3 +289,5 @@ h3 {
     width: 150px;
   }
 }
+
+/* okay */

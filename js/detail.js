@@ -132,7 +132,7 @@ function createDetailInfoElement(movie, info) {
 }
 
 // RECENT REVIEWS - creates the title/header and 'ADD REVIEW' button
-function createRecentReviewsHeader() {
+function createRecentReviewsHeader(movie) {
   const reviewTitleContainerElement = document.createElement("div");
   reviewTitleContainerElement.classList.add("review-header-container");
 
@@ -144,6 +144,9 @@ function createRecentReviewsHeader() {
   addReviewButtonElement.innerHTML =
     '<img class="button-icon" src="img/plus-circle.svg" alt="plus icon">Add Review';
   addReviewButtonElement.classList.add("add-review-button");
+  addReviewButtonElement.addEventListener("click", function(e){
+    window.location.href = "form.html?movie=" + movie.id;
+  });
   reviewTitleContainerElement.appendChild(addReviewButtonElement);
 
   return reviewTitleContainerElement;
@@ -163,7 +166,7 @@ function createReviewElement(review) {
 
   const nameElement = document.createElement("p");
   nameElement.classList.add("review-name", "transparent-white-italic");
-  nameElement.innerText = "by " + getUserById(review.userId).name;
+  nameElement.innerText = "by " + review.name;
   titleContainerElement.appendChild(nameElement);
 
   reviewElement.appendChild(titleContainerElement);
@@ -253,7 +256,7 @@ async function renderContent() {
   const detailInfoElement = createDetailInfoElement(movie, info);
   detailElement.appendChild(detailInfoElement);
 
-  const reviewTitleElement = createRecentReviewsHeader();
+  const reviewTitleElement = createRecentReviewsHeader(movie);
   detailElement.appendChild(reviewTitleElement);
 
   // DISPLAY ALL REVIEWS
@@ -289,3 +292,5 @@ async function renderContent() {
 loadData().then(() => {
   renderContent();
 });
+
+//okay
