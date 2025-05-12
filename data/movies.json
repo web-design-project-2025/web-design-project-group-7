@@ -81,7 +81,7 @@
       "id": 12,
       "title": "Parasite",
       "posterImg": "posters/parasite.webp",
-      "genre": "Drama, Comedy, Thriller",
+      "genre": "Drama, Comedy, Thriller, Show All",
       "score": 5.0
     },
     {
@@ -178,7 +178,7 @@
     },
     {
       "id": 26,
-      "title": "Late Night with The Devil",
+      "title": "Late Night with the devil",
       "posterImg": "posters/late_night_devil.webp",
       "genre": "Horror, Show All",
       "score": 3.9
@@ -236,7 +236,7 @@
       "id": 34,
       "title": "Lord of the Rings: The Fellowship of the Ring",
       "posterImg": "posters/lord_rings.webp",
-      "genre": "Fantasy, Adventure, Action, Show all",
+      "genre": "Fantasy, Adventure, Action, Show All",
       "score": 5.0
     },
     {

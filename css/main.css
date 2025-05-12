@@ -329,6 +329,10 @@ p {
   transition: 0,7s;
 }
 
+#recentreviews{
+  margin-left: 10vw;
+}
+
 .reviewtext {
   font-size: 10pt;
   line-height: 1.5;

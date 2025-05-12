@@ -27,6 +27,7 @@ _about-us.html_ = About us page **_(editorial page)_**
 - _main.js_ Shared logic (data loading and practical functions) + home page dinamic rendering
 - _browse.js_ Browse page (including search feature)
 - _detail.js_ Detail page
+- _form.js_ Stars functionality and "new review" form
 
 **css/** stylesheets for corrsponding hml pages  
 **img/** posters, icons and other images
@@ -43,11 +44,11 @@ This project implements a variation of the _GitLab Flow_ strategy. The default b
 - **WebStorage API USAGE**: movie informations gathered from OMDb are stored locally, to avoid repeated calls of the API. LocalStorage is also used to save recently visited movies.
 - **STAR RATINGS**: several functions calculate and update movie score based on its reviews. Said score is then displayed visually with full and empty star char.
 - **MOVIE DETAILS**: gathered from both local json files and public API and displayed in the detail page, along with recently visited movies from localStorage.
-- **REVIEW SUBMISSIONS**: users can leave a review using a form. Given the small size of our target group we opted for a "Type your name" field in the form, rather than implementing user login or profiles
+- **REVIEW SUBMISSIONS**: users could leave a review using a form. Given the small size of our target group we opted for a "Type your name" field in the form, rather than implementing user login or profiles. Currently not operational outside of visualy.
 - **RESPONSIVE DESIGN**: curated layouts for varying screen sizes.
 
-_All key JavaScript functions are commented inline for clarity.  
-All sources for code snippets borrowed or adapted from online resouces are credited inline_
+_All key JavaScript functions are commented inline for clarity._  
+_All sources for code snippets borrowed or adapted from online resouces are credited inline_
 
 ## Authors:
 

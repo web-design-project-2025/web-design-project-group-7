@@ -46,6 +46,7 @@ function setStarScore(stars, score) {
 postReviewButton.addEventListener("click", function(e){
   e.preventDefault();
   thankYouOverlay.style.display = "block";
+  window.scrollTo({ top: 0 });
 });
 
 

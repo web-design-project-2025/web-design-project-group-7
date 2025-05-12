@@ -246,7 +246,7 @@ searchButtonElement.addEventListener("click", function (e) {
 });
 
 loadData();
-updateMoviesScore(movies);
+updateScore(movies);
 
 loadData().then(() => {
   homepage();
