@@ -26,7 +26,7 @@
   h1 {
     font-family: "monofett";
     color: #9f4125;
-    font-size: 40pt;
+    font-size: 16pt;
     text-transform: uppercase;
     font-weight: 400;
     margin-top: 0%;
@@ -37,7 +37,6 @@
 p {
   font-family: "changa", sans-serif;
   color: var(--white);
-  font-size: 16pt;
 }
 
 h1 {
@@ -84,15 +83,17 @@ h1 {
 .label {
   font-family: "changa", sans-serif;
   color: var(--white);
-  font-size: 14pt;
+  font-size: 12pt;
 }
 
 #post-review-button {
-  font-size: 9pt;
+  font-size: 10pt;
   border-radius: 10rem;
   background-color: var(--white);
   border: 0;
   padding: 1%;
+  color: #1c140e;
+  text-transform: uppercase;
 }
 
 #post-review-button:hover {
@@ -226,12 +227,12 @@ h1 {
   top: 0;
   left: 0;
   background-color: rgba(159, 65, 37);
-  height: 100vh;
+  height: 107vh;
   display: none;
 }
 
 #thankyoutext {
-  color: var(--white);
+  color: var(--brown);
 }
 
 #thankyou-content {
@@ -246,9 +247,13 @@ h1 {
   padding-right: 2%;
   font-size: 14pt;
   border-radius: 10rem;
-  font-weight: bold;
   background-color: var(--white);
   margin-top: 6%;
+  text-transform: uppercase;
+}
+
+#reviews-button:hover{
+  background-color: var(--sand);
 }
 
 #logo-overlay {
