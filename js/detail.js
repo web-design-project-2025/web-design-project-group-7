@@ -166,7 +166,7 @@ function createReviewElement(review) {
 
   const nameElement = document.createElement("p");
   nameElement.classList.add("review-name", "transparent-white-italic");
-  nameElement.innerText = "by " + getUserById(review.userId).name;
+  nameElement.innerText = "by " + review.name;
   titleContainerElement.appendChild(nameElement);
 
   reviewElement.appendChild(titleContainerElement);
