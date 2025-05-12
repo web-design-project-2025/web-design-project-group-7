@@ -38,7 +38,7 @@
     display: flex;
     align-items: flex-start;
     padding-top: 3%;
-    padding-bottom: 8%;
+    margin-bottom: -10%;
     padding-left: 20%;
     padding-right: 20%;
     background-color: var(--brown);
@@ -92,14 +92,10 @@ h2 {
 }
 
 #polaroid22 {
-    display: flex;
-    align-items: end;
-    padding-top: 40%;
     width: 14rem; 
-    position: absolute;
-    top: 35%;
+    position: relative;
+    transform: rotate(10deg) translateY(70%);
     left: 70%;
-    rotate: 10deg;
 }
 
 
@@ -109,13 +105,11 @@ h2 {
     display: flex;
     flex-direction: row;
     text-align: center;
-    padding-top: 3%;
-    padding-bottom: 8%;
     padding-left: 20%;
     padding-right: 20%;
     gap: 2rem;
-    position: absolute;
-    top: 78rem;
+    position: relative;
+    transform: translateY(-35%);
 }
 
 #textboxh {
@@ -157,14 +151,194 @@ h2 {
 #aboutus5 {
     padding-left: 20%;
     padding-right: 20%;
-    padding-top: 6%;
-    padding-bottom: 2%;
 }
 
-h4 {
+#aboutus5text {
     color: var(--red);
     font-family: "monofett";
     font-size: 36pt;
     margin-bottom: 2rem;
+}
+
+/* responsive */
+
+@media screen and (max-width: 1200px) {
+    #aboutus2 {
+        margin-bottom: -15%;
+    }
+
+    h1 {
+        padding-top: 18%;
+        font-size: 40pt;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    #text2 {
+        column-count: 1;
+    }
+
+    #text3 {
+        column-count: 1;
+    }
+
+    #aboutus4 {
+        position: relative;
+        transform: translateY(-20%);
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    
+    #logo-aboutus {
+        width: 10rem;
+      }
+
+    h1 {
+        padding-top: 10%;
+        padding-left: 7rem;
+        font-size: 30pt;
+      }
+
+      h2{
+        font-size: 30pt;
+      }
+
+      h3 {
+        font-size: 30pt;
+      }
+
+      #aboutus5text {
+       font-size: 30pt;
+      }
+
+    
+    #aboutus2 {
+        padding: 0;
+        padding-left: 10%;
+        padding-right: 10%;
+        padding-bottom: 20%;
+        padding-top: 5%;
+    }
+    #text2 {
+        width: 100%;
+        padding: 0;
+    }
+    #polaroid11 {
+        align-self: center;
+    }
+
+    #polaroid22 {
+        display: none;
+    }
+
+    #aboutus3 {
+        padding: 0;
+        padding-left: 10%;
+    }
+
+    #left-column3 {
+        padding-right: 10%;
+    }
+}
+
+
+@media screen and (max-width: 800px) {
+
+    h1 {
+        font-size: 25pt;
+    }
+   
+    #aboutus2 {
+        padding-left: 10%;
+        padding-right: 0%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #left-column3 {
+        padding-right: 10%;
+    }
+
+    #aboutus3 {
+        padding-right: 0;
+    }
+
+
+    #polaroid11 {
+        padding-left: 20%;
+        padding-top: 5%;
+        justify-items: conter;
+    }
+
+    #aboutus4 {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        transform: translateY(3%);
+        scale: 0.9;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #aboutus1 {
+      
+      }
+    
+      #logo-aboutus {
+        width: 6rem;
+      }
+    
+      h1 {
+        padding-top: 7%;
+        padding-left: 3rem;
+        font-size: 20pt;
+      }
+
+      #aboutus5 {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+}
+
+@media screen and (max-width: 393px) {
+
+      #logo-aboutus {
+        padding-top: 10%;
+        width: 3rem;
+      }
+    
+      h1 {
+        padding-top: 7%;
+        padding-left: 3rem;
+        font-size: 15pt;
+      }
+
+      #aboutus2 {
+        width: 100%;
+        padding-left: 5%;
+        padding-right: 0%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    h2{
+        font-size: 20pt;
+        margin-bottom: 1rem;
+    }
+
+    h3 {
+        font-size: 20pt;
+    }
+
+    #aboutus5text {
+        font-size: 20pt;
+        margin-bottom: 1rem;
+    }
+
+    #aboutus5 {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
 }
 
