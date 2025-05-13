@@ -1,6 +1,6 @@
 * {
   font-family: "changa", sans-serif;
-  color: var(--white);
+  /* color: var(--white); */
   --red: #9f4125;
   --brown: #1c140e;
   --grey: #7d6f68;
@@ -120,7 +120,7 @@ h3 {
   text-transform: uppercase;
 }
 
-.add-review-button:hover{
+.add-review-button:hover {
   background-color: var(--red);
 }
 
@@ -129,6 +129,7 @@ h3 {
 }
 
 .list-title {
+  color: var(--white);
   margin: 0;
   font-size: 0.75rem;
 }
