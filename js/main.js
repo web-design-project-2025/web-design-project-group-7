@@ -41,7 +41,7 @@ async function loadData() {
 
     for (let movie of movies) {
       const infoResponse = await fetch(
-        `http://www.omdbapi.com/?t=${movie.title}&apikey=1d35b601`
+        `https://www.omdbapi.com/?t=${movie.title}&apikey=1d35b601`
       );
       const movieInfo = await infoResponse.json();
 
