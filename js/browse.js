@@ -29,12 +29,17 @@ function changePage(newPage) {
 }
 
 // FILTER BY - creates the movieElements only for movies that match the applied filter
-function filterBy(genre, movie) {
-  const filterGeneres = movie.genre.split(", ");
-  if (filterGeneres.includes(genre)) {
-    const movieElement = createMovieElement(movie);
-    contentElement.appendChild(movieElement);
+function filterBy(genre, movies) {
+  let filterMovies = [];
+  for (let movie of movies) {
+    const filterGeneres = movie.genre.split(", ");
+    if (filterGeneres.includes(genre)) {
+      filterMovies.push(movie);
+      // const movieElement = createMovieElement(movie);
+      // contentElement.appendChild(movieElement);
+    }
   }
+  return filterMovies;
 }
 
 // COMPARE STRING
@@ -194,7 +199,7 @@ function createMovieElement(movie) {
   movieElement.appendChild(infoElement);
 
   const titleElement = document.createElement("h5");
-  titleElement.classList.add("text");
+  titleElement.classList.add("text", "title");
   titleElement.innerText = movie.title;
   infoElement.appendChild(titleElement);
 
@@ -229,19 +234,23 @@ function renderContent() {
       filterOverlayTitles();
     } else {
       const noResultsElement = document.createElement("section");
-      noResultsElement.classList.add("no-res-container");
+      noResultsElement.classList.add("no-res-section");
       const noResultsHeaderElement = document.createElement("h3");
       noResultsHeaderElement.innerText = "OH NO! WE ARE REAL LOSERS!";
       noResultsHeaderElement.classList.add("no-res-header");
       noResultsElement.appendChild(noResultsHeaderElement);
-      const noResultsTextElement = document.createElement("P");
-      noResultsTextElement.innerText = "We could find what you are looking for";
+      const noResultsContainerElement = document.createElement("div");
+      noResultsContainerElement.classList.add("no-res-container");
+      const noResultsTextElement = document.createElement("p");
+      noResultsTextElement.innerText =
+        "We couldn't find what you are looking for";
       noResultsTextElement.classList.add("no-res-text");
-      noResultsElement.appendChild(noResultsTextElement);
+      noResultsContainerElement.appendChild(noResultsTextElement);
       const sadLogo = document.createElement("img");
-      sadLogo.src = "img/logo.svg";
+      sadLogo.src = "img/logo_sad.svg";
       sadLogo.classList.add("no-res-logo");
-      noResultsElement.appendChild(sadLogo);
+      noResultsContainerElement.appendChild(sadLogo);
+      noResultsElement.appendChild(noResultsContainerElement);
       resultTitleElement.appendChild(noResultsElement);
 
       movies = searchMovies;
@@ -249,10 +258,14 @@ function renderContent() {
     }
   }
 
+  let filterMovies = filterBy(filter, movies);
+  movies = filterMovies;
+
   // Pagination
   for (let i = (page - 1) * numberPerPage; i < page * numberPerPage; i++) {
     let movie = movies[i];
-    filterBy(filter, movie); // This creates movieElements
+    const movieElement = createMovieElement(movie);
+    contentElement.appendChild(movieElement);
   }
   pageNumberElement.innerText =
     "Page " + page + " of " + Math.ceil(movies.length / numberPerPage);
@@ -351,3 +364,5 @@ function loadBrowsePage() {
 loadData().then(() => {
   loadBrowsePage();
 });
+
+/* okay */

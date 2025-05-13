@@ -3,102 +3,546 @@
     {
       "id": 1,
       "movieId": 1,
-      "userId": 2,
-      "title": "title title title",
-      "text": "A hilarious and heartwarming fairy tale with unforgettable characters.",
-      "score": 1,
-      "likes": 320,
-      "likedByUser": true
+      "name": "nr 1 shrek fan",
+      "title": "Best movie ever!!!",
+      "text": "Its funny, stupid and gross. I love it!",
+      "score": 5
     },
     {
       "id": 2,
-      "movieId": 2,
-      "userId": 4,
-      "title": "title title title",
-      "text": "Shrek 2 is even funnier and more charming than the first. Loved Puss in Boots!",
-      "score": 4,
-      "likes": 280,
-      "likedByUser": false
+      "movieId": 1,
+      "name": "Slimy Jim",
+      "title": "Fun for kids and adults!",
+      "text": "The jokes for adults that go over the kids heads make this a great movie for the entire family, so long as your kids don't ask you why you're laughing.",
+      "score": 4
     },
     {
       "id": 3,
-      "movieId": 3,
-      "userId": 3,
-      "title": "title title title",
-      "text": "Not as strong as the first two, but still a fun adventure.",
-      "score": 3,
-      "likes": 150,
-      "likedByUser": false
+      "movieId": 2,
+      "name": "Hedvig",
+      "title": "I own several Shrek shirts because of this movie",
+      "text": "What the title said",
+      "score": 5
     },
     {
       "id": 4,
-      "movieId": 4,
-      "userId": 1,
-      "title": "title title title",
-      "text": "Inception is a mind-bending masterpiece that keeps you thinking for days.",
-      "score": 2,
-      "likes": 540,
-      "likedByUser": true
+      "movieId": 2,
+      "name": "Slimy Jim",
+      "title": "This one is somehow better than the first one",
+      "text": "If you thought the fisrt Shrek movie was good, you have not seen the second. Its funnier, wilder and somehow more innapropriate than the first.",
+      "score": 5
     },
     {
       "id": 5,
       "movieId": 5,
-      "userId": 2,
-      "title": "title title title",
-      "text": "Interstellar is an emotional and visually stunning space epic.",
-      "score": 5,
-      "likes": 490,
-      "likedByUser": false
+      "name": "Hedvig",
+      "title": "Writing this at 3 am",
+      "text": "Is it the best movie ive seen? No. Will i be able to sleep tonight? No.",
+      "score": 3
     },
     {
       "id": 6,
-      "movieId": 6,
-      "userId": 3,
-      "title": "title title title",
-      "text": "One of the greatest superhero movies of all time!",
-      "score": 5,
-      "likes": 610,
-      "likedByUser": true
+      "movieId": 5,
+      "name": "Slimy Jim",
+      "title": "Nicolas Cage was in this movie?",
+      "text": "The SFX team made Cage look unrecogniceable and his amazing performance only made it better! A must if you like horror.",
+      "score": 4
     },
     {
       "id": 7,
       "movieId": 1,
-      "userId": 4,
-      "title": "title title title",
-      "text": "A childhood classic that never gets old.",
-      "score": 1,
-      "likes": 300,
-      "likedByUser": false
+      "name": "jessica",
+      "title": "Funny",
+      "text": "A classic, I think the donkey is annoying but i like the rest. I hope he isn't in the sequel.",
+      "score": 3
     },
     {
       "id": 8,
       "movieId": 2,
-      "userId": 1,
-      "title": "title title title",
-      "text": "The humor and action make this a perfect family film.",
-      "score": 1,
-      "likes": 275,
-      "likedByUser": true
+      "name": "nr 1 shrek fan",
+      "title": "I changed my mind, this one is the best movie ever",
+      "text": "Its funnier, stupider and grosser than the first one! A masterpiece!",
+      "score": 5
     },
     {
       "id": 9,
       "movieId": 4,
-      "userId": 3,
-      "title": "title title title",
-      "text": "Christopher Nolan at his best! A film that challenges perception.",
-      "score": 2,
-      "likes": 520,
-      "likedByUser": false
+      "name": "jessica",
+      "title": "oooo Spooky",
+      "text": "I understand why people say they're dissapointed but i don't agree, Lilly-Rose Depp plays Ellen imaculately and nothing could make me dislike Bill Skarsgårds count Orlok. ",
+      "score": 4
     },
     {
       "id": 10,
+      "movieId": 4,
+      "name": "Benny",
+      "title": "I'm dissapionted",
+      "text": "There's only one kind of movie thats worse than a bad one; a mediocre one.",
+      "score": 2
+    },
+    {
+      "id": 11,
+      "movieId": 3,
+      "name": "jessica",
+      "title": "Very good",
+      "text": "Im not surprised this movie won A oscar but All of them? Sure.",
+      "score": 4
+    },
+    {
+      "id": 12,
+      "movieId": 3,
+      "name": "Hedvig",
+      "title": "I watched it at leat 4 times",
+      "text": "Fantastic Spectacular give me 14 more",
+      "score": 5
+    },
+    {
+      "id": 14,
+      "movieId": 5,
+      "name": "Benny",
+      "title": "Im now scared of nicholas cage living in my basement",
+      "text": "A solid 3 from me, a good scary movie but not anything special",
+      "score": 3
+    },
+    {
+      "id": 15,
       "movieId": 6,
-      "userId": 2,
-      "title": "title title title",
-      "text": "Heath Ledger's Joker is legendary. A dark and gripping story.",
-      "score": 4,
-      "likes": 590,
-      "likedByUser": true
+      "name": "Geek Barbie",
+      "title": "I owe Greta Gerwig my life",
+      "text": ":O",
+      "score": 5
+    },
+    {
+      "id": 16,
+      "movieId": 6,
+      "name": "Slimy Jim",
+      "title": "I think i need a pink cowboy hat",
+      "text": "I want to buy a pink house and a pink car and a pink fridge",
+      "score": 5
+    },
+    {
+      "id": 17,
+      "movieId": 7,
+      "name": "Hedvig",
+      "title": "I have no idea what I just watched",
+      "text": "I think I need a week to process what I just watched, but yeah you should see it if you like body horror.",
+      "score": 3
+    },
+    {
+      "id": 18,
+      "movieId": 7,
+      "name": "nr 1 shrek fan",
+      "title": "I wish I hadn't watched this movie",
+      "text": "I kind of wanted to puke after watching this, I need to watch Shrek 2 as a palete cleanser",
+      "score": 1
+    },
+    {
+      "id": 19,
+      "movieId": 8,
+      "name": "Benny",
+      "title": "Worste movie I've seen in a while",
+      "text": "It's just boring and bad, not worth the time and OH ITS 2,5 HOURS LONG",
+      "score": 1
+    },
+    {
+      "id": 20,
+      "movieId": 9,
+      "name": "Hedvig",
+      "title": "Women :( ",
+      "text": "Beautifully acted, written, directed, and the costumes?? Fantastic!",
+      "score": 4
+    },
+    {
+      "id": 21,
+      "movieId": 9,
+      "name": "jessica",
+      "title": "A very good adaptation of the book",
+      "text": "A must watch if you like the book",
+      "score": 4
+    },
+    {
+      "id": 22,
+      "movieId": 10,
+      "name": "Slimy Jim",
+      "title": "Hey... What?",
+      "text": "The fisrt half was a 4, the second a 2. I don't know what else to say. But let Robert Pattinson play more weird guys, ho does it so well! ",
+      "score": 3
+    },
+    {
+      "id": 23,
+      "movieId": 11,
+      "name": "Benny",
+      "title": "The pope died a day after I watched this... Should I be worried?",
+      "text": "It's a very well directed and acted movie, much more tense than I expected.",
+      "score": 4
+    },
+    {
+      "id": 24,
+      "movieId": 12,
+      "name": "Benny",
+      "title": "Probably the best movie I've seen",
+      "text": "You spend the whole movie sitting on the edge of your seat, never knowing whats going to happen next. Fantastic acting and directing. 5 stars!",
+      "score": 5
+    },
+    {
+      "id": 25,
+      "movieId": 12,
+      "name": "Slimy Jim",
+      "title": "The subtitles are DEFINITELY worth it",
+      "text": "Bong Joon-ho can do no wrong, his oscars speech was incredible",
+      "score": 5
+    },
+    {
+      "id": 26,
+      "movieId": 12,
+      "name": "Hedvig",
+      "title": "I love watching insane people do insane people thing",
+      "text": "Put your hand up if you did NOT expect a man living in the basement",
+      "score": 5
+    },
+    {
+      "id": 27,
+      "movieId": 13,
+      "name": "GlizzyLizzy",
+      "title": "I love the 90s",
+      "text": "Blade is so unseriously serious and so seriously good I don't think I could think of a sigle bad thing to say.",
+      "score": 5
+    },
+    {
+      "id": 28,
+      "movieId": 13,
+      "name": "Benny",
+      "title": "CGI so bad it's amazing",
+      "text": "If you want to watch a gory, funny, and wildly 90's super hero movie this one is the one. Some of the jokes have aged poorly but you can't escape that with an almost 30 year old movie. ",
+      "score": 3
+    },
+    {
+      "id": 29,
+      "movieId": 13,
+      "name": "Hedvig",
+      "title": "Never seen a super hero movie like this before",
+      "text": "Watched this in cinema with my dad and we both loved it",
+      "score": 4
+    },
+    {
+      "id": 30,
+      "movieId": 14,
+      "name": "GlizzyLizzy",
+      "title": "No other movie can do it like this one",
+      "text": "Ru Pauls character in this movie scares me to my bones, but a movie dosen't become a classic without reason. Its funny, charming and increadibly satirical of other teen rom-coms of its time. A great watch!",
+      "score": 4
+    },
+    {
+      "id": 31,
+      "movieId": 15,
+      "name": "Slimy Jim",
+      "title": "I had more fun than my kids had",
+      "text": "Watched this with my kids for the first time and they found it a bit boring, but I couldn't care less. It's a really funny movie with an increadibly lovable cast and it's great nostalgia to see it again. If it was up to me id give it a 4, but they insist it was just a 3!",
+      "score": 3
+    },
+    {
+      "id": 32,
+      "movieId": 15,
+      "name": "Rebecca",
+      "title": "My faourite childhood movie",
+      "text": "I loved is as a kid and I watched it so many times I ruined the tape. If that's mot a sign of a good movie I don't know what is.",
+      "score": 5
+    },
+    {
+      "id": 33,
+      "movieId": 16,
+      "name": "jessica",
+      "title": "Visualy stunning, lackin plotwise",
+      "text": "It's one of those movies that you leave feeling as if the creators came up with the plot just to have an excuse to make a bunch of pretty shots.",
+      "score": 2
+    },
+    {
+      "id": 34,
+      "movieId": 16,
+      "name": "Benny",
+      "title": "Too long",
+      "text": "The acting and visuals are very stylized and I had a hard time finding myself in it, but im impressed of the attention to details.",
+      "score": 3
+    },
+    {
+      "id": 35,
+      "movieId": 17,
+      "name": "Hedvig",
+      "title": "I think it was good but I'm too dumb to say why",
+      "text": "The animation is incredible and I was very immersed in the story as I was watching it, but afterwards I felt more confused than anything else.",
+      "score": 3
+    },
+    {
+      "id": 36,
+      "movieId": 18,
+      "name": "GlizzyLizzy",
+      "title": "Watch But I'm a Cheerleader instead",
+      "text": "At it's time I'm sure this movie was groundbreaking, but coming back 40 years later it just feels somewhat bland",
+      "score": 3
+    },
+    {
+      "id": 37,
+      "movieId": 18,
+      "name": "jessica",
+      "title": "Must watch ",
+      "text": "A movie that shaped a generation and changed hollywood forever!",
+      "score": 4
+    },
+    {
+      "id": 38,
+      "movieId": 19,
+      "name": "Slimy Jim",
+      "title": "Childhood favourite",
+      "text": "This was my favourite movie as a kid and I still think it holds up well even though I'm an adult now.",
+      "score": 5
+    },
+    {
+      "id": 39,
+      "movieId": 19,
+      "name": "GlizzyLizzy",
+      "title": "I get why people love it...",
+      "text": "...It's just not a story for me. I didn't have any special relationship to this movie as a kid and i think thats why I'm very neutral about it still.",
+      "score": 3
+    },
+    {
+      "id": 40,
+      "movieId": 20,
+      "name": "jessica",
+      "title": "Why can't holywood make more movies like this?!",
+      "text": "Meryl Streep plays her character so well that I think she actually is that evil in real life, no one can act that well. Beside Streep's performance its a really solid movie that I HIGHLY recomend any rom-com fan to watch!",
+      "score": 4
+    },
+    {
+      "id": 41,
+      "movieId": 21,
+      "name": "Hedvig",
+      "title": "I liked it but it's not Wes Andersson's best movie",
+      "text": "It's a fun movie and I enjoyed my time in the theater but I'm probably going to have forgotten most of the plot in about a week",
+      "score": 3
+    },
+    {
+      "id": 42,
+      "movieId": 21,
+      "name": "Benny",
+      "title": "Too much and not enough all at once",
+      "text": "There's too much going on for me to be able to really get attatched to any of the characters or stories. ",
+      "score": 2
+    },
+    {
+      "id": 43,
+      "movieId": 22,
+      "name": "GlizzyLizzy",
+      "title": "Very blond very legal",
+      "text": "Had very fun watching this movie with my firnds, now we all want to become hot and work in law",
+      "score": 4
+    },
+    {
+      "id": 44,
+      "movieId": 22,
+      "name": "Jessica",
+      "title": "Very bad depiction of law school",
+      "text": "I maybe stupidly went in thinking there was going to be more legal drama than personal drama, so I was a little dissapointed",
+      "score": 2
+    },
+    {
+      "id": 45,
+      "movieId": 23,
+      "name": "Hedvig",
+      "title": "Stunning visuals, traumaticed me as a child",
+      "text": "Did I understand the cultural references? No. Am I scared? Yes. Did I enjoy the movie? I don't know.",
+      "score": 3
+    },
+    {
+      "id": 46,
+      "movieId": 23,
+      "name": "Benny",
+      "title": "In Haiao Miyazaki we trust",
+      "text": "Beutifull, stunning, gorgeous! The story is gripping and the complex storytelling makes this a mustwatch for any movie buff",
+      "score": 5
+    },
+    {
+      "id": 47,
+      "movieId": 24,
+      "name": "GlizzyLizzy",
+      "title": "To-To-Ro Totoro",
+      "text": "This is one of my favourite movies and I don't care that its made for children. I cry everytime",
+      "score": 5
+    },
+    {
+      "id": 48,
+      "movieId": 24,
+      "name": "Slimy Jim",
+      "title": "A great movie for kids and adults alike!",
+      "text": "The animation is beautiful and the music is just as lovely. It's a heartwarming story and I think anyone would love it.",
+      "score": 5
+    },
+    {
+      "id": 49,
+      "movieId": 25,
+      "name": "Benny",
+      "title": "How did this movie not make more money???",
+      "text": "It's insane how such a fantastic movie can get so little regonicion. The acting is fenominal and the production and directing is equally as fantastic. One of the best sci-fi movies I watched this year.",
+      "score": 4
+    },
+    {
+      "id": 50,
+      "movieId": 25,
+      "name": "Hedvig",
+      "title": "Not enough tempo to keep your attention",
+      "text": "I really like the idea of it but poor execution on the directors side made this movie more of a dissapointment than I expected.",
+      "score": 2
+    },
+    {
+      "id": 51,
+      "movieId": 26,
+      "name": "Slimy Jim",
+      "title": "Freaky vintage found footatge horror talk show? Sign me up!",
+      "text": "David Dastmalchian always has this unsetteling aura around him and in this movie he really let's that shine. The practical speciall effects are also so cool to watch when most of us are used to only seeing CGI nowadays. The pacing could be better but overall a very good movie!",
+      "score": 4
+    },
+    {
+      "id": 52,
+      "movieId": 27,
+      "name": "Benny",
+      "title": "Becomes scarily more possible the more I think about it",
+      "text": "One of the scarient war movies I've seen lately, very violent. I didn't like the ending",
+      "score": 3
+    },
+    {
+      "id": 53,
+      "movieId": 28,
+      "name": "Slimy Jim",
+      "title": "WHAT. A. RIDE.",
+      "text": "Truly a piece of chaotic cinema. So bloody. Everyone dies. Gruesomely. Probably not a movie you would enjoy watching on your own but get a group of friend together and you will have a very fun evening",
+      "score": 4
+    },
+    {
+      "id": 54,
+      "movieId": 28,
+      "name": "jessica",
+      "title": "I walked out",
+      "text": "I dind't finnish this movie. I thought it was gross and childish and like something a 12 year old boy would have made up.",
+      "score": 1
+    },
+    {
+      "id": 55,
+      "movieId": 29,
+      "name": "Tindra",
+      "title": "Watch this instead of Elvis",
+      "text": "A very gripping story that tell a story you havent seen before. The acting is fantastic. A little slow at times but overall a good watch.",
+      "score": 4
+    },
+    {
+      "id": 56,
+      "movieId": 30,
+      "name": "Hedvig",
+      "title": "No",
+      "text": "It feels like the people who made this movie wants us to belive Elvis was some kind of hero when the real story was more of the opposite",
+      "score": 1
+    },
+    {
+      "id": 57,
+      "movieId": 30,
+      "name": "Slimy Jim",
+      "title": "Maybe you'd like this movie if you love elvis and hate the truth",
+      "text": "The movie is predictable and untastefull but the acting is good and the music scenes makes up for some of its flaws.",
+      "score": 2
+    },
+    {
+      "id": 58,
+      "movieId": 31,
+      "name": "Hedvig",
+      "title": "D':",
+      "text": "This movie is beautiful both in it's animation and story. I watch this when I can't sleep and it makes me feel better every time.",
+      "score": 5
+    },
+    {
+      "id": 58,
+      "movieId": 31,
+      "name": "jessica",
+      "title": "A cute movie",
+      "text": "It's a very heartwarming story but I found the main characters a little anoying. I would however watch an entire movie about the mom.",
+      "score": 4
+    },
+    {
+      "id": 59,
+      "movieId": 32,
+      "name": "Benny",
+      "title": "Changed the cinema industry for the next decades",
+      "text": "RDJ truly embodies Tony Stark in this masterpiece of a superhero movie. Truly set a new standard for what actionmovies could be.",
+      "score": 5
+    },
+    {
+      "id": 60,
+      "movieId": 32,
+      "name": "Slimy Jim",
+      "title": "Decent watch ",
+      "text": "I watched this while making dinner and enjoyed it because I didn't have to pay too much attention to it",
+      "score": 3
+    },
+    {
+      "id": 61,
+      "movieId": 33,
+      "name": "Slimy Jim",
+      "title": "If avengers was animated",
+      "text": "Genuinely a really funny movie I think both kids and adults can appreciate.",
+      "score": 3
+    },
+    {
+      "id": 62,
+      "movieId": 33,
+      "name": "Benny",
+      "title": "Not anything special",
+      "text": "We watched this a few nights ago and already I can't remember any of the major plotpoints. Exept the synth-gag. That was funny.",
+      "score": 2
+    },
+    {
+      "id": 63,
+      "movieId": 34,
+      "name": "Slimy Jim",
+      "title": "The movie that made me fall in love with fantasy",
+      "text": "What is there to say that hasn't alredy been said? A masterpiece of fantasy cinema and a fantastic adaptation of the books.",
+      "score": 5
+    },
+    {
+      "id": 64,
+      "movieId": 34,
+      "name": "Benny",
+      "title": "top 3 of all movies I've seen, and the other two are the sequels",
+      "text": "This movie, and the original trillogy, is truly in a category of its own. I don't know what happened on the set of this movie but whatever it was, it created true magic.",
+      "score": 5
+    },
+    {
+      "id": 65,
+      "movieId": 34,
+      "name": "jessica",
+      "title": "I want Orlando Blooms hair",
+      "text": "Objectively this is a fantastic movie and I fully agree with the popular opinion but why does it have to be soooo looong. I can't watch it without taking a break in the middle to go for a walk or something.",
+      "score": 4
+    },
+    {
+      "id": 66,
+      "movieId": 35,
+      "name": "GlizzyLizzy",
+      "title": "Not as fenominal as the first one but still a very good movie",
+      "text": "As colorfull and as much of the great music that makes the first one such a joy, but the story lacks a little and some of the characters feel more like caricatures of themselves.",
+      "score": 3
+    },
+    {
+      "id": 67,
+      "movieId": 35,
+      "name": "Hedvig",
+      "title": "Violence, but its fun!",
+      "text": "I had a lot of fun, it's a fun movie and the twist at the end with Peter's mom was interesting",
+      "score": 4
+    },
+    {
+      "id": 67,
+      "movieId": 36,
+      "name": "Benny",
+      "title": "Does anyone know where I can get a Guardians of the Galaxy Hoodie?",
+      "text": "You can tell that marvel tried to do something different with this one, and it worked fantastically. James Gun was absolutely the right person to direct a movie like this.",
+      "score": 5
     }
   ]
 }

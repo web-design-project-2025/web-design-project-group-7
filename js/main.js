@@ -202,7 +202,7 @@ function updateScore(movies) {
 
 // HOME PAGE - recent reviews rendering
 function homepage() {
-  const lastReviews = getLastReviews(3);
+  const lastReviews = getLastReviews(4);
   for (let lastReview of lastReviews) {
     const posterElement = createHomeReview(lastReview);
     homepageElement.appendChild(posterElement);
@@ -252,6 +252,25 @@ function getLastReviews(n) {
   return lastReviews;
 }
 
+searchBarElement.addEventListener("change", function (e) {
+  console.log(searchBarElement.value);
+  searchValue = this.value;
+  e.preventDefault();
+  window.location.href = `browse.html?value=${searchValue}`;
+});
+
+searchButtonElement.addEventListener("click", function (e) {
+  console.log(searchBarElement.value);
+  searchValue = searchBarElement.value;
+  e.preventDefault();
+  window.location.href = `browse.html?value=${searchValue}`;
+});
+
+loadData();
+updateScore(movies);
+
 loadData().then(() => {
   homepage();
 });
+
+//okay

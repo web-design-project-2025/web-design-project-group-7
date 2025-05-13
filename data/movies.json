@@ -46,7 +46,7 @@
       "id": 7,
       "title": "The Substance",
       "posterImg": "posters/substance.webp",
-      "genre": "Horror, Body-Horror, Thriller, Show All",
+      "genre": "Horror, Body Horror, Thriller, Show All",
       "score": 0
     },
     {
@@ -82,7 +82,176 @@
       "title": "Parasite",
       "posterImg": "posters/parasite.webp",
       "genre": "Drama, Comedy, Thriller, Show All",
-      "score": 0
+      "score": 5.0
+    },
+    {
+      "id": 13,
+      "title": "Blade",
+      "posterImg": "posters/blade.webp",
+      "genre": "Action, Thriller, Super Hero, Show All",
+      "score": 4.1
+    },
+    {
+      "id": 14,
+      "title": "But I'm a Cheerleader",
+      "posterImg": "posters/cheerleader.webp",
+      "genre": "Comedy, Romance, Show All",
+      "score": 3.9
+    },
+    {
+      "id": 15,
+      "title": "Monsters inc.",
+      "posterImg": "posters/monsters-inc.webp",
+      "genre": "Comedy, Animation, Adventure, Show All",
+      "score": 1.2
+    },
+    {
+      "id": 16,
+      "title": "Grand Budapest Hotel",
+      "posterImg": "posters/budapest.webp",
+      "genre": "Comedy, Adventure, Romance, Show All",
+      "score": 4.8
+    },
+    {
+      "id": 17,
+      "title": "Isle of Dogs",
+      "posterImg": "posters/isle_of_dogs.webp",
+      "genre": "Animation, Sci-Fi, Comedy, Show All",
+      "score": 2.6
+    },
+    {
+      "id": 18,
+      "title": "The Breakfast Club",
+      "posterImg": "posters/breakfast.webp",
+      "genre": "Comedy, Drama, Show All",
+      "score": 5.0
+    },
+    {
+      "id": 19,
+      "title": "Finding Nemo",
+      "posterImg": "posters/nemo.webp",
+      "genre": "Animation, Comedy, Adventure, Show All",
+      "score": 5.0
+    },
+    {
+      "id": 20,
+      "title": "The Devil Wears Prada",
+      "posterImg": "posters/prada.webp",
+      "genre": "Drama, Comedy, Show All",
+      "score": 5.0,
+      "reviews": 2300000
+    },
+    {
+      "id": 21,
+      "title": "The French Dispatch",
+      "posterImg": "posters/french_dispatch.webp",
+      "genre": "Romance, Comedy, Show All",
+      "score": 5.0
+    },
+    {
+      "id": 22,
+      "title": "Legally Blonde",
+      "posterImg": "posters/legally-blonde.webp",
+      "genre": "Comedy, Romance, Show All",
+      "score": 5.0
+    },
+    {
+      "id": 23,
+      "title": "Spritied Away",
+      "posterImg": "posters/spirited_away.webp",
+      "genre": "Animation, Fantasy, Show All",
+      "score": 5.0
+    },
+    {
+      "id": 24,
+      "title": "My Neighbor Totoro",
+      "posterImg": "posters/totoro.webp",
+      "genre": "Adventure, Animation, Show All",
+      "score": 4.8
+    },
+    {
+      "id": 25,
+      "title": "Annihilation",
+      "posterImg": "posters/annihilation.webp",
+      "genre": "Horror, Sci-Fi, Show All",
+      "score": 4.1
+    },
+    {
+      "id": 26,
+      "title": "Late Night with the devil",
+      "posterImg": "posters/late_night_devil.webp",
+      "genre": "Horror, Show All",
+      "score": 3.9
+    },
+    {
+      "id": 27,
+      "title": "Civil War",
+      "posterImg": "posters/civil_war.webp",
+      "genre": "Thriller, Horror, Action, Show All",
+      "score": 1.2
+    },
+    {
+      "id": 28,
+      "title": "Cocaine Bear",
+      "posterImg": "posters/cocain_bear.webp",
+      "genre": "Horror, Body Horror, Comedy, Show All",
+      "score": 4.8
+    },
+    {
+      "id": 29,
+      "title": "Priscilla",
+      "posterImg": "posters/priscilla.webp",
+      "genre": "Drama, Romance, Show All",
+      "score": 2.6
+    },
+    {
+      "id": 30,
+      "title": "Elvis",
+      "posterImg": "posters/elvis.webp",
+      "genre": "Drama, Music, Show All",
+      "score": 5.0
+    },
+    {
+      "id": 31,
+      "title": "Ponyo",
+      "posterImg": "posters/ponyo.webp",
+      "genre": "Adventure, Animation, Show All",
+      "score": 5.0
+    },
+    {
+      "id": 32,
+      "title": "Iron Man",
+      "posterImg": "posters/iron_man.webp",
+      "genre": "Super Hero, Action, Sci-Fi, Show All",
+      "score": 5.0
+    },
+    {
+      "id": 33,
+      "title": "Monsters vs Aliens",
+      "posterImg": "posters/monsters_vs_aliens.webp",
+      "genre": "Animation, Super Hero, Action, Sci-Fi, Comedy, Show All",
+      "score": 5.0
+    },
+    {
+      "id": 34,
+      "title": "Lord of the Rings: The Fellowship of the Ring",
+      "posterImg": "posters/lord_rings.webp",
+      "genre": "Fantasy, Adventure, Action, Show All",
+      "score": 5.0
+    },
+    {
+      "id": 35,
+      "title": "Guardians of the Galaxy vol. 2",
+      "posterImg": "posters/guardians_2.webp",
+      "genre": "Super Hero, Action, Sci-Fi, Comedy, Show All",
+      "score": 5.0
+    },
+    {
+      "id": 36,
+      "title": "Guardians of the Galaxy",
+      "posterImg": "posters/guardians.webp",
+      "genre": "Super Hero, Action, Sci-Fi, Comedy, Show All",
+      "score": 5.0
     }
   ]
 }
