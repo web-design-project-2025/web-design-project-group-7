@@ -1,5 +1,6 @@
 const urlParams = new URLSearchParams(window.location.search);
 searchValue = urlParams.get("value");
+let allMovies = movies;
 
 let page = 1;
 const numberPerPage = 12;
@@ -104,7 +105,7 @@ function downArrowOverlay(wordId, arrowId, overlayId) {
 /* This function: - creates an array that includes every movie.genre, without duplicates
                   - orders them in aphabetical order, keeping ""Show All" at the top
                   - displays the genres in the genre filter overlay*/
-function filterOverlayTitles() {
+function filterOverlayTitles(movies) {
   let genres = [];
   for (let movie of movies) {
     let nowGenre = movie.genre;
@@ -215,11 +216,11 @@ function createMovieElement(movie) {
 function renderContent() {
   contentElement.innerHTML = ""; //empty everything
 
-  updateScore(movies);
-
+  updateScore(allMovies);
+  let displayMovies = allMovies;
   // The page is used for displaying the search results when the search bar is used
   if (searchValue) {
-    const searchMovies = searchTitle(movies, searchValue);
+    const searchMovies = searchTitle(displayMovies, searchValue);
 
     const resultTitleElement = document.getElementById(
       "result-title-container"
@@ -230,8 +231,8 @@ function renderContent() {
     resultsElement.innerText = "Showing results for: '" + searchValue + "'";
     resultTitleElement.appendChild(resultsElement);
     if (searchMovies.length > 0) {
-      movies = searchMovies;
-      filterOverlayTitles();
+      displayMovies = searchMovies;
+      filterOverlayTitles(displayMovies);
     } else {
       const noResultsElement = document.createElement("section");
       noResultsElement.classList.add("no-res-section");
@@ -253,27 +254,27 @@ function renderContent() {
       noResultsElement.appendChild(noResultsContainerElement);
       resultTitleElement.appendChild(noResultsElement);
 
-      movies = searchMovies;
-      filterOverlayTitles();
+      displayMovies = searchMovies;
+      filterOverlayTitles(displayMovies);
     }
   }
 
-  let filterMovies = filterBy(filter, movies);
-  movies = filterMovies;
-
+  let filterMovies = filterBy(filter, displayMovies);
+  const totalPages = Math.ceil(filterMovies.length / numberPerPage);
+  if (page > totalPages) page = totalPages;
+  if (page < 1) page = 1;
+  pageNumberElement.innerText = `Page ${page} of ${totalPages}`;
   // Pagination
   for (let i = (page - 1) * numberPerPage; i < page * numberPerPage; i++) {
-    let movie = movies[i];
-    const movieElement = createMovieElement(movie);
+    let filterMovie = filterMovies[i];
+    const movieElement = createMovieElement(filterMovie);
     contentElement.appendChild(movieElement);
   }
-  pageNumberElement.innerText =
-    "Page " + page + " of " + Math.ceil(movies.length / numberPerPage);
 }
 
 function loadBrowsePage() {
-  updateScore(movies);
-  filterOverlayTitles();
+  updateScore(allMovies);
+  filterOverlayTitles(allMovies);
 
   // EVENT LISTENERS
   downArrowOverlay("title-word", "title-arrow", "title-overlay");
@@ -362,6 +363,7 @@ function loadBrowsePage() {
 }
 
 loadData().then(() => {
+  allMovies = movies;
   loadBrowsePage();
 });
 
