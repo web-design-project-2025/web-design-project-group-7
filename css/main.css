@@ -296,12 +296,24 @@ p {
   transition: 0, 7s;
 }
 
+/* section 3 */
+
 #homepage3 {
   padding-left: 10%;
   padding-right: 10%;
   padding-top: 5%;
   background-color: var(--brown) ù;
   color: var(--white);
+}
+
+H3 {
+  font-family: "monofett";
+  color: var(--red);
+  font-size: 36pt;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-top: 0%;
+  margin-bottom: 3%;
 }
 
 #homepage3-poster {
@@ -319,6 +331,7 @@ p {
   font-size: 14pt;
   margin-bottom: 3%;
   margin-top: 3%;
+  line-height: 1.2;
 }
 
 .titlereview:hover {
@@ -333,14 +346,11 @@ p {
 .reviewtext {
   font-size: 10pt;
   line-height: 1.5;
+  width: 100%;
 }
 
 .text {
   color: var(--white);
-}
-
-.reviewtext {
-  width: 100%;
 }
 
 .poster {
@@ -358,27 +368,13 @@ p {
   }
 }
 
-H3 {
-  font-family: "monofett";
-  color: var(--red);
-  font-size: 36pt;
-  text-transform: uppercase;
-  font-weight: 400;
-  margin-top: 0%;
-  margin-bottom: 8%;
-}
-
 @media screen and (max-width: 880px) {
-  #homepage3 {
-    padding-left: 10%;
-  }
+
   #homepage3-poster {
     grid-template-columns: repeat(2, 1fr);
     gap: 0%;
   }
-  #recentreviews {
-    padding-left: 11%;
-  }
+ 
   .poster {
     width: 90%;
   }
@@ -433,6 +429,23 @@ H3 {
   #home-image-2 {
     width: 100%;
   }
+}
+
+@media screen and (max-width: 600px) {
+  #homepage3-poster {
+    display: grid;
+    gap: 1%;
+    grid-template-columns: repeat(1, 1fr);
+    padding-left: 12%;
+    padding-right: 12%;
+    padding-bottom: 5%;
+    margin-bottom: 17%;
+    justify-items: space-evenly;
+  }
+}
+
+H3 {
+  line-height: 1;
 }
 
 /* FOOTER */

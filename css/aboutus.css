@@ -163,6 +163,10 @@ h2 {
 /* responsive */
 
 @media screen and (max-width: 1200px) {
+    #logo-aboutus {
+        width: 10rem;
+      }
+
     #aboutus2 {
         margin-bottom: -15%;
     }
@@ -171,6 +175,10 @@ h2 {
         padding-top: 18%;
         font-size: 40pt;
     }
+    #logo-aboutus {
+        width: 12rem;
+        padding-top: 13%;
+      }
 }
 
 @media screen and (max-width: 1100px) {
@@ -186,20 +194,17 @@ h2 {
         position: relative;
         transform: translateY(-20%);
     }
+    
 }
 
 @media screen and (max-width: 1000px) {
     
-    #logo-aboutus {
-        width: 10rem;
-      }
-
     h1 {
-        padding-top: 10%;
-        padding-left: 7rem;
+        padding-top: 20%;
+        padding-left: 6rem;
         font-size: 30pt;
       }
-
+      
       h2{
         font-size: 30pt;
       }
@@ -240,6 +245,7 @@ h2 {
     #left-column3 {
         padding-right: 10%;
     }
+
 }
 
 
@@ -248,6 +254,11 @@ h2 {
     h1 {
         font-size: 25pt;
     }
+    #logo-aboutus {
+        width: 10rem;
+        padding-top: 8%;
+      }
+
    
     #aboutus2 {
         padding-left: 10%;
@@ -280,13 +291,32 @@ h2 {
     }
 }
 
-@media screen and (max-width: 800px) {
-    #aboutus1 {
-      
+@media screen and (max-width: 800px) {  
+      #logo-aboutus {
+        width: 8rem;
       }
     
-      #logo-aboutus {
-        width: 6rem;
+      h1 {
+        padding-top: 7%;
+        padding-left: 3rem;
+        font-size: 30pt;
+      }
+      
+      h3 {
+        padding-top: 7%;
+      }
+
+      #aboutus5 {
+        padding-left: 5%;
+        padding-right: 5%;
+        margin-bottom: 10%;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    #logo-aboutus {
+        width: 5rem;
       }
     
       h1 {
@@ -294,11 +324,6 @@ h2 {
         padding-left: 3rem;
         font-size: 20pt;
       }
-
-      #aboutus5 {
-        padding-left: 5%;
-        padding-right: 5%;
-    }
 }
 
 @media screen and (max-width: 393px) {
@@ -339,6 +364,7 @@ h2 {
     #aboutus5 {
         padding-left: 5%;
         padding-right: 5%;
+        margin-bottom: 10%;
     }
 }
 
