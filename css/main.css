@@ -154,7 +154,7 @@ h2 {
 p {
   color: var(--white);
   font-family: "changa", san-serif;
-  font-size: 12pt;
+  font-size: 11pt;
   line-height: 100%;
   margin-top: 0%;
   margin-bottom: 5%;
@@ -306,7 +306,7 @@ footer {
 /* sections of the footer */
 .footer-section {
   width: 25%;
-  padding-left: 4%;
+  padding-left: 2rem;
   padding-bottom: 5%;
 }
 /* contents of previous sections */
@@ -320,6 +320,11 @@ h4 {
   font-weight: 400;
   color: var(--brown);
   border-bottom: solid --brown;
+  line-height: 1.4;
+}
+
+.footer-text {
+  font-size: 1.8svw;
 }
 /* small logos inside of footer */
 #footer-logo {
@@ -339,6 +344,10 @@ h4 {
     justify-content: left;
     width: 30%;
   }
+
+  .footer-text{
+    font-size: 11pt;
+  }
 }
 
 @media screen and (min-width: 469px) {
@@ -347,6 +356,22 @@ h4 {
   }
 }
 /* narrow screen */
+
+@media screen and (max-width: 580px){
+    footer{
+    flex-direction: column;
+    padding-top: 10%;
+  }
+
+  .footer-section{
+    width: 60%;
+    padding-inline: 20%;
+  }
+
+  .footer-text{
+    font-size: 11pt;
+  }
+}
 @media only screen and (max-width: 468px) {
   header {
     justify-content: center;
@@ -378,14 +403,5 @@ h4 {
     margin-top: 2.5px;
   }
 
-  footer{
-    flex-direction: column;
-    padding-top: 10%;
-  }
 
-  .footer-section{
-    width: 60%;
-    padding-inline: 20%;
-    
-  }
 }
