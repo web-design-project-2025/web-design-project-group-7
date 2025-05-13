@@ -4,11 +4,13 @@ let users = [];
 let moviesInfos = [];
 
 const responsiveSearchButton = document.getElementById("responsive-search");
+const resoinsiveSearchGo = document.getElementById("responsive-search-button");
 const headerLinksDiv = document.getElementById("header-links");
 const responsiveSearchSection = document.getElementById(
   "responsive-search-section"
 );
 const responsiveBackButton = document.getElementById("responsive-back-button");
+const responsiveSearchBar = document.getElementById("responsive-searchbar");
 
 const homepageElement = document.getElementById("homepage3-poster");
 
@@ -252,14 +254,13 @@ function getLastReviews(n) {
   return lastReviews;
 }
 
-searchBarElement.addEventListener("change", function (e) {
-  console.log(searchBarElement.value);
+responsiveSearchBar.addEventListener("change", function (e) {
   searchValue = this.value;
   e.preventDefault();
   window.location.href = `browse.html?value=${searchValue}`;
 });
 
-searchButtonElement.addEventListener("click", function (e) {
+resoinsiveSearchGo.addEventListener("click", function (e) {
   console.log(searchBarElement.value);
   searchValue = searchBarElement.value;
   e.preventDefault();
