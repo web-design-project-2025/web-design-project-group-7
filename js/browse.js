@@ -251,8 +251,12 @@ function renderContent() {
       sadLogo.src = "img/logo_sad.svg";
       sadLogo.classList.add("no-res-logo");
       noResultsContainerElement.appendChild(sadLogo);
+      sadLogo.addEventListener("mouseover", function(e){
+        sadLogo.src = "img/logo_happy.svg";
+      });
       noResultsElement.appendChild(noResultsContainerElement);
       resultTitleElement.appendChild(noResultsElement);
+
 
       displayMovies = searchMovies;
       filterOverlayTitles(displayMovies);
