@@ -359,9 +359,6 @@ H3 {
 }
 
 @media screen and (max-width: 800px) {
-  #searchbar {
-    display: none;
-  }
 
   /* homepage1 */
   #homepage1 {
