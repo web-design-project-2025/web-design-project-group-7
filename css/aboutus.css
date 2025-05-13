@@ -158,6 +158,92 @@ h2 {
 /* responsive */
 
 @media screen and (max-width: 1200px) {
+
+    #logo-aboutus {
+        width: 10rem;
+      }
+
+    #aboutus2 {
+        margin-bottom: -15%;
+    }
+
+    h1 {
+        padding-top: 18%;
+        font-size: 40pt;
+    }
+    #logo-aboutus {
+        width: 12rem;
+        padding-top: 13%;
+      }
+}
+
+@media screen and (max-width: 1100px) {
+    #text2 {
+        column-count: 1;
+    }
+
+    #text3 {
+        column-count: 1;
+    }
+
+    #aboutus4 {
+        position: relative;
+        transform: translateY(-20%);
+    }
+    
+}
+
+@media screen and (max-width: 1000px) {
+    
+    h1 {
+        padding-top: 20%;
+        padding-left: 6rem;
+        font-size: 30pt;
+      }
+      
+      h2{
+        font-size: 30pt;
+      }
+
+      h3 {
+        font-size: 30pt;
+      }
+
+      #aboutus5text {
+       font-size: 30pt;
+      }
+
+    
+    #aboutus2 {
+        padding: 0;
+        padding-left: 10%;
+        padding-right: 10%;
+        padding-bottom: 20%;
+        padding-top: 5%;
+    }
+    #text2 {
+        width: 100%;
+        padding: 0;
+    }
+    #polaroid11 {
+        align-self: center;
+    }
+
+    #polaroid22 {
+        display: none;
+    }
+
+    #aboutus3 {
+        padding: 0;
+        padding-left: 10%;
+    }
+
+    #left-column3 {
+        padding-right: 10%;
+    }
+
+}
+
   #aboutus2 {
     margin-bottom: -15%;
   }
@@ -187,6 +273,7 @@ h2 {
   #logo-aboutus {
     width: 10rem;
   }
+
 
   h1 {
     padding-top: 10%;
@@ -251,6 +338,81 @@ h2 {
     padding-right: 10%;
   }
 
+
+    h1 {
+        font-size: 25pt;
+    }
+    #logo-aboutus {
+        width: 10rem;
+        padding-top: 8%;
+      }
+
+   
+    #aboutus2 {
+        padding-left: 10%;
+        padding-right: 0%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #left-column3 {
+        padding-right: 10%;
+    }
+
+    #aboutus3 {
+        padding-right: 0;
+    }
+
+
+    #polaroid11 {
+        padding-left: 20%;
+        padding-top: 5%;
+        justify-items: conter;
+    }
+
+    #aboutus4 {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        transform: translateY(3%);
+        scale: 0.9;
+    }
+}
+
+@media screen and (max-width: 800px) {  
+      #logo-aboutus {
+        width: 8rem;
+      }
+    
+      h1 {
+        padding-top: 7%;
+        padding-left: 3rem;
+        font-size: 30pt;
+      }
+      
+      h3 {
+        padding-top: 7%;
+      }
+
+      #aboutus5 {
+        padding-left: 5%;
+        padding-right: 5%;
+        margin-bottom: 10%;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    #logo-aboutus {
+        width: 5rem;
+      }
+    
+      h1 {
+        padding-top: 7%;
+        padding-left: 3rem;
+        font-size: 20pt;
+      }
+
   #aboutus3 {
     padding-right: 0;
   }
@@ -288,6 +450,7 @@ h2 {
     padding-left: 5%;
     padding-right: 5%;
   }
+
 }
 
 @media screen and (max-width: 393px) {
@@ -295,6 +458,47 @@ h2 {
     padding-top: 10%;
     width: 3rem;
   }
+
+
+      #logo-aboutus {
+        padding-top: 10%;
+        width: 3rem;
+      }
+    
+      h1 {
+        padding-top: 7%;
+        padding-left: 3rem;
+        font-size: 15pt;
+      }
+
+      #aboutus2 {
+        width: 100%;
+        padding-left: 5%;
+        padding-right: 0%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    h2{
+        font-size: 20pt;
+        margin-bottom: 1rem;
+    }
+
+    h3 {
+        font-size: 20pt;
+    }
+
+    #aboutus5text {
+        font-size: 20pt;
+        margin-bottom: 1rem;
+    }
+
+    #aboutus5 {
+        padding-left: 5%;
+        padding-right: 5%;
+        margin-bottom: 10%;
+    }
+}
 
   h1 {
     padding-top: 7%;
@@ -314,6 +518,7 @@ h2 {
     font-size: 20pt;
     margin-bottom: 1rem;
   }
+
 
   h3 {
     font-size: 20pt;
