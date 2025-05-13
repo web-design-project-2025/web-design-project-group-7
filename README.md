@@ -14,7 +14,7 @@ Responsive website, that allows users to browse movies, find detailed informatio
 _index.html_ = Homepage  
 _browse.html_ = Browse all movies  
 _detail.html_ = Movie detail page  
-_new-review.html_ = Form to add new review  
+_form.html_ = Form to add new review  
 _about-us.html_ = About us page **_(editorial page)_**
 
 **data/**
