@@ -3,6 +3,20 @@
   .content {
     grid-template-columns: repeat(4, 1fr);
   }
+
+  .filter-container{
+    display: flex;
+    width: 31rem;
+    height: 3rem;
+  }
+  .filter-list{
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 2rem;
+  }
+
+  .filter-list{
+    margin-bottom: 0px;
+  }
 }
 
 /* (medium screen is in browse.css) */
@@ -14,7 +28,9 @@
     margin-inline: 30vw;
   }
 
-  .filter-container {
-    margin-inline: 18vw;
+  .filter-container{
+    margin-left: 0px;
+    margin-right: 0px;
+    align-self: center;
   }
 }

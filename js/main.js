@@ -1,6 +1,5 @@
 let movies = [];
 let reviews = [];
-let users = [];
 let moviesInfos = [];
 
 const responsiveSearchButton = document.getElementById("responsive-search");
@@ -29,10 +28,6 @@ async function loadData() {
   const reviewResponse = await fetch("data/reviews.json");
   const reviewJSON = await reviewResponse.json();
   reviews = reviewJSON.reviews;
-
-  const userResponse = await fetch("data/users.json");
-  const userJSON = await userResponse.json();
-  users = userJSON.users;
 
   if (localStorage.moviesInfos) {
     moviesInfos = JSON.parse(localStorage.moviesInfos);
@@ -78,10 +73,6 @@ function getMovieById(id) {
 
 function getReviewById(id) {
   return reviews.find((review) => review.id === id);
-}
-
-function getUserById(id) {
-  return users.find((user) => user.id === id);
 }
 
 function getReviewByMovie(movie) {
