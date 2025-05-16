@@ -32,6 +32,10 @@ h1 {
   padding-left: 7rem;
 }
 
+p {
+    font-size: 17px;
+}
+
 /* about us section 2 */
 
 #aboutus2 {
@@ -531,4 +535,4 @@ h2 {
     padding-left: 5%;
     padding-right: 5%;
   }
-
+  }
