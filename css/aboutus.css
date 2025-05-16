@@ -82,6 +82,7 @@ h2 {
   column-count: 2;
   column-gap: 2rem;
   margin-bottom: 0;
+  
 }
 
 #left-column3 {
@@ -153,6 +154,7 @@ h2 {
   font-family: "monofett";
   font-size: 36pt;
   margin-bottom: 2rem;
+  text-transform: uppercase;
 }
 
 /* responsive */
