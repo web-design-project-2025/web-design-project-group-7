@@ -1,0 +1,308 @@
+* {
+  font-family: "changa", sans-serif;
+  /* color: var(--white); */
+  --red: #9f4125;
+  --brown: #1c140e;
+  --grey: #7d6f68;
+  --sand: #cda47b;
+  --white: #f6e3cf;
+  --gap: 2%;
+}
+
+body {
+  background-color: var(--brown);
+}
+
+.d-container {
+  display: flex;
+
+  width: 100%;
+  min-height: 100vh;
+  justify-content: center;
+  background-color: var(--brown);
+}
+
+.d-content {
+  width: 100%;
+}
+
+/* GRADIENT ON BACKGROUND IMAGE */
+/* Most of the code in the following 15 lines comes from: "How to Add Gradient Overlay to Image in CSS" 
+   by ByteGrad https://www.youtube.com/watch?v=5CztcrXpfec */
+.bg-img-container {
+  width: 100%;
+  height: 15rem;
+  position: relative;
+  z-index: 0;
+}
+
+.bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.bg-gradient {
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to top, var(--brown), transparent);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+h1 {
+  color: var(--white);
+  line-height: 1;
+
+}
+
+.d-movie {
+  display: flex;
+
+  flex-direction: row;
+  gap: var(--gap);
+}
+
+.d-detail {
+  width: 64%;
+  margin-inline: 18%;
+  margin-top: -5rem;
+
+  position: relative;
+  z-index: 2;
+}
+
+.poster {
+  width: 30%;
+  height: auto;
+  align-self: flex-start;
+}
+
+h3 {
+  margin: 0;
+  width: 100%;
+  font-size: 2rem;
+  color: var(--white);
+}
+
+.plot {
+  line-height: 1.5;
+}
+
+.review-header-container {
+  margin-top: 1rem;
+  padding-bottom: 5px;
+  margin-bottom: 2rem;
+  width: 100%;
+  display: flex;
+  border-bottom: solid 2px var(--sand);
+  align-items: flex-end;
+}
+
+.add-review-button {
+  width: 200px;
+  color: var(--brown);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1%;
+  gap: 0.5rem;
+  border-radius: 100px;
+  border: none;
+  background-color: var(--white);
+  text-transform: uppercase;
+}
+
+.add-review-button:hover {
+  background-color: var(--red);
+}
+
+.button-icon {
+  width: 1rem;
+}
+
+.list-title {
+  color: var(--white);
+  margin: 0;
+  font-size: 0.75rem;
+}
+
+.list-items {
+  display: flex;
+  align-items: flex-end;
+  gap: var(--gap);
+  border-top: solid 1px #f6e3cf50;
+}
+
+.list-description {
+  margin-top: 5%;
+  margin-bottom: 3px;
+}
+
+.ul-info {
+  padding: 0;
+}
+
+.title-stars {
+  font-size: 1.5rem;
+  padding-right: 2%;
+}
+
+.d-title {
+  margin-top: 0;
+  margin-bottom: 0.2rem;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.score-container {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.title-basedOn {
+  font-weight: 100;
+}
+
+.title-number {
+  font-weight: bold;
+}
+
+.review-title-container {
+  display: flex;
+  align-items: flex-center;
+  gap: var(--gap);
+  margin-bottom: 1%;
+}
+
+.review-title {
+  margin: 0;
+  color: var(--white);
+  border: none;
+  font-weight: bold;
+}
+
+.review-name {
+  margin: 0;
+  margin-top: 7px;
+}
+
+.small-stars {
+  margin: 0;
+  margin-bottom: 3%;
+}
+
+.review-text {
+  margin-bottom: 2rem;
+  border-bottom: solid 1px #f6e3cf50;
+  padding-bottom: 1rem;
+}
+
+.transparent-white-italic {
+  font-style: italic;
+  color: #f6e3cf70;
+}
+
+.recent-header {
+  text-align: center;
+  margin-top: 1rem;
+  padding-bottom: 5px;
+  margin-bottom: 2rem;
+  border-bottom: solid 2px var(--sand);
+}
+
+.recent-container {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+  gap: 10%;
+}
+
+.movie-img {
+  width: 100%;
+}
+
+.recent-title {
+  margin: 0;
+  padding-bottom: 2rem;
+}
+
+@media screen and (max-width: 750px) {
+  h1 {
+    font-size: 30pt;
+  }
+  .d-movie {
+    flex-direction: column;
+  }
+  .score-container {
+    display: block;
+  }
+  .title-number {
+    display: inline;
+    margin-left: 0.3rem;
+  }
+  .title-basedOn {
+    display: inline;
+  }
+  .title-stars {
+    margin-top: 0;
+  }
+  .d-stuff {
+    width: 84%;
+    margin-inline: 8%;
+    margin-top: -5rem;
+
+    position: relative;
+    z-index: 2;
+  }
+  .list-description {
+    margin-top: 3%;
+  }
+
+  h3 {
+    margin-bottom: 6%;
+  }
+}
+@media screen and (max-width: 450px) {
+  .review-title-container {
+    display: block;
+  }
+
+  .recent-container {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 0;
+  }
+
+  .review-header-container {
+    display: block;
+    border-bottom: none;
+    gap: 5%;
+  }
+  .add-review-button {
+    width: 150px;
+  }
+}
+@media screen and (max-width: 390px) {
+  .list-items {
+    align-items: flex-start;
+  }
+  .list-description {
+    margin-top: 3pt;
+    margin-bottom: 3%;
+  }
+  .recent-container {
+    display: block;
+  }
+}
+
+
+/* okay */

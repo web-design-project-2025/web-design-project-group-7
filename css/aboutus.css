@@ -1,0 +1,538 @@
+* {
+  font-family: "changa", sans-serif;
+
+  --red: #9f4125;
+  --brown: #1c140e;
+  --grey: #7d6f68;
+  --sand: #cda47b;
+  --white: #f6e3cf;
+  --gap: 2%;
+}
+
+/* main */
+
+/* about us section 1 */
+
+#aboutus1 {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  padding-left: 20%;
+  padding-right: 20%;
+  background-color: var(--sand);
+}
+
+#logo-aboutus {
+  width: 15rem;
+}
+
+h1 {
+  padding-top: 10%;
+  padding-left: 7rem;
+}
+
+p {
+    font-size: 17px;
+}
+
+/* about us section 2 */
+
+#aboutus2 {
+  display: flex;
+  align-items: flex-start;
+  padding-top: 3%;
+  margin-bottom: -10%;
+  padding-left: 20%;
+  padding-right: 20%;
+  background-color: var(--brown);
+}
+
+h2 {
+  margin-bottom: 2rem;
+}
+
+#text2 {
+  column-count: 2;
+  column-gap: 2rem;
+  margin-bottom: 0;
+}
+
+#left-column2 {
+  padding-right: 5rem;
+}
+
+#polaroid11 {
+  display: flex;
+  align-items: end;
+  padding-top: 40%;
+  width: 12rem;
+}
+
+/* about us section 3 */
+
+#aboutus3 {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  padding-left: 20%;
+  padding-right: 20%;
+  background-color: var(--white);
+}
+
+#text3 {
+  color: var(--brown);
+  column-count: 2;
+  column-gap: 2rem;
+  margin-bottom: 0;
+  
+}
+
+#left-column3 {
+  padding-right: 15rem;
+  padding-bottom: 8%;
+}
+
+#polaroid22 {
+  width: 14rem;
+  position: relative;
+  transform: rotate(10deg) translateY(70%);
+  left: 70%;
+}
+
+/* section 4 */
+
+#aboutus4 {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  padding-left: 20%;
+  padding-right: 20%;
+  gap: 2rem;
+  position: relative;
+  transform: translateY(-35%);
+}
+
+#textboxh {
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 18pt;
+  color: var(--red);
+}
+
+#textboxp {
+  color: var(--red);
+}
+
+#textbox1 {
+  border-style: solid;
+  border-color: var(--sand);
+  padding: 1rem;
+  background-color: var(--sand);
+}
+
+#textbox2 {
+  border-style: solid;
+  border-color: var(--sand);
+  padding: 1rem;
+  background-color: var(--sand);
+}
+
+#textbox3 {
+  border-style: solid;
+  border-color: var(--sand);
+  padding: 1rem;
+  background-color: var(--sand);
+}
+
+/* section 5 */
+
+#aboutus5 {
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+#aboutus5text {
+  color: var(--red);
+  font-family: "monofett";
+  font-size: 36pt;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+}
+
+/* responsive */
+
+@media screen and (max-width: 1200px) {
+
+    #logo-aboutus {
+        width: 10rem;
+      }
+
+    #aboutus2 {
+        margin-bottom: -15%;
+    }
+
+    h1 {
+        padding-top: 18%;
+        font-size: 40pt;
+    }
+    #logo-aboutus {
+        width: 12rem;
+        padding-top: 13%;
+      }
+}
+
+@media screen and (max-width: 1100px) {
+    #text2 {
+        column-count: 1;
+    }
+
+    #text3 {
+        column-count: 1;
+    }
+
+    #aboutus4 {
+        position: relative;
+        transform: translateY(-20%);
+    }
+    
+}
+
+@media screen and (max-width: 1000px) {
+    
+    h1 {
+        padding-top: 20%;
+        padding-left: 6rem;
+        font-size: 30pt;
+      }
+      
+      h2{
+        font-size: 30pt;
+      }
+
+      h3 {
+        font-size: 30pt;
+      }
+
+      #aboutus5text {
+       font-size: 30pt;
+      }
+
+    
+    #aboutus2 {
+        padding: 0;
+        padding-left: 10%;
+        padding-right: 10%;
+        padding-bottom: 20%;
+        padding-top: 5%;
+    }
+    #text2 {
+        width: 100%;
+        padding: 0;
+    }
+    #polaroid11 {
+        align-self: center;
+    }
+
+    #polaroid22 {
+        display: none;
+    }
+
+    #aboutus3 {
+        padding: 0;
+        padding-left: 10%;
+    }
+
+    #left-column3 {
+        padding-right: 10%;
+    }
+
+}
+
+  #aboutus2 {
+    margin-bottom: -15%;
+  }
+
+  h1 {
+    padding-top: 18%;
+    font-size: 40pt;
+  }
+
+@media screen and (max-width: 1100px) {
+  #text2 {
+    column-count: 1;
+  }
+
+  #text3 {
+    column-count: 1;
+  }
+
+  #aboutus4 {
+    position: relative;
+    transform: translateY(-20%);
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  #logo-aboutus {
+    width: 10rem;
+  }
+
+
+  h1 {
+    padding-top: 10%;
+    padding-left: 7rem;
+    font-size: 30pt;
+  }
+
+  h2 {
+    font-size: 30pt;
+  }
+
+  h3 {
+    font-size: 30pt;
+  }
+
+  #aboutus5text {
+    font-size: 30pt;
+  }
+
+  #aboutus2 {
+    padding: 0;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 20%;
+    padding-top: 5%;
+  }
+  #text2 {
+    width: 100%;
+    padding: 0;
+  }
+  #polaroid11 {
+    align-self: center;
+  }
+
+  #polaroid22 {
+    display: none;
+  }
+
+  #aboutus3 {
+    padding: 0;
+    padding-left: 10%;
+  }
+
+  #left-column3 {
+    padding-right: 10%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  h1 {
+    font-size: 25pt;
+  }
+
+  #aboutus2 {
+    padding-left: 10%;
+    padding-right: 0%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #left-column3 {
+    padding-right: 10%;
+  }
+
+
+    h1 {
+        font-size: 25pt;
+    }
+    #logo-aboutus {
+        width: 10rem;
+        padding-top: 8%;
+      }
+
+   
+    #aboutus2 {
+        padding-left: 10%;
+        padding-right: 0%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #left-column3 {
+        padding-right: 10%;
+    }
+
+    #aboutus3 {
+        padding-right: 0;
+    }
+
+
+    #polaroid11 {
+        padding-left: 20%;
+        padding-top: 5%;
+        justify-items: conter;
+    }
+
+    #aboutus4 {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        transform: translateY(3%);
+        scale: 0.9;
+    }
+}
+
+@media screen and (max-width: 800px) {  
+      #logo-aboutus {
+        width: 8rem;
+      }
+    
+      h1 {
+        padding-top: 7%;
+        padding-left: 3rem;
+        font-size: 30pt;
+      }
+      
+      h3 {
+        padding-top: 7%;
+      }
+
+      #aboutus5 {
+        padding-left: 5%;
+        padding-right: 5%;
+        margin-bottom: 10%;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    #logo-aboutus {
+        width: 5rem;
+      }
+    
+      h1 {
+        padding-top: 7%;
+        padding-left: 3rem;
+        font-size: 20pt;
+      }
+
+  #aboutus3 {
+    padding-right: 0;
+  }
+
+  #polaroid11 {
+    padding-left: 20%;
+    padding-top: 5%;
+    justify-items: conter;
+  }
+
+  #aboutus4 {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transform: translateY(3%);
+    scale: 0.9;
+  }
+}
+
+@media screen and (max-width: 800px) {
+
+  #logo-aboutus {
+    width: 6rem;
+  }
+
+  h1 {
+    padding-top: 7%;
+    padding-left: 3rem;
+    font-size: 20pt;
+  }
+
+  #aboutus5 {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+}
+
+@media screen and (max-width: 393px) {
+  #logo-aboutus {
+    padding-top: 10%;
+    width: 3rem;
+  }
+
+
+      #logo-aboutus {
+        padding-top: 10%;
+        width: 3rem;
+      }
+    
+      h1 {
+        padding-top: 7%;
+        padding-left: 3rem;
+        font-size: 15pt;
+      }
+
+      #aboutus2 {
+        width: 100%;
+        padding-left: 5%;
+        padding-right: 0%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    h2{
+        font-size: 20pt;
+        margin-bottom: 1rem;
+    }
+
+    h3 {
+        font-size: 20pt;
+    }
+
+    #aboutus5text {
+        font-size: 20pt;
+        margin-bottom: 1rem;
+    }
+
+    #aboutus5 {
+        padding-left: 5%;
+        padding-right: 5%;
+        margin-bottom: 10%;
+    }
+
+  h1 {
+    padding-top: 7%;
+    padding-left: 3rem;
+    font-size: 15pt;
+  }
+
+  #aboutus2 {
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 0%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  h2 {
+    font-size: 20pt;
+    margin-bottom: 1rem;
+  }
+
+
+  h3 {
+    font-size: 20pt;
+  }
+
+  #aboutus5text {
+    font-size: 20pt;
+    margin-bottom: 1rem;
+  }
+
+  #aboutus5 {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  }

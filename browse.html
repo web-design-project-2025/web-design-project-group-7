@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Local Loser's Movie Club</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/browse.css" />
+    <link rel="stylesheet" href="css/browse-response.css" />
+    <script src="js/main.js" defer></script>
+    <script src="js/browse.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Changa:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Monofett&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <a class="header-nav" id="logo-link" href="index.html">
+        <img
+          id="logo"
+          src="img/logo.svg"
+          alt="the logo of the website, a cute popcorn shaped like a star with two large eyes"
+        />
+      </a>
+      <div id="header-links">
+        <a href="index.html">
+          <p class="navlink">home</p>
+        </a>
+        <a href="browse.html">
+          <p class="navlink">browse</p>
+        </a>
+        <a href="about-us.html">
+          <p class="navlink">about us</p>
+        </a>
+      </div>
+      <section class="header-search">
+        <input
+          class="navitem"
+          type="search"
+          placeholder="Search"
+          id="searchbar"
+        />
+        <button id="searchbutton" type="submit">
+          <img
+            id="searchlogo"
+            src="img/search new.svg"
+            alt="a magnifying glass, representing the search button"
+          />
+        </button>
+      </section>
+      <button id="responsive-search">
+        <img
+          id="searchlogo"
+          src="img/search new.svg"
+          alt="a magnifying glass, representing the search button"
+        />
+      </button>
+    <section id="responsive-search-section">
+      <input
+      class="navitem"
+      type="search"
+      placeholder="Search"
+      id="responsive-searchbar"
+    />
+    <button id="responsive-search-button" type="submit">
+      <img
+        id="searchlogo"
+        src="img/search new.svg"
+        alt="a magnifying glass, representing the search button"
+        />
+    <button id="responsive-back-button">
+      <img id="searchlogo" src="img/left_arrow.svg" alt="an arrow poing left, indication back">
+    </button>
+    </section>
+    </header>
+
+    <main class="container">
+      <section id="filters-container" class="filter-container padding">
+        <h6 class="filter-sortby">Sort by</h6>
+        <ul class="filter-list">
+          <li id="title-word" class="filter-item">
+            <p class="filter-name">Title</p>
+            <img
+              id="title-arrow"
+              class="down-arrow"
+              src="img/down_arrow.svg"
+              alt="down arrow"
+            />
+            <div id="title-overlay" class="filter-overlay">
+              <ul class="overlay-options">
+                <li id="sort-a-z" class="filter-name">A-Z</li>
+                <li id="sort-z-a" class="filter-name">Z-A</li>
+              </ul>
+            </div>
+          </li>
+
+          <li id="posted-word" class="filter-item">
+            <p class="filter-name">Posted</p>
+            <img
+              id="posted-arrow"
+              class="down-arrow"
+              src="img/down_arrow.svg"
+              alt="down arrow"
+            />
+
+            <div id="posted-overlay" class="filter-overlay">
+              <ul class="overlay-options">
+                <li id="sort-new" class="filter-name">Newest</li>
+                <li id="sort-old" class="filter-name">Oldest</li>
+              </ul>
+            </div>
+          </li>
+
+          <li id="rating-word" class="filter-item">
+            <p class="filter-name">Rating</p>
+            <img
+              id="rating-arrow"
+              class="down-arrow"
+              src="img/down_arrow.svg"
+              alt="down arrow"
+            />
+
+            <div id="rating-overlay" class="filter-overlay">
+              <ul class="overlay-options">
+                <li id="sort-high" class="filter-name">Highest</li>
+                <li id="sort-low" class="filter-name">Lowest</li>
+              </ul>
+            </div>
+          </li>
+
+          <li id="genre-word" class="filter-item">
+            <p class="filter-name">Genre</p>
+            <img
+              id="genre-arrow"
+              class="down-arrow"
+              src="img/down_arrow.svg"
+              alt="down arrow"
+            />
+
+            <div id="genre-overlay" class="filter-overlay">
+              <ul id="filter-list" class="overlay-options">
+                <!--<li id="filter-drama" class="filter-name">Drama</li>
+                <li id="filter-horror" class="filter-name">Horror</li>-->
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <div id="result-title-container"></div>
+      <div class="content" id="content"></div>
+
+      <div class="pagination">
+
+        <button class="page-button" id="first-pag">
+          <img
+            class="arrow-page-img"
+            src="img/dubble_left_arrow.svg"
+            alt="button to first page"
+          />
+        </button>
+        <button class="page-button" id="previous-pag">
+          <img
+            class="arrow-page-img"
+            src="img/left_arrow.svg"
+            alt="button to previous page"
+          />
+        </button>
+        <p id="page-number">Page 1 of 1</p>
+        <button class="page-button" id="next-pag">
+          <img
+            class="arrow-page-img"
+            src="img/right_arrow.svg"
+            alt="button to next page"
+          />
+        </button>
+        <button class="page-button" id="last-pag">
+          <img
+            class="arrow-page-img"
+            src="img/dubble_right_arrow.svg"
+            alt="button to last page"
+          />
+        </button>
+      </div>
+    </main>
+
+    <footer>
+      <section class="footer-section">
+        <h4 class="footer-title">Local Loser's Movie Club™</h4>
+        <p class="footer-text">
+          Want to become a member? Ask us a question? Debate about movie
+          ratings? Contact us here!
+        </p>
+        <p class="footer-text" id="footer-bold">locallosersmovieclub@gmail.com</p>
+      </section>
+
+      <section class="footer-section">
+        <h4>Stalk us on social media!</h4>
+        <div class="footer-container">
+          <img
+            id="footer-logo"
+            src="img/instagram icon.svg"
+            alt="instagram logo"
+          />
+          <p class="footer-text">LocalLosersMovieClub</p>
+        </div>
+        <div class="footer-container">
+          <img
+            id="footer-logo"
+            src="img/facebook icon.svg"
+            alt="facebook logo"
+          />
+          <p class="footer-text">Local Loser's Movie Club</p>
+        </div>
+        <div class="footer-container">
+          <img id="footer-logo" src="img/twitter icon.svg" alt="twitter logo" />
+          <p class="footer-text">LocalLosersMovieClub</p>
+        </div>
+      </section>
+      <section class="footer-section">
+        <h4>Who are we?</h4>
+        <p class="footer-text">
+          Do you not know who we are? How did you get here? Who are you?
+          Anyways, check out our about us page!
+        </p>
+        <div class="footer-container">
+          <img id="footer-logo" src="img/home icon.svg" alt="about us logo" />
+          <a href="about-us.html">
+            <p class="footer-text" id="footer-bold">About us</p>
+          </a>
+        </div>
+      </section>
+    </footer>
+  </body>
+</html>
