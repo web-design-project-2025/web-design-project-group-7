@@ -252,7 +252,6 @@ h2 {
     padding-top: 18%;
     font-size: 40pt;
   }
-}
 
 @media screen and (max-width: 1100px) {
   #text2 {
@@ -433,8 +432,6 @@ h2 {
 }
 
 @media screen and (max-width: 800px) {
-  #aboutus1 {
-  }
 
   #logo-aboutus {
     width: 6rem;
@@ -498,7 +495,6 @@ h2 {
         padding-right: 5%;
         margin-bottom: 10%;
     }
-}
 
   h1 {
     padding-top: 7%;
